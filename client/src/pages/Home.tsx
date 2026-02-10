@@ -8,6 +8,7 @@
  */
 
 import { useState } from "react";
+import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -181,13 +182,13 @@ export default function Home() {
           {/* Projects Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProjects.map((project, index) => (
-              <Card 
-                key={project.id} 
-                className="group overflow-hidden bg-card border-border hover:border-primary/50 transition-all duration-500 hover:glow-amber cursor-pointer"
-                style={{
-                  animationDelay: `${index * 100}ms`,
-                }}
-              >
+              <Link key={project.id} href={`/project/${project.id}`}>
+                <Card 
+                  className="group overflow-hidden bg-card border-border hover:border-primary/50 transition-all duration-500 hover:glow-amber cursor-pointer"
+                  style={{
+                    animationDelay: `${index * 100}ms`,
+                  }}
+                >
                 <div className="relative aspect-video overflow-hidden">
                   <img 
                     src={project.image} 
@@ -227,6 +228,7 @@ export default function Home() {
                   </div>
                 </div>
               </Card>
+              </Link>
             ))}
           </div>
         </div>

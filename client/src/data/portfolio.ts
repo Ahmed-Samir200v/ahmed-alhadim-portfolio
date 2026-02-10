@@ -101,6 +101,11 @@ export interface Project {
   image: string;
   tags: string[];
   featured: boolean;
+  gallery?: string[];
+  fullDescription?: string;
+  technicalDetails?: string[];
+  challenges?: string;
+  outcome?: string;
 }
 
 export const projects: Project[] = [
@@ -113,6 +118,25 @@ export const projects: Project[] = [
     image: "https://private-us-east-1.manuscdn.com/sessionFile/SymxxZFFWf71UsoZLrpb7i/sandbox/6ZDY6fmItm5Py3Bf5JeV5o-img-2_1770730622000_na1fn_dnItbGFiLXNob3djYXNl.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvU3lteHhaRkZXZjcxVXNvWkxycGI3aS9zYW5kYm94LzZaRFk2Zm1JdG01UHkzQmY1SmVWNW8taW1nLTJfMTc3MDczMDYyMjAwMF9uYTFmbl9kbkl0YkdGaUxYTm9iM2RqWVhObC5wbmc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=Pw-j8f-6rWB9TD6~r-YWxYC5Xp3o9kH0AlUn7VL3ofMPqEmD6nr4-kMsgLz9sF2riaGvkGopG6q5G8JS5F~2w5IdRexTvLZopOUissoO2HVHNuD73ibZwaU5GinW707OQvjNsHYdxE3U3cd-82jISizMnBZPh6vxXqAuGQVZ-LrfLrDL3Nw6qfQOsd19RbOPhYrAipDVvY-veoML~QPhh05dYhYpeiZYRjxcMTxqryIxz717p6WZ0gDq13f4KmO4f9aYqWrEs0pR0VmXUMe-S-WovSxglM13CFEXa69FzpcElou14tCtsB7jLsaZ-WOfEkM32ZO8W0RXT2vAunTQbA__",
     tags: ["Unity", "VR", "Educational", "PBR", "Optimization"],
     featured: true,
+    gallery: [
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/MKWeYzveiqcpMMZf.png",
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/cwYOhplIHjrYzOkU.png",
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/pAureCPEiVjkMFTI.png",
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/KdZOWagLpFbKyiMC.png",
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/jGbIQSkMuTBLCKoJ.png",
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/uFxoMobkEkHeYXbZ.png",
+    ],
+    fullDescription: "This comprehensive VR chemistry laboratory was designed as an educational tool for STEM learning, providing students with a safe, interactive environment to conduct virtual experiments. The project showcases advanced real-time rendering techniques, including physically-based materials for realistic chemical reactions, dynamic lighting systems, and optimized performance for standalone VR hardware. Students can interact with holographic molecular structures, explore the periodic table in 3D space, and conduct experiments with real-time visual feedback.",
+    technicalDetails: [
+      "Built in Unity 2021 LTS with Universal Render Pipeline (URP)",
+      "Custom shader development for liquid simulations and chemical reactions",
+      "Optimized to maintain 72fps on Meta Quest 2 hardware",
+      "Implemented LOD (Level of Detail) systems for complex molecular models",
+      "Spatial audio integration for immersive laboratory ambience",
+      "Hand tracking support for natural interaction with lab equipment",
+    ],
+    challenges: "The main challenge was balancing visual fidelity with performance constraints on mobile VR hardware. Complex molecular structures and real-time particle effects required careful optimization through custom shaders, aggressive LOD systems, and efficient draw call batching. Additionally, designing intuitive VR interactions for precise laboratory procedures required extensive user testing and iteration.",
+    outcome: "Successfully deployed in multiple educational institutions as a STEM learning tool. Students reported increased engagement and better understanding of chemical concepts through hands-on VR interaction. The project demonstrated the viability of standalone VR for educational applications without requiring expensive physical laboratory equipment.",
   },
   {
     id: "biology-lab-vr",
