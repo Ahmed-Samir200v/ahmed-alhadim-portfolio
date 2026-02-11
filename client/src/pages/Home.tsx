@@ -42,6 +42,9 @@ export default function Home() {
               <a href="#projects" className="text-sm font-heading hover:text-primary transition-colors">Projects</a>
               <a href="#experience" className="text-sm font-heading hover:text-primary transition-colors">Experience</a>
               <a href="#skills" className="text-sm font-heading hover:text-primary transition-colors">Skills</a>
+              <Link href="/blog">
+                <a className="text-sm font-heading hover:text-primary transition-colors">Blog</a>
+              </Link>
               <a href="#contact" className="text-sm font-heading hover:text-primary transition-colors">Contact</a>
             </div>
             <div className="flex items-center gap-4">
@@ -426,6 +429,123 @@ export default function Home() {
                 ))}
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Blog Preview Section */}
+      <section id="blog" className="py-24 relative overflow-hidden">
+        {/* Decorative Cube Icons */}
+        <div className="absolute top-20 right-10 opacity-10 animate-float hover:opacity-20 transition-all duration-700 hover:scale-110 hover:rotate-[50deg]" style={{animationDelay: '1.2s'}}>
+          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/FZfjwUzTsScMPRYL.png" alt="" className="h-28 transition-transform duration-700" />
+        </div>
+        <div className="absolute bottom-20 left-10 opacity-10 animate-float hover:opacity-20 transition-all duration-700 hover:scale-110 hover:rotate-[-50deg]" style={{animationDelay: '2.8s'}}>
+          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/FZfjwUzTsScMPRYL.png" alt="" className="h-32 transition-transform duration-700" />
+        </div>
+        
+        <div className="container relative z-10">
+          <div className="text-center mb-12">
+            <h2 className="font-display text-5xl md:text-6xl mb-4 text-primary text-glow-amber">
+              TECHNICAL INSIGHTS
+            </h2>
+            <p className="text-xl text-muted-foreground font-heading mb-8">
+              In-depth articles on VR/XR development, 3D art, and real-time rendering
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
+            {/* Featured Blog Article 1 */}
+            <Link href="/blog/optimizing-vr-meta-quest-2">
+              <Card className="group h-full overflow-hidden bg-card/50 backdrop-blur-sm border-border hover:border-primary/50 transition-all duration-300 hover:scale-105 cursor-pointer">
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1617802690992-15d93263d3a9?w=600&h=400&fit=crop"
+                    alt="VR Optimization"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+                  <div className="absolute top-4 right-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-heading font-semibold">
+                    FEATURED
+                  </div>
+                </div>
+                <div className="p-6 space-y-3">
+                  <span className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-heading font-semibold border border-primary/20">
+                    VR Development
+                  </span>
+                  <h3 className="font-heading text-lg font-semibold text-foreground group-hover:text-primary transition-colors line-clamp-2">
+                    Optimizing VR Experiences for Meta Quest 2
+                  </h3>
+                  <p className="text-sm text-muted-foreground line-clamp-2">
+                    Essential optimization techniques to achieve smooth 72Hz performance on Meta Quest 2.
+                  </p>
+                </div>
+              </Card>
+            </Link>
+
+            {/* Featured Blog Article 2 */}
+            <Link href="/blog/pbr-texturing-workflow-substance-unity">
+              <Card className="group h-full overflow-hidden bg-card/50 backdrop-blur-sm border-border hover:border-primary/50 transition-all duration-300 hover:scale-105 cursor-pointer">
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=600&h=400&fit=crop"
+                    alt="PBR Texturing"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+                  <div className="absolute top-4 right-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-heading font-semibold">
+                    FEATURED
+                  </div>
+                </div>
+                <div className="p-6 space-y-3">
+                  <span className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-heading font-semibold border border-primary/20">
+                    3D Art
+                  </span>
+                  <h3 className="font-heading text-lg font-semibold text-foreground group-hover:text-primary transition-colors line-clamp-2">
+                    PBR Texturing Workflow: Substance to Unity
+                  </h3>
+                  <p className="text-sm text-muted-foreground line-clamp-2">
+                    Complete guide to creating photorealistic PBR materials for real-time rendering.
+                  </p>
+                </div>
+              </Card>
+            </Link>
+
+            {/* Featured Blog Article 3 */}
+            <Link href="/blog/spatial-ui-design-vr">
+              <Card className="group h-full overflow-hidden bg-card/50 backdrop-blur-sm border-border hover:border-primary/50 transition-all duration-300 hover:scale-105 cursor-pointer">
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?w=600&h=400&fit=crop"
+                    alt="Spatial UI Design"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+                  <div className="absolute top-4 right-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-heading font-semibold">
+                    FEATURED
+                  </div>
+                </div>
+                <div className="p-6 space-y-3">
+                  <span className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-heading font-semibold border border-primary/20">
+                    XR Design
+                  </span>
+                  <h3 className="font-heading text-lg font-semibold text-foreground group-hover:text-primary transition-colors line-clamp-2">
+                    Designing Intuitive Spatial UI for VR
+                  </h3>
+                  <p className="text-sm text-muted-foreground line-clamp-2">
+                    Best practices for creating comfortable and accessible VR interfaces.
+                  </p>
+                </div>
+              </Card>
+            </Link>
+          </div>
+
+          <div className="text-center">
+            <Link href="/blog">
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-heading">
+                View All Articles
+                <ArrowRight size={18} className="ml-2" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
