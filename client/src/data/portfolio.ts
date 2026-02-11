@@ -115,7 +115,7 @@ export const projects: Project[] = [
     category: "VR",
     platform: "Meta Quest 2",
     description: "An immersive educational VR simulation designed for STEM learning, featuring a fully interactive chemistry laboratory environment. This project showcases advanced PBR materials, realistic lighting, and intuitive spatial UI design. Students can conduct virtual experiments with holographic molecular structures, periodic table interactions, and real-time chemical reactions. Optimized for standalone VR with efficient LOD systems and performance profiling to maintain 72fps on Meta Quest 2 hardware.",
-    image: "https://private-us-east-1.manuscdn.com/sessionFile/SymxxZFFWf71UsoZLrpb7i/sandbox/6ZDY6fmItm5Py3Bf5JeV5o-img-2_1770730622000_na1fn_dnItbGFiLXNob3djYXNl.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvU3lteHhaRkZXZjcxVXNvWkxycGI3aS9zYW5kYm94LzZaRFk2Zm1JdG01UHkzQmY1SmVWNW8taW1nLTJfMTc3MDczMDYyMjAwMF9uYTFmbl9kbkl0YkdGaUxYTm9iM2RqWVhObC5wbmc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=Pw-j8f-6rWB9TD6~r-YWxYC5Xp3o9kH0AlUn7VL3ofMPqEmD6nr4-kMsgLz9sF2riaGvkGopG6q5G8JS5F~2w5IdRexTvLZopOUissoO2HVHNuD73ibZwaU5GinW707OQvjNsHYdxE3U3cd-82jISizMnBZPh6vxXqAuGQVZ-LrfLrDL3Nw6qfQOsd19RbOPhYrAipDVvY-veoML~QPhh05dYhYpeiZYRjxcMTxqryIxz717p6WZ0gDq13f4KmO4f9aYqWrEs0pR0VmXUMe-S-WovSxglM13CFEXa69FzpcElou14tCtsB7jLsaZ-WOfEkM32ZO8W0RXT2vAunTQbA__",
+    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/qbSepkVkQAwuKsFc.jpg",
     tags: ["Unity", "VR", "Educational", "PBR", "Optimization"],
     featured: true,
     gallery: [
@@ -150,7 +150,7 @@ export const projects: Project[] = [
     category: "VR",
     platform: "Meta Quest 2 & WebXR",
     description: "A cross-platform educational VR experience bringing biology education to life through immersive 3D environments. Features detailed anatomical models, microscope simulations, and interactive cellular biology demonstrations. Built with Unity and optimized for both standalone VR and WebXR deployment, allowing access from VR headsets and web browsers. Implements efficient texture streaming and dynamic asset loading to support complex biological models while maintaining performance across platforms.",
-    image: "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=1200&q=80",
+    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/ItoBgpWAOgXQthUg.jpg",
     tags: ["Unity", "VR", "WebXR", "Cross-Platform", "Educational"],
     featured: true,
     gallery: [
@@ -179,7 +179,7 @@ export const projects: Project[] = [
     category: "VR",
     platform: "Meta Quest 2",
     description: "A cinematic virtual tour of a state library, showcasing architectural visualization excellence and cultural heritage preservation through XR technology. This project features photogrammetry-enhanced assets, volumetric lighting, and spatial audio design to create an authentic sense of presence. Users can explore grand reading halls, rare book collections, and architectural details with interactive information hotspots. Demonstrates expertise in large-scale environment optimization and narrative-driven VR experiences.",
-    image: "https://private-us-east-1.manuscdn.com/sessionFile/SymxxZFFWf71UsoZLrpb7i/sandbox/6ZDY6fmItm5Py3Bf5JeV5o-img-4_1770730625000_na1fn_YXJjaGl0ZWN0dXJhbC12ci1zcGFjZQ.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvU3lteHhaRkZXZjcxVXNvWkxycGI3aS9zYW5kYm94LzZaRFk2Zm1JdG01UHkzQmY1SmVWNW8taW1nLTRfMTc3MDczMDYyNTAwMF9uYTFmbl9ZWEpqYUdsMFpXTjBkWEpoYkMxMmNpMXpjR0ZqWlEucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTkyMCxoXzE5MjAvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=UWya5PVw3I1C3NYRjIvxLujUCulUNetLrqILZUQabZqRlz0o6QP7cNY7soqJnTKXZTo7nnx0EzLEXy9Ff~934bhVGFT9cSx-j36sxfIayxuZ7f-UPAdVulYgUMv5gun-MkXVPG~Z0v3goQy1uyJBOoaZb4MJ1I1mN~mWbAHD5DuiUgwWATBw5wA9HnulWzEVOC8qpEiAtM94lnzR-SPxGF2t7pHqIzolwgQ2~036~LTukOsteVpzBFr57vM0W4HGgsQ2ffZJEfM1gZs6nbhStsBMjDzvKrEp60Ge3PgGZ9qixiKIQ3~tstL6MlEJVFJPRem1csyojPM8DU6YJn6VWw__",
+    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/MzOEyNARdEtFPgDo.jpg",
     tags: ["Unity", "VR", "Architectural Viz", "Cultural Heritage"],
     featured: true,
     gallery: [
