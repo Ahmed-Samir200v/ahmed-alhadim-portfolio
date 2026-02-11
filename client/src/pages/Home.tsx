@@ -350,6 +350,256 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Tools & Technologies Section */}
+      <section id="tools" className="py-24 relative overflow-hidden bg-gradient-to-b from-background via-background/50 to-background">
+        <div className="container relative z-10">
+          <h2 className="font-display text-5xl md:text-6xl mb-4 text-primary text-glow-amber text-center">
+            TOOLS & TECHNOLOGIES
+          </h2>
+          <p className="text-xl text-muted-foreground text-center mb-16 font-heading">
+            Professional software and platforms I use to craft immersive experiences
+          </p>
+          
+          {/* Animated Logo Bar */}
+          <div className="relative">
+            {/* Gradient Overlays */}
+            <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none"></div>
+            <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none"></div>
+            
+            {/* Logo Container */}
+            <div className="overflow-hidden">
+              <div className="flex items-center gap-12 md:gap-16 py-8 animate-scroll-infinite">
+                {/* Unity */}
+                <div className="group flex-shrink-0 transform transition-all duration-500 hover:scale-110 hover:-translate-y-2">
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <img 
+                      src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/EAgBdRaJPJCAduCI.png" 
+                      alt="Unity" 
+                      className="h-16 md:h-20 w-auto filter brightness-90 group-hover:brightness-110 transition-all duration-500 relative z-10"
+                      style={{filter: 'drop-shadow(0 0 20px rgba(255,255,255,0.3))'}}
+                    />
+                  </div>
+                </div>
+
+                {/* Unreal Engine */}
+                <div className="group flex-shrink-0 transform transition-all duration-500 hover:scale-110 hover:-translate-y-2">
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <img 
+                      src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/UNlUKpwFZtIgbHgD.png" 
+                      alt="Unreal Engine" 
+                      className="h-16 md:h-20 w-auto filter brightness-90 group-hover:brightness-110 transition-all duration-500 relative z-10"
+                      style={{filter: 'drop-shadow(0 0 20px rgba(255,255,255,0.3))'}}
+                    />
+                  </div>
+                </div>
+
+                {/* 3ds Max */}
+                <div className="group flex-shrink-0 transform transition-all duration-500 hover:scale-110 hover:-translate-y-2">
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <img 
+                      src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/ZErRzZlvwJmKnYCB.png" 
+                      alt="3ds Max" 
+                      className="h-16 md:h-20 w-auto filter brightness-90 group-hover:brightness-110 transition-all duration-500 relative z-10"
+                      style={{filter: 'drop-shadow(0 0 20px rgba(255,255,255,0.3))'}}
+                    />
+                  </div>
+                </div>
+
+                {/* Substance Painter */}
+                <div className="group flex-shrink-0 transform transition-all duration-500 hover:scale-110 hover:-translate-y-2">
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <img 
+                      src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/aLPsDxUHcwdejyGx.png" 
+                      alt="Substance Painter" 
+                      className="h-16 md:h-20 w-auto filter brightness-90 group-hover:brightness-110 transition-all duration-500 relative z-10"
+                      style={{filter: 'drop-shadow(0 0 20px rgba(255,255,255,0.3))'}}
+                    />
+                  </div>
+                </div>
+
+                {/* Photoshop */}
+                <div className="group flex-shrink-0 transform transition-all duration-500 hover:scale-110 hover:-translate-y-2">
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <img 
+                      src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/kdwQLEYOBfqidnjy.png" 
+                      alt="Photoshop" 
+                      className="h-16 md:h-20 w-auto filter brightness-90 group-hover:brightness-110 transition-all duration-500 relative z-10"
+                      style={{filter: 'drop-shadow(0 0 20px rgba(255,255,255,0.3))'}}
+                    />
+                  </div>
+                </div>
+
+                {/* Meta Quest */}
+                <div className="group flex-shrink-0 transform transition-all duration-500 hover:scale-110 hover:-translate-y-2">
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <img 
+                      src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/MYDtzMGjuhJoTRqT.png" 
+                      alt="Meta Quest" 
+                      className="h-16 md:h-20 w-auto filter brightness-90 group-hover:brightness-110 transition-all duration-500 relative z-10"
+                      style={{filter: 'drop-shadow(0 0 20px rgba(255,255,255,0.3))'}}
+                    />
+                  </div>
+                </div>
+
+                {/* Pico */}
+                <div className="group flex-shrink-0 transform transition-all duration-500 hover:scale-110 hover:-translate-y-2">
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <img 
+                      src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/olKtIDKETrgjVstu.png" 
+                      alt="Pico" 
+                      className="h-16 md:h-20 w-auto filter brightness-90 group-hover:brightness-110 transition-all duration-500 relative z-10"
+                      style={{filter: 'drop-shadow(0 0 20px rgba(255,255,255,0.3))'}}
+                    />
+                  </div>
+                </div>
+
+                {/* Magic Leap */}
+                <div className="group flex-shrink-0 transform transition-all duration-500 hover:scale-110 hover:-translate-y-2">
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <img 
+                      src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/OvrjZinAOhUQrhzd.png" 
+                      alt="Magic Leap" 
+                      className="h-16 md:h-20 w-auto filter brightness-90 group-hover:brightness-110 transition-all duration-500 relative z-10"
+                      style={{filter: 'drop-shadow(0 0 20px rgba(255,255,255,0.3))'}}
+                    />
+                  </div>
+                </div>
+
+                {/* Figma */}
+                <div className="group flex-shrink-0 transform transition-all duration-500 hover:scale-110 hover:-translate-y-2">
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <img 
+                      src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/ytgacYxnngiMGwQr.png" 
+                      alt="Figma" 
+                      className="h-16 md:h-20 w-auto filter brightness-90 group-hover:brightness-110 transition-all duration-500 relative z-10"
+                      style={{filter: 'drop-shadow(0 0 20px rgba(255,255,255,0.3))'}}
+                    />
+                  </div>
+                </div>
+
+                {/* Duplicate logos for seamless loop */}
+                <div className="group flex-shrink-0 transform transition-all duration-500 hover:scale-110 hover:-translate-y-2">
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <img 
+                      src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/EAgBdRaJPJCAduCI.png" 
+                      alt="Unity" 
+                      className="h-16 md:h-20 w-auto filter brightness-90 group-hover:brightness-110 transition-all duration-500 relative z-10"
+                      style={{filter: 'drop-shadow(0 0 20px rgba(255,255,255,0.3))'}}
+                    />
+                  </div>
+                </div>
+
+                <div className="group flex-shrink-0 transform transition-all duration-500 hover:scale-110 hover:-translate-y-2">
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <img 
+                      src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/UNlUKpwFZtIgbHgD.png" 
+                      alt="Unreal Engine" 
+                      className="h-16 md:h-20 w-auto filter brightness-90 group-hover:brightness-110 transition-all duration-500 relative z-10"
+                      style={{filter: 'drop-shadow(0 0 20px rgba(255,255,255,0.3))'}}
+                    />
+                  </div>
+                </div>
+
+                <div className="group flex-shrink-0 transform transition-all duration-500 hover:scale-110 hover:-translate-y-2">
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <img 
+                      src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/ZErRzZlvwJmKnYCB.png" 
+                      alt="3ds Max" 
+                      className="h-16 md:h-20 w-auto filter brightness-90 group-hover:brightness-110 transition-all duration-500 relative z-10"
+                      style={{filter: 'drop-shadow(0 0 20px rgba(255,255,255,0.3))'}}
+                    />
+                  </div>
+                </div>
+
+                <div className="group flex-shrink-0 transform transition-all duration-500 hover:scale-110 hover:-translate-y-2">
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <img 
+                      src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/aLPsDxUHcwdejyGx.png" 
+                      alt="Substance Painter" 
+                      className="h-16 md:h-20 w-auto filter brightness-90 group-hover:brightness-110 transition-all duration-500 relative z-10"
+                      style={{filter: 'drop-shadow(0 0 20px rgba(255,255,255,0.3))'}}
+                    />
+                  </div>
+                </div>
+
+                <div className="group flex-shrink-0 transform transition-all duration-500 hover:scale-110 hover:-translate-y-2">
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <img 
+                      src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/kdwQLEYOBfqidnjy.png" 
+                      alt="Photoshop" 
+                      className="h-16 md:h-20 w-auto filter brightness-90 group-hover:brightness-110 transition-all duration-500 relative z-10"
+                      style={{filter: 'drop-shadow(0 0 20px rgba(255,255,255,0.3))'}}
+                    />
+                  </div>
+                </div>
+
+                <div className="group flex-shrink-0 transform transition-all duration-500 hover:scale-110 hover:-translate-y-2">
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <img 
+                      src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/MYDtzMGjuhJoTRqT.png" 
+                      alt="Meta Quest" 
+                      className="h-16 md:h-20 w-auto filter brightness-90 group-hover:brightness-110 transition-all duration-500 relative z-10"
+                      style={{filter: 'drop-shadow(0 0 20px rgba(255,255,255,0.3))'}}
+                    />
+                  </div>
+                </div>
+
+                <div className="group flex-shrink-0 transform transition-all duration-500 hover:scale-110 hover:-translate-y-2">
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <img 
+                      src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/olKtIDKETrgjVstu.png" 
+                      alt="Pico" 
+                      className="h-16 md:h-20 w-auto filter brightness-90 group-hover:brightness-110 transition-all duration-500 relative z-10"
+                      style={{filter: 'drop-shadow(0 0 20px rgba(255,255,255,0.3))'}}
+                    />
+                  </div>
+                </div>
+
+                <div className="group flex-shrink-0 transform transition-all duration-500 hover:scale-110 hover:-translate-y-2">
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <img 
+                      src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/OvrjZinAOhUQrhzd.png" 
+                      alt="Magic Leap" 
+                      className="h-16 md:h-20 w-auto filter brightness-90 group-hover:brightness-110 transition-all duration-500 relative z-10"
+                      style={{filter: 'drop-shadow(0 0 20px rgba(255,255,255,0.3))'}}
+                    />
+                  </div>
+                </div>
+
+                <div className="group flex-shrink-0 transform transition-all duration-500 hover:scale-110 hover:-translate-y-2">
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <img 
+                      src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/ytgacYxnngiMGwQr.png" 
+                      alt="Figma" 
+                      className="h-16 md:h-20 w-auto filter brightness-90 group-hover:brightness-110 transition-all duration-500 relative z-10"
+                      style={{filter: 'drop-shadow(0 0 20px rgba(255,255,255,0.3))'}}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials Section */}
       <section id="testimonials" className="py-24 relative overflow-hidden">
         {/* Decorative Cube Icons */}

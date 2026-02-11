@@ -379,3 +379,21 @@ html {
   border-top: 1px solid oklch(0.25 0.03 270);
   margin: 2rem 0;
 }
+
+/* Infinite scroll animation for Tools & Technologies section */
+@keyframes scroll-infinite {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll-infinite {
+  animation: scroll-infinite 40s linear infinite;
+}
+
+.animate-scroll-infinite:hover {
+  animation-play-state: paused;
+}
