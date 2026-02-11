@@ -212,7 +212,7 @@ export const projects: Project[] = [
     category: "VR",
     platform: "Meta Quest 2",
     description: "An interactive training simulation designed for emergency preparedness and survival skills education. Features realistic environmental hazards, decision-making scenarios, and procedural training modules. Built with Unity's physics system and custom interaction frameworks to create believable survival scenarios. Demonstrates expertise in game mechanics design, AI behavior systems, and immersive storytelling for training applications.",
-    image: "https://images.unsplash.com/photo-1614732414444-096e5f1122d5?w=1200&q=80",
+    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/FDNvOQVPKxSsKvAl.jpg",
     tags: ["Unity", "VR", "Training", "Simulation", "Game Mechanics"],
     featured: false,
     gallery: [
