@@ -125,25 +125,25 @@ export default function Home() {
             <div className="lg:col-span-2 hidden lg:flex items-center justify-center">
               <div className="relative w-full h-96">
                 {/* 3D Cube element */}
-                <div className="absolute top-0 right-0 w-32 h-32 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/40 flex items-center justify-center glow-amber animate-float shadow-2xl backdrop-blur-sm" style={{ transform: 'perspective(1000px) rotateX(15deg) rotateY(-15deg)' }}>
+                <div className="absolute top-0 right-0 w-32 h-32 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/40 flex items-center justify-center glow-amber animate-float shadow-2xl backdrop-blur-sm cursor-pointer transition-all duration-700 ease-out hover:scale-110 hover:shadow-[0_0_40px_rgba(255,179,71,0.6)]" style={{ transform: 'perspective(1000px) rotateX(15deg) rotateY(-15deg)', transition: 'transform 0.7s ease-out' }} onMouseEnter={(e) => e.currentTarget.style.transform = 'perspective(1000px) rotateX(25deg) rotateY(-35deg) scale(1.1)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'perspective(1000px) rotateX(15deg) rotateY(-15deg) scale(1)'}>
                   <div className="absolute inset-2 border border-primary/20 rounded-lg" style={{ transform: 'translateZ(20px)' }} />
                   <Code2 size={48} className="text-primary" style={{ transform: 'translateZ(40px)' }} />
                 </div>
                 
                 {/* 3D Hexagon element */}
-                <div className="absolute top-32 right-20 w-24 h-24 rounded-lg bg-gradient-to-br from-accent/20 to-accent/5 border border-accent/40 flex items-center justify-center glow-violet animate-float shadow-2xl backdrop-blur-sm" style={{ animationDelay: '0.5s', transform: 'perspective(1000px) rotateX(-10deg) rotateY(20deg)' }}>
+                <div className="absolute top-32 right-20 w-24 h-24 rounded-lg bg-gradient-to-br from-accent/20 to-accent/5 border border-accent/40 flex items-center justify-center glow-violet animate-float shadow-2xl backdrop-blur-sm cursor-pointer transition-all duration-700 ease-out hover:scale-110 hover:shadow-[0_0_40px_rgba(139,127,255,0.6)]" style={{ animationDelay: '0.5s', transform: 'perspective(1000px) rotateX(-10deg) rotateY(20deg)', transition: 'transform 0.7s ease-out' }} onMouseEnter={(e) => e.currentTarget.style.transform = 'perspective(1000px) rotateX(-30deg) rotateY(40deg) scale(1.1)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'perspective(1000px) rotateX(-10deg) rotateY(20deg) scale(1)'}>
                   <div className="absolute inset-1.5 border border-accent/20 rounded" style={{ transform: 'translateZ(15px)' }} />
                   <Layers size={36} className="text-accent" style={{ transform: 'translateZ(30px)' }} />
                 </div>
                 
                 {/* 3D Sphere-like element */}
-                <div className="absolute bottom-0 right-10 w-36 h-36 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/40 flex items-center justify-center glow-amber animate-float shadow-2xl backdrop-blur-sm" style={{ animationDelay: '1s', transform: 'perspective(1000px) rotateX(10deg) rotateY(-10deg)' }}>
+                <div className="absolute bottom-0 right-10 w-36 h-36 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/40 flex items-center justify-center glow-amber animate-float shadow-2xl backdrop-blur-sm cursor-pointer transition-all duration-700 ease-out hover:scale-110 hover:shadow-[0_0_40px_rgba(255,179,71,0.6)]" style={{ animationDelay: '1s', transform: 'perspective(1000px) rotateX(10deg) rotateY(-10deg)', transition: 'transform 0.7s ease-out' }} onMouseEnter={(e) => e.currentTarget.style.transform = 'perspective(1000px) rotateX(30deg) rotateY(-30deg) scale(1.1) rotate(10deg)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'perspective(1000px) rotateX(10deg) rotateY(-10deg) scale(1) rotate(0deg)'}>
                   <div className="absolute inset-3 border border-primary/20 rounded-xl" style={{ transform: 'translateZ(25px)' }} />
                   <Sparkles size={52} className="text-primary" style={{ transform: 'translateZ(50px)' }} />
                 </div>
                 
                 {/* Additional small 3D element */}
-                <div className="absolute top-48 right-48 w-16 h-16 rounded-lg bg-gradient-to-br from-accent/15 to-accent/5 border border-accent/30 flex items-center justify-center glow-violet animate-float shadow-xl backdrop-blur-sm" style={{ animationDelay: '1.5s', transform: 'perspective(1000px) rotateX(20deg) rotateY(-25deg)' }}>
+                <div className="absolute top-48 right-48 w-16 h-16 rounded-lg bg-gradient-to-br from-accent/15 to-accent/5 border border-accent/30 flex items-center justify-center glow-violet animate-float shadow-xl backdrop-blur-sm cursor-pointer transition-all duration-700 ease-out hover:scale-125 hover:shadow-[0_0_30px_rgba(139,127,255,0.5)]" style={{ animationDelay: '1.5s', transform: 'perspective(1000px) rotateX(20deg) rotateY(-25deg)', transition: 'transform 0.7s ease-out' }} onMouseEnter={(e) => e.currentTarget.style.transform = 'perspective(1000px) rotateX(40deg) rotateY(-45deg) scale(1.25) rotate(180deg)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'perspective(1000px) rotateX(20deg) rotateY(-25deg) scale(1) rotate(0deg)'}>
                   <div className="w-8 h-8 border-2 border-accent/40 rounded-full" />
                 </div>
               </div>
