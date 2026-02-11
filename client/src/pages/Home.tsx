@@ -32,9 +32,9 @@ export default function Home() {
           <div className="flex items-center justify-between">
             <a href="#" className="flex items-center">
           <img
-            src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/FZfjwUzTsScMPRYL.png"
-            alt="Al-Hadim Cube Icon"
-            className="h-12 transition-transform duration-300 hover:scale-110 hover:rotate-12"
+            src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/sftHyPWzPimOxihY.png"
+            alt="Al-Hadim Logo"
+            className="h-10 transition-transform duration-300 hover:scale-105"
           />
             </a>
             <div className="hidden md:flex items-center gap-8">
@@ -181,11 +181,11 @@ export default function Home() {
       {/* Projects Section - Film reel style */}
       <section id="projects" className="py-24 relative overflow-hidden">
         {/* Decorative Cube Icons */}
-        <div className="absolute top-40 left-20 opacity-10 animate-float" style={{animationDelay: '0.5s'}}>
-          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/FZfjwUzTsScMPRYL.png" alt="" className="h-28 rotate-45" />
+        <div className="absolute top-40 left-20 opacity-10 animate-float hover:opacity-20 transition-all duration-700 hover:scale-110 hover:rotate-[60deg]" style={{animationDelay: '0.5s'}}>
+          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/FZfjwUzTsScMPRYL.png" alt="" className="h-28 rotate-45 transition-transform duration-700" />
         </div>
-        <div className="absolute bottom-40 right-20 opacity-10 animate-float" style={{animationDelay: '2s'}}>
-          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/FZfjwUzTsScMPRYL.png" alt="" className="h-36 -rotate-45" />
+        <div className="absolute bottom-40 right-20 opacity-10 animate-float hover:opacity-20 transition-all duration-700 hover:scale-110 hover:rotate-[-60deg]" style={{animationDelay: '2s'}}>
+          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/FZfjwUzTsScMPRYL.png" alt="" className="h-36 -rotate-45 transition-transform duration-700" />
         </div>
         
         <div className="container relative z-10">
@@ -270,11 +270,11 @@ export default function Home() {
       {/* Skills Section */}
       <section id="skills" className="py-24 bg-card/30 relative overflow-hidden">
         {/* Decorative Cube Icons */}
-        <div className="absolute top-10 right-40 opacity-10 animate-float" style={{animationDelay: '1s'}}>
-          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/FZfjwUzTsScMPRYL.png" alt="" className="h-20 rotate-90" />
+        <div className="absolute top-10 right-40 opacity-10 animate-float hover:opacity-20 transition-all duration-700 hover:scale-125 hover:rotate-[120deg]" style={{animationDelay: '1s'}}>
+          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/FZfjwUzTsScMPRYL.png" alt="" className="h-20 rotate-90 transition-transform duration-700" />
         </div>
-        <div className="absolute bottom-10 left-40 opacity-10 animate-float" style={{animationDelay: '2.5s'}}>
-          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/FZfjwUzTsScMPRYL.png" alt="" className="h-24 -rotate-90" />
+        <div className="absolute bottom-10 left-40 opacity-10 animate-float hover:opacity-20 transition-all duration-700 hover:scale-125 hover:rotate-[-120deg]" style={{animationDelay: '2.5s'}}>
+          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/FZfjwUzTsScMPRYL.png" alt="" className="h-24 -rotate-90 transition-transform duration-700" />
         </div>
         
         <div className="container relative z-10">
@@ -304,11 +304,11 @@ export default function Home() {
       {/* Experience Section */}
       <section id="experience" className="py-24 relative overflow-hidden">
         {/* Decorative Cube Icons */}
-        <div className="absolute top-20 left-10 opacity-10 animate-float" style={{animationDelay: '0.3s'}}>
-          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/FZfjwUzTsScMPRYL.png" alt="" className="h-32 rotate-180" />
+        <div className="absolute top-20 left-10 opacity-10 animate-float hover:opacity-20 transition-all duration-700 hover:scale-110 hover:rotate-[210deg]" style={{animationDelay: '0.3s'}}>
+          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/FZfjwUzTsScMPRYL.png" alt="" className="h-32 rotate-180 transition-transform duration-700" />
         </div>
-        <div className="absolute bottom-20 right-10 opacity-10 animate-float" style={{animationDelay: '1.8s'}}>
-          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/FZfjwUzTsScMPRYL.png" alt="" className="h-28" />
+        <div className="absolute bottom-20 right-10 opacity-10 animate-float hover:opacity-20 transition-all duration-700 hover:scale-110 hover:rotate-[30deg]" style={{animationDelay: '1.8s'}}>
+          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/FZfjwUzTsScMPRYL.png" alt="" className="h-28 transition-transform duration-700" />
         </div>
         
         <div className="container relative z-10">
@@ -341,6 +341,91 @@ export default function Home() {
                 </ul>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section id="testimonials" className="py-24 relative overflow-hidden">
+        {/* Decorative Cube Icons */}
+        <div className="absolute top-10 right-20 opacity-10 animate-float hover:opacity-20 transition-all duration-700 hover:scale-120 hover:rotate-[75deg]" style={{animationDelay: '0.8s'}}>
+          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/FZfjwUzTsScMPRYL.png" alt="" className="h-24 rotate-45 transition-transform duration-700" />
+        </div>
+        <div className="absolute bottom-10 left-20 opacity-10 animate-float hover:opacity-20 transition-all duration-700 hover:scale-120 hover:rotate-[-75deg]" style={{animationDelay: '2.2s'}}>
+          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/FZfjwUzTsScMPRYL.png" alt="" className="h-28 -rotate-45 transition-transform duration-700" />
+        </div>
+        
+        <div className="container relative z-10">
+          <h2 className="font-display text-5xl md:text-6xl mb-4 text-primary text-glow-amber text-center">
+            CLIENT TESTIMONIALS
+          </h2>
+          <p className="text-xl text-muted-foreground text-center mb-16 font-heading">
+            What clients and colleagues say about working with me
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {/* Testimonial 1 */}
+            <div className="bg-card/50 backdrop-blur-sm border border-border rounded-lg p-8 hover:border-primary/50 transition-all duration-300 hover:scale-105">
+              <div className="flex items-start gap-4 mb-6">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center text-2xl font-bold text-primary">
+                  M
+                </div>
+                <div>
+                  <h3 className="font-heading text-lg text-foreground">Mohammed Al-Rashidi</h3>
+                  <p className="text-sm text-muted-foreground">Project Manager, Ekson</p>
+                </div>
+              </div>
+              <p className="text-muted-foreground leading-relaxed">
+                "Ahmed's expertise in VR development transformed our educational platform. His attention to detail and ability to optimize complex 3D environments for Quest 2 exceeded our expectations. A true professional."
+              </p>
+              <div className="flex gap-1 mt-4">
+                {[...Array(5)].map((_, i) => (
+                  <span key={i} className="text-primary text-xl">★</span>
+                ))}
+              </div>
+            </div>
+
+            {/* Testimonial 2 */}
+            <div className="bg-card/50 backdrop-blur-sm border border-border rounded-lg p-8 hover:border-primary/50 transition-all duration-300 hover:scale-105">
+              <div className="flex items-start gap-4 mb-6">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center text-2xl font-bold text-primary">
+                  S
+                </div>
+                <div>
+                  <h3 className="font-heading text-lg text-foreground">Sarah Johnson</h3>
+                  <p className="text-sm text-muted-foreground">Creative Director, SPARK td</p>
+                </div>
+              </div>
+              <p className="text-muted-foreground leading-relaxed">
+                "Working with Ahmed was seamless. His 3D assets are production-ready and beautifully crafted. He understands the technical constraints of real-time rendering while maintaining artistic excellence."
+              </p>
+              <div className="flex gap-1 mt-4">
+                {[...Array(5)].map((_, i) => (
+                  <span key={i} className="text-primary text-xl">★</span>
+                ))}
+              </div>
+            </div>
+
+            {/* Testimonial 3 */}
+            <div className="bg-card/50 backdrop-blur-sm border border-border rounded-lg p-8 hover:border-primary/50 transition-all duration-300 hover:scale-105">
+              <div className="flex items-start gap-4 mb-6">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center text-2xl font-bold text-primary">
+                  K
+                </div>
+                <div>
+                  <h3 className="font-heading text-lg text-foreground">Dr. Khalid Al-Mansoori</h3>
+                  <p className="text-sm text-muted-foreground">Director, Harmony International Schools</p>
+                </div>
+              </div>
+              <p className="text-muted-foreground leading-relaxed">
+                "Ahmed created immersive VR labs that revolutionized our STEM curriculum. Students are more engaged than ever. His work combines educational value with cutting-edge technology perfectly."
+              </p>
+              <div className="flex gap-1 mt-4">
+                {[...Array(5)].map((_, i) => (
+                  <span key={i} className="text-primary text-xl">★</span>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
