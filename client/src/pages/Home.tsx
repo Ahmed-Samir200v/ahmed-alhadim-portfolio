@@ -31,11 +31,11 @@ export default function Home() {
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <a href="#" className="flex items-center">
-              <img 
-                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/qgUzCKyVwFCPuUzF.png" 
-                alt="Al-Hadim Logo" 
-                className="h-10 w-auto transition-transform hover:scale-105"
-              />
+          <img
+            src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/sftHyPWzPimOxihY.png"
+            alt="Al-Hadim Cube Icon"
+            className="h-12 transition-transform duration-300 hover:scale-110 hover:rotate-12"
+          />
             </a>
             <div className="hidden md:flex items-center gap-8">
               <a href="#about" className="text-sm font-heading hover:text-primary transition-colors">About</a>
@@ -157,8 +157,16 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-24 bg-card/30">
-        <div className="container">
+      <section id="about" className="py-24 bg-card/30 relative overflow-hidden">
+        {/* Decorative Cube Icons */}
+        <div className="absolute top-20 right-10 opacity-10 animate-float" style={{animationDelay: '0s'}}>
+          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/sftHyPWzPimOxihY.png" alt="" className="h-32 rotate-12" />
+        </div>
+        <div className="absolute bottom-20 left-10 opacity-10 animate-float" style={{animationDelay: '1.5s'}}>
+          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/sftHyPWzPimOxihY.png" alt="" className="h-24 -rotate-12" />
+        </div>
+        
+        <div className="container relative z-10">
           <div className="max-w-4xl mx-auto">
             <h2 className="font-display text-5xl md:text-6xl mb-8 text-primary text-glow-amber">
               ABOUT ME
@@ -171,8 +179,16 @@ export default function Home() {
       </section>
 
       {/* Projects Section - Film reel style */}
-      <section id="projects" className="py-24">
-        <div className="container">
+      <section id="projects" className="py-24 relative overflow-hidden">
+        {/* Decorative Cube Icons */}
+        <div className="absolute top-40 left-20 opacity-10 animate-float" style={{animationDelay: '0.5s'}}>
+          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/sftHyPWzPimOxihY.png" alt="" className="h-28 rotate-45" />
+        </div>
+        <div className="absolute bottom-40 right-20 opacity-10 animate-float" style={{animationDelay: '2s'}}>
+          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/sftHyPWzPimOxihY.png" alt="" className="h-36 -rotate-45" />
+        </div>
+        
+        <div className="container relative z-10">
           <div className="mb-12">
             <h2 className="font-display text-5xl md:text-6xl mb-6 text-primary text-glow-amber">
               FEATURED WORK
@@ -252,8 +268,16 @@ export default function Home() {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-24 bg-card/30">
-        <div className="container">
+      <section id="skills" className="py-24 bg-card/30 relative overflow-hidden">
+        {/* Decorative Cube Icons */}
+        <div className="absolute top-10 right-40 opacity-10 animate-float" style={{animationDelay: '1s'}}>
+          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/sftHyPWzPimOxihY.png" alt="" className="h-20 rotate-90" />
+        </div>
+        <div className="absolute bottom-10 left-40 opacity-10 animate-float" style={{animationDelay: '2.5s'}}>
+          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/sftHyPWzPimOxihY.png" alt="" className="h-24 -rotate-90" />
+        </div>
+        
+        <div className="container relative z-10">
           <h2 className="font-display text-5xl md:text-6xl mb-12 text-primary text-glow-amber">
             TECHNICAL EXPERTISE
           </h2>
@@ -278,8 +302,16 @@ export default function Home() {
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="py-24">
-        <div className="container">
+      <section id="experience" className="py-24 relative overflow-hidden">
+        {/* Decorative Cube Icons */}
+        <div className="absolute top-20 left-10 opacity-10 animate-float" style={{animationDelay: '0.3s'}}>
+          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/sftHyPWzPimOxihY.png" alt="" className="h-32 rotate-180" />
+        </div>
+        <div className="absolute bottom-20 right-10 opacity-10 animate-float" style={{animationDelay: '1.8s'}}>
+          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/sftHyPWzPimOxihY.png" alt="" className="h-28" />
+        </div>
+        
+        <div className="container relative z-10">
           <h2 className="font-display text-5xl md:text-6xl mb-12 text-primary text-glow-amber">
             EXPERIENCE
           </h2>
@@ -342,23 +374,55 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 border-t border-border">
+      <footer className="bg-background border-t border-border py-12">
         <div className="container">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-sm text-muted-foreground font-accent">
-              © 2026 {personalInfo.name}. All rights reserved.
-            </p>
-            <div className="flex items-center gap-6">
-              <a href={personalInfo.email} className="text-sm text-muted-foreground hover:text-primary transition-colors font-accent">
-                Email
+          <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+            {/* Logo and Brand */}
+            <div className="flex items-center gap-4">
+              <img
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/sftHyPWzPimOxihY.png"
+                alt="Al-Hadim Cube Icon"
+                className="h-16 animate-float"
+              />
+              <div>
+                <h3 className="text-xl font-display font-bold text-amber">AHMED ALHADIM</h3>
+                <p className="text-sm text-muted-foreground font-accent">Senior 3D Artist | Game & XR Specialist</p>
+              </div>
+            </div>
+
+            {/* Social Links */}
+            <div className="flex gap-6">
+              <a
+                href={`mailto:${personalInfo.email}`}
+                className="text-muted-foreground hover:text-amber transition-colors"
+                aria-label="Email"
+              >
+                <Mail className="h-6 w-6" />
               </a>
-              <a href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-primary transition-colors font-accent">
-                LinkedIn
+              <a
+                href={personalInfo.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-violet transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="h-6 w-6" />
               </a>
-              <a href={personalInfo.youtube} target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-primary transition-colors font-accent">
-                YouTube
+              <a
+                href={personalInfo.youtube}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-amber transition-colors"
+                aria-label="YouTube"
+              >
+                <Youtube className="h-6 w-6" />
               </a>
             </div>
+          </div>
+
+          {/* Copyright */}
+          <div className="mt-8 pt-8 border-t border-border text-center text-sm text-muted-foreground font-accent">
+            <p>© {new Date().getFullYear()} {personalInfo.name}. All rights reserved.</p>
           </div>
         </div>
       </footer>
