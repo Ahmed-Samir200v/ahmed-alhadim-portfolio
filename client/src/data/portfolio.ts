@@ -106,6 +106,10 @@ export interface Project {
   technicalDetails?: string[];
   challenges?: string;
   outcome?: string;
+  role?: string;
+  duration?: string;
+  technologies?: string[];
+  keyFeatures?: string[];
 }
 
 export const projects: Project[] = [
@@ -241,10 +245,39 @@ export const projects: Project[] = [
     title: "Nakhil Castle VR Experience",
     category: "VR",
     platform: "VR Platforms",
-    description: "A cultural heritage VR experience showcasing Omani architecture and historical preservation. This project combines photogrammetry, traditional 3D modeling, and historical research to recreate the castle's grandeur in virtual reality. Features detailed Middle Eastern architectural elements, authentic material work, and atmospheric lighting that captures the essence of the location. Optimized for smooth navigation through large-scale environments while maintaining visual fidelity.",
-    image: "https://images.unsplash.com/photo-1564769625905-50e93615e769?w=1200&q=80",
-    tags: ["VR", "Cultural Heritage", "Photogrammetry", "Architecture"],
-    featured: false,
+    description: "An immersive cultural heritage VR experience that digitally preserves and showcases the historic Nakhil Fort in Oman. This project combines photogrammetry, traditional 3D modeling, and extensive historical research to recreate the castle's architectural grandeur in virtual reality. Features meticulously detailed Middle Eastern architectural elements including defensive towers, fortified walls, traditional courtyards, and authentic material work. Advanced atmospheric lighting captures the golden hour ambiance and the fort's majestic presence within its natural landscape. The experience includes interactive educational elements about Omani history and architectural techniques. Optimized for smooth navigation through large-scale environments while maintaining exceptional visual fidelity across VR platforms.",
+    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/mdmsoGCtyIPPuBHS.jpg",
+    tags: ["VR", "Cultural Heritage", "Photogrammetry", "Architecture", "Historical Preservation"],
+    featured: true,
+    gallery: [
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/mdmsoGCtyIPPuBHS.jpg",
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/GVLRELtagavMgLrU.png",
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/JnMJdJRGzZrKnywQ.jpg",
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/hLgcNbiJvJBufTdK.jpg",
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/AohtPApzNHPouMZT.jpg",
+    ],
+    role: "Lead 3D Artist & VR Developer",
+    duration: "4 months",
+    technologies: [
+      "Unity Engine",
+      "Photogrammetry (RealityCapture)",
+      "3ds Max",
+      "Substance Painter",
+      "ZBrush",
+      "VR Optimization",
+    ],
+    keyFeatures: [
+      "Photorealistic recreation of Nakhil Fort using photogrammetry and traditional modeling techniques",
+      "Detailed architectural elements including defensive towers, fortified walls, and traditional courtyards",
+      "Authentic PBR materials capturing weathered stone, traditional plasterwork, and historical textures",
+      "Dynamic lighting system showcasing golden hour ambiance and atmospheric conditions",
+      "Interactive educational hotspots providing historical context and architectural insights",
+      "Optimized large-scale environment navigation with seamless teleportation and smooth locomotion",
+      "Cultural preservation through accurate historical research and consultation with local experts",
+      "Ambient soundscape featuring traditional Omani music and environmental audio",
+    ],
+    challenges: "The primary challenge was balancing historical accuracy with VR performance optimization. Photogrammetry scans of the fort produced extremely high-polygon models that required extensive retopology and LOD creation while preserving architectural details. Recreating authentic weathered stone textures and traditional Omani plasterwork demanded careful material research and PBR workflow optimization. The large-scale environment spanning multiple courtyards and towers required efficient occlusion culling and streaming systems. Additionally, collaborating with cultural heritage experts to ensure historical accuracy while maintaining creative freedom for VR-specific enhancements required careful communication and iterative feedback cycles.",
+    outcome: "Successfully delivered an immersive cultural heritage experience that serves both as a digital preservation tool and an educational platform for Omani history. The project demonstrates expertise in photogrammetry workflows, large-scale environment optimization, and culturally sensitive design. The VR experience has been showcased at cultural exhibitions and serves as a reference for future heritage preservation projects. The realistic architectural recreation and atmospheric presentation effectively transport users to this historic landmark, creating an engaging educational tool that combines technical excellence with cultural respect.",
   },
   {
     id: "game-asset-library",

@@ -14,6 +14,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Mail, Linkedin, Youtube, ArrowRight, Code2, Layers, Sparkles } from "lucide-react";
 import { personalInfo, projects, skills, experience } from "@/data/portfolio";
+import Header from "@/components/Header";
 
 export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
@@ -26,8 +27,9 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
+      <Header />
+      {/* Old Navigation - Keeping for reference, will be removed */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border" style={{display: 'none'}}>
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <a href="#" className="flex items-center">
