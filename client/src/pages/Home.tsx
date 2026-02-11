@@ -32,7 +32,7 @@ export default function Home() {
           <div className="flex items-center justify-between">
             <a href="#" className="flex items-center">
           <img
-            src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/sftHyPWzPimOxihY.png"
+            src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/FZfjwUzTsScMPRYL.png"
             alt="Al-Hadim Cube Icon"
             className="h-12 transition-transform duration-300 hover:scale-110 hover:rotate-12"
           />
@@ -160,10 +160,10 @@ export default function Home() {
       <section id="about" className="py-24 bg-card/30 relative overflow-hidden">
         {/* Decorative Cube Icons */}
         <div className="absolute top-20 right-10 opacity-10 animate-float" style={{animationDelay: '0s'}}>
-          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/sftHyPWzPimOxihY.png" alt="" className="h-32 rotate-12" />
+          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/FZfjwUzTsScMPRYL.png" alt="" className="h-32 rotate-12" />
         </div>
         <div className="absolute bottom-20 left-10 opacity-10 animate-float" style={{animationDelay: '1.5s'}}>
-          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/sftHyPWzPimOxihY.png" alt="" className="h-24 -rotate-12" />
+          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/FZfjwUzTsScMPRYL.png" alt="" className="h-24 -rotate-12" />
         </div>
         
         <div className="container relative z-10">
@@ -182,10 +182,10 @@ export default function Home() {
       <section id="projects" className="py-24 relative overflow-hidden">
         {/* Decorative Cube Icons */}
         <div className="absolute top-40 left-20 opacity-10 animate-float" style={{animationDelay: '0.5s'}}>
-          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/sftHyPWzPimOxihY.png" alt="" className="h-28 rotate-45" />
+          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/FZfjwUzTsScMPRYL.png" alt="" className="h-28 rotate-45" />
         </div>
         <div className="absolute bottom-40 right-20 opacity-10 animate-float" style={{animationDelay: '2s'}}>
-          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/sftHyPWzPimOxihY.png" alt="" className="h-36 -rotate-45" />
+          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/FZfjwUzTsScMPRYL.png" alt="" className="h-36 -rotate-45" />
         </div>
         
         <div className="container relative z-10">
@@ -271,10 +271,10 @@ export default function Home() {
       <section id="skills" className="py-24 bg-card/30 relative overflow-hidden">
         {/* Decorative Cube Icons */}
         <div className="absolute top-10 right-40 opacity-10 animate-float" style={{animationDelay: '1s'}}>
-          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/sftHyPWzPimOxihY.png" alt="" className="h-20 rotate-90" />
+          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/FZfjwUzTsScMPRYL.png" alt="" className="h-20 rotate-90" />
         </div>
         <div className="absolute bottom-10 left-40 opacity-10 animate-float" style={{animationDelay: '2.5s'}}>
-          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/sftHyPWzPimOxihY.png" alt="" className="h-24 -rotate-90" />
+          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/FZfjwUzTsScMPRYL.png" alt="" className="h-24 -rotate-90" />
         </div>
         
         <div className="container relative z-10">
@@ -305,10 +305,10 @@ export default function Home() {
       <section id="experience" className="py-24 relative overflow-hidden">
         {/* Decorative Cube Icons */}
         <div className="absolute top-20 left-10 opacity-10 animate-float" style={{animationDelay: '0.3s'}}>
-          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/sftHyPWzPimOxihY.png" alt="" className="h-32 rotate-180" />
+          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/FZfjwUzTsScMPRYL.png" alt="" className="h-32 rotate-180" />
         </div>
         <div className="absolute bottom-20 right-10 opacity-10 animate-float" style={{animationDelay: '1.8s'}}>
-          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/sftHyPWzPimOxihY.png" alt="" className="h-28" />
+          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/FZfjwUzTsScMPRYL.png" alt="" className="h-28" />
         </div>
         
         <div className="container relative z-10">
@@ -380,7 +380,7 @@ export default function Home() {
             {/* Logo and Brand */}
             <div className="flex items-center gap-4">
               <img
-                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/sftHyPWzPimOxihY.png"
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/FZfjwUzTsScMPRYL.png"
                 alt="Al-Hadim Cube Icon"
                 className="h-16 animate-float"
               />
