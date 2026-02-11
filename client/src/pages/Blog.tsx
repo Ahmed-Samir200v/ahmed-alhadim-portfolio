@@ -4,7 +4,9 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { blogArticles, getAllCategories, getArticlesByCategory } from '@/data/blogData';
-import { Calendar, Clock, Search, Tag } from 'lucide-react';
+import { Calendar, Clock, Search, Tag, ArrowLeft } from 'lucide-react';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 export default function Blog() {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -24,8 +26,18 @@ export default function Blog() {
 
   return (
     <div className="min-h-screen bg-background">
+      <Header />
+      
       {/* Hero Section */}
-      <section className="py-24 relative overflow-hidden bg-gradient-to-b from-background via-card/30 to-background">
+      <section className="pt-32 pb-24 relative overflow-hidden bg-gradient-to-b from-background via-card/30 to-background">
+        <div className="container">
+          <Link href="/">
+            <Button variant="outline" className="mb-8 border-border hover:border-primary/50 font-heading">
+              <ArrowLeft size={18} className="mr-2" />
+              Back to Home
+            </Button>
+          </Link>
+        </div>
         {/* Decorative Cube Icons */}
         <div className="absolute top-20 right-20 opacity-10 animate-float hover:opacity-20 transition-all duration-700 hover:scale-110 hover:rotate-[45deg]" style={{animationDelay: '0.5s'}}>
           <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/FZfjwUzTsScMPRYL.png" alt="" className="h-32 transition-transform duration-700" />
@@ -176,6 +188,8 @@ export default function Blog() {
           </div>
         </div>
       </section>
+      
+      <Footer />
     </div>
   );
 }

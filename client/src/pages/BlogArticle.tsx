@@ -4,6 +4,8 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { getArticleBySlug, getRelatedArticles } from '@/data/blogData';
 import { Calendar, Clock, ArrowLeft, Tag, Share2 } from 'lucide-react';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 export default function BlogArticle() {
   const params = useParams<{ slug: string }>();
@@ -17,17 +19,21 @@ export default function BlogArticle() {
 
   if (!article) {
     return (
-      <div className="min-h-screen bg-background flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="font-display text-4xl mb-4 text-primary">Article Not Found</h1>
-          <p className="text-muted-foreground mb-8">The article you're looking for doesn't exist.</p>
-          <Link href="/blog">
-            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-heading">
-              <ArrowLeft size={18} className="mr-2" />
-              Back to Blog
-            </Button>
-          </Link>
+      <div className="min-h-screen bg-background">
+        <Header />
+        <div className="min-h-screen flex items-center justify-center">
+          <div className="text-center">
+            <h1 className="font-display text-4xl mb-4 text-primary">Article Not Found</h1>
+            <p className="text-muted-foreground mb-8">The article you're looking for doesn't exist.</p>
+            <Link href="/blog">
+              <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-heading">
+                <ArrowLeft size={18} className="mr-2" />
+                Back to Blog
+              </Button>
+            </Link>
+          </div>
         </div>
+        <Footer />
       </div>
     );
   }
@@ -50,8 +56,10 @@ export default function BlogArticle() {
 
   return (
     <div className="min-h-screen bg-background">
+      <Header />
+      
       {/* Hero Section */}
-      <section className="relative py-16 overflow-hidden">
+      <section className="relative pt-24 pb-16 overflow-hidden">
         {/* Cover Image Background */}
         <div className="absolute inset-0 z-0">
           <img
@@ -232,6 +240,8 @@ export default function BlogArticle() {
           </div>
         </div>
       </section>
+      
+      <Footer />
     </div>
   );
 }

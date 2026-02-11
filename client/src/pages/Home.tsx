@@ -42,8 +42,8 @@ export default function Home() {
               <a href="#projects" className="text-sm font-heading hover:text-primary transition-colors">Projects</a>
               <a href="#experience" className="text-sm font-heading hover:text-primary transition-colors">Experience</a>
               <a href="#skills" className="text-sm font-heading hover:text-primary transition-colors">Skills</a>
-              <Link href="/blog">
-                <a className="text-sm font-heading hover:text-primary transition-colors">Blog</a>
+              <Link href="/blog" className="text-sm font-heading hover:text-primary transition-colors">
+                Blog
               </Link>
               <a href="#contact" className="text-sm font-heading hover:text-primary transition-colors">Contact</a>
             </div>
