@@ -31,7 +31,7 @@ export default function Home() {
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="font-display text-2xl tracking-wider text-primary">
-              {personalInfo.name.split(" ")[0]}
+              ALHADIM
             </div>
             <div className="hidden md:flex items-center gap-8">
               <a href="#about" className="text-sm font-heading hover:text-primary transition-colors">About</a>
@@ -121,17 +121,30 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right side - floating icons */}
+            {/* Right side - 3D floating elements */}
             <div className="lg:col-span-2 hidden lg:flex items-center justify-center">
               <div className="relative w-full h-96">
-                <div className="absolute top-0 right-0 w-24 h-24 rounded-lg bg-card border border-primary/30 flex items-center justify-center glow-amber animate-float">
-                  <Code2 size={40} className="text-primary" />
+                {/* 3D Cube element */}
+                <div className="absolute top-0 right-0 w-32 h-32 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/40 flex items-center justify-center glow-amber animate-float shadow-2xl backdrop-blur-sm" style={{ transform: 'perspective(1000px) rotateX(15deg) rotateY(-15deg)' }}>
+                  <div className="absolute inset-2 border border-primary/20 rounded-lg" style={{ transform: 'translateZ(20px)' }} />
+                  <Code2 size={48} className="text-primary" style={{ transform: 'translateZ(40px)' }} />
                 </div>
-                <div className="absolute top-32 right-20 w-20 h-20 rounded-lg bg-card border border-accent/30 flex items-center justify-center glow-violet animate-float" style={{ animationDelay: '0.5s' }}>
-                  <Layers size={32} className="text-accent" />
+                
+                {/* 3D Hexagon element */}
+                <div className="absolute top-32 right-20 w-24 h-24 rounded-lg bg-gradient-to-br from-accent/20 to-accent/5 border border-accent/40 flex items-center justify-center glow-violet animate-float shadow-2xl backdrop-blur-sm" style={{ animationDelay: '0.5s', transform: 'perspective(1000px) rotateX(-10deg) rotateY(20deg)' }}>
+                  <div className="absolute inset-1.5 border border-accent/20 rounded" style={{ transform: 'translateZ(15px)' }} />
+                  <Layers size={36} className="text-accent" style={{ transform: 'translateZ(30px)' }} />
                 </div>
-                <div className="absolute bottom-0 right-10 w-28 h-28 rounded-lg bg-card border border-primary/30 flex items-center justify-center glow-amber animate-float" style={{ animationDelay: '1s' }}>
-                  <Sparkles size={44} className="text-primary" />
+                
+                {/* 3D Sphere-like element */}
+                <div className="absolute bottom-0 right-10 w-36 h-36 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/40 flex items-center justify-center glow-amber animate-float shadow-2xl backdrop-blur-sm" style={{ animationDelay: '1s', transform: 'perspective(1000px) rotateX(10deg) rotateY(-10deg)' }}>
+                  <div className="absolute inset-3 border border-primary/20 rounded-xl" style={{ transform: 'translateZ(25px)' }} />
+                  <Sparkles size={52} className="text-primary" style={{ transform: 'translateZ(50px)' }} />
+                </div>
+                
+                {/* Additional small 3D element */}
+                <div className="absolute top-48 right-48 w-16 h-16 rounded-lg bg-gradient-to-br from-accent/15 to-accent/5 border border-accent/30 flex items-center justify-center glow-violet animate-float shadow-xl backdrop-blur-sm" style={{ animationDelay: '1.5s', transform: 'perspective(1000px) rotateX(20deg) rotateY(-25deg)' }}>
+                  <div className="w-8 h-8 border-2 border-accent/40 rounded-full" />
                 </div>
               </div>
             </div>
