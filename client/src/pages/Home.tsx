@@ -30,9 +30,13 @@ export default function Home() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <div className="font-display text-2xl tracking-wider text-primary">
-              ALHADIM
-            </div>
+            <a href="#" className="flex items-center">
+              <img 
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/qgUzCKyVwFCPuUzF.png" 
+                alt="Al-Hadim Logo" 
+                className="h-10 w-auto transition-transform hover:scale-105"
+              />
+            </a>
             <div className="hidden md:flex items-center gap-8">
               <a href="#about" className="text-sm font-heading hover:text-primary transition-colors">About</a>
               <a href="#projects" className="text-sm font-heading hover:text-primary transition-colors">Projects</a>
