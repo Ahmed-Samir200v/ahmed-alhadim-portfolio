@@ -104,8 +104,9 @@ export interface Project {
   gallery?: string[];
   fullDescription?: string;
   technicalDetails?: string[];
-  challenges?: string;
+  challenges?: string | string[];
   outcome?: string;
+  results?: string[];
   role?: string;
   duration?: string;
   technologies?: string[];
@@ -348,5 +349,55 @@ export const projects: Project[] = [
     image: "https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?w=1200&q=80",
     tags: ["WebGL", "Three.js", "Web3D", "Interactive"],
     featured: false,
+  },
+  {
+    id: "oman-park-archviz",
+    title: "Oman Park Architectural Visualization",
+    category: "Visualization",
+    platform: "Rendering & VR",
+    description: "A stunning futuristic architectural visualization project showcasing Oman Park—a visionary public space that blends cutting-edge design with natural landscapes. This comprehensive visualization suite demonstrates photorealistic rendering capabilities, advanced lighting techniques, and immersive VR walkthroughs. The project features ultra-realistic materials using PBR workflows, dynamic day/night lighting scenarios, atmospheric effects, and detailed landscaping. Created for client presentations and urban planning proposals, this work exemplifies the intersection of architectural visualization and virtual reality technology. Optimized for both high-resolution static renders and real-time VR exploration on Meta Quest platforms.",
+    image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/yQBnBkSTesHONSWR.jpg",
+    tags: ["Architectural Visualization", "3ds Max", "Unreal Engine", "VR", "PBR", "Rendering"],
+    featured: true,
+    gallery: [
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/yQBnBkSTesHONSWR.jpg",
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/ILdHsQGlVnuSxrRN.jpg",
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/QNECegqPWqzUOkIZ.jpg",
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/WaUVUaRwURCXecZX.jpg",
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/jCxtYCUoDTtumEfM.jpg",
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/OwkqSesxCVRlbriW.jpg",
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/IHJsLGsOpipwVSdz.jpg",
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/WzvZjEKelVXWqIXG.jpg",
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/lLaiNdZKgkqekOVx.jpg",
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/lLbhnUEvfmqEuisS.jpg",
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/DgTLzPTYdjEpDNJK.jpg",
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/ekKZhywCqHsvreYW.jpg",
+      "https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/aqQNvKGsLXHwHZFK.jpg",
+    ],
+    technologies: ["3ds Max", "Unreal Engine", "Substance Painter", "Photoshop", "VRay"],
+    keyFeatures: [
+      "Photorealistic PBR materials and textures",
+      "Dynamic day/night lighting scenarios",
+      "Atmospheric effects (fog, volumetric lighting, god rays)",
+      "Detailed landscaping with native vegetation",
+      "Interactive VR walkthrough mode",
+      "4K+ resolution static renders for presentations",
+      "Optimized real-time rendering for VR platforms",
+      "Modular architecture for design iterations",
+    ],
+    challenges: [
+      "Balancing photorealistic quality with VR performance requirements",
+      "Creating accurate lighting for multiple time-of-day scenarios",
+      "Optimizing high-poly architectural details for real-time rendering",
+      "Achieving seamless transitions between static renders and VR mode",
+      "Managing large scene complexity while maintaining 72fps in VR",
+    ],
+    results: [
+      "Client approval for urban development proposal",
+      "Featured in architectural visualization portfolio showcases",
+      "Successful VR presentation to stakeholders and investors",
+      "Demonstrated expertise in futuristic architectural visualization",
+      "Established workflow for hybrid render/VR projects",
+    ],
   },
 ];
