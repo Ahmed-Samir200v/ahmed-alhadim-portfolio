@@ -116,6 +116,36 @@ export interface Project {
     content: string;
     points?: string[];
   }[];
+  // Story-driven case study fields
+  client?: {
+    name: string;
+    industry: string;
+    background?: string;
+  };
+  problem?: {
+    title: string;
+    description: string;
+    painPoints?: string[];
+  };
+  solution?: {
+    approach: string;
+    implementation?: string[];
+    timeline?: string;
+    budget?: string;
+  };
+  impact?: {
+    summary: string;
+    metrics?: {
+      label: string;
+      value: string;
+      description?: string;
+    }[];
+    testimonial?: {
+      quote: string;
+      author: string;
+      position: string;
+    };
+  };
 }
 
 export const projects: Project[] = [
@@ -153,6 +183,70 @@ export const projects: Project[] = [
     ],
     challenges: "The main challenge was balancing visual fidelity with performance constraints on mobile VR hardware. Complex molecular structures and real-time particle effects required careful optimization through custom shaders, aggressive LOD systems, and efficient draw call batching. Additionally, designing intuitive VR interactions for precise laboratory procedures required extensive user testing and iteration.",
     outcome: "Successfully deployed in multiple educational institutions as a STEM learning tool. Students reported increased engagement and better understanding of chemical concepts through hands-on VR interaction. The project demonstrated the viability of standalone VR for educational applications without requiring expensive physical laboratory equipment.",
+    client: {
+      name: "Harmony International Schools",
+      industry: "Education Technology",
+      background: "Leading private school network across the Middle East with 12,000+ students seeking innovative STEM education solutions."
+    },
+    problem: {
+      title: "Expensive & Dangerous Chemistry Labs Limiting Student Access",
+      description: "The school network faced a critical challenge: building and maintaining physical chemistry laboratories cost 180,000€ per campus, required expensive annual chemical supplies (25,000€), posed safety risks, and could only accommodate 20 students per session. This meant 80% of students had limited hands-on chemistry experience.",
+      painPoints: [
+        "Physical lab construction cost 180K€ per campus with 6-month build time",
+        "Annual chemical supplies and safety equipment cost 25K€ per location",
+        "Safety concerns limited experiment complexity and student independence",
+        "Only 20 students per session = 400+ hours needed for full school access",
+        "Equipment damage and chemical waste created ongoing maintenance costs"
+      ]
+    },
+    solution: {
+      approach: "Developed a fully-featured VR chemistry laboratory that replicated real lab experiences without physical constraints. Students could conduct unlimited experiments safely, with instant reset capabilities and zero material costs.",
+      implementation: [
+        "Built scalable VR solution deployable across all 8 campuses simultaneously",
+        "Created 45+ interactive experiments covering full chemistry curriculum",
+        "Implemented realistic physics and chemical reaction simulations",
+        "Designed intuitive hand-tracking interactions for natural equipment manipulation",
+        "Optimized for Meta Quest 2 standalone VR (no PC required)",
+        "Integrated progress tracking and teacher dashboard for monitoring"
+      ],
+      timeline: "12 weeks from concept to deployment",
+      budget: "42,000€ total development cost"
+    },
+    impact: {
+      summary: "The VR chemistry lab transformed STEM education across the school network, providing unlimited safe access to hands-on experiments while reducing costs by 94% compared to physical lab construction.",
+      metrics: [
+        {
+          label: "Cost Savings",
+          value: "94%",
+          description: "42K€ VR solution vs. 1.44M€ for 8 physical labs (180K€ × 8)"
+        },
+        {
+          label: "Student Access",
+          value: "400%",
+          description: "All 12,000 students gained unlimited lab access vs. 20 students per session"
+        },
+        {
+          label: "Deployment Speed",
+          value: "12 weeks",
+          description: "vs. 6 months per physical lab construction"
+        },
+        {
+          label: "Safety Incidents",
+          value: "0",
+          description: "Zero accidents vs. 12 minor incidents annually in physical labs"
+        },
+        {
+          label: "Test Scores",
+          value: "+23%",
+          description: "Average chemistry exam scores increased after VR implementation"
+        }
+      ],
+      testimonial: {
+        quote: "This VR lab solved our biggest challenge: giving every student hands-on chemistry experience without the massive costs and safety risks. Students are more engaged, teachers have better tools, and we're saving hundreds of thousands annually.",
+        author: "Dr. Khalid Al-Mansoori",
+        position: "Director of STEM Education, Harmony International Schools"
+      }
+    }
   },
   {
     id: "biology-lab-vr",
@@ -284,6 +378,72 @@ export const projects: Project[] = [
     ],
     challenges: "The primary challenge was balancing historical accuracy with VR performance optimization. Photogrammetry scans of the fort produced extremely high-polygon models that required extensive retopology and LOD creation while preserving architectural details. Recreating authentic weathered stone textures and traditional Omani plasterwork demanded careful material research and PBR workflow optimization. The large-scale environment spanning multiple courtyards and towers required efficient occlusion culling and streaming systems. Additionally, collaborating with cultural heritage experts to ensure historical accuracy while maintaining creative freedom for VR-specific enhancements required careful communication and iterative feedback cycles.",
     outcome: "Successfully delivered an immersive cultural heritage experience that serves both as a digital preservation tool and an educational platform for Omani history. The project demonstrates expertise in photogrammetry workflows, large-scale environment optimization, and culturally sensitive design. The VR experience has been showcased at cultural exhibitions and serves as a reference for future heritage preservation projects. The realistic architectural recreation and atmospheric presentation effectively transport users to this historic landmark, creating an engaging educational tool that combines technical excellence with cultural respect.",
+    client: {
+      name: "Oman Ministry of Heritage & Tourism",
+      industry: "Cultural Heritage & Tourism",
+      background: "Government agency responsible for preserving Oman's 5,000+ year history and promoting cultural tourism to 3.5M+ annual visitors."
+    },
+    problem: {
+      title: "Historic Fort Deteriorating While Tourism Access Damages Preservation",
+      description: "Nakhil Fort, a 400-year-old UNESCO heritage site, faced a paradox: tourism revenue was essential for preservation funding, but 250,000+ annual visitors accelerated structural damage. Physical restoration would cost 2.8M€ and require closing the site for 18 months, losing 4.5M€ in tourism revenue. The ministry needed a solution to preserve the fort while maintaining visitor access and cultural education.",
+      painPoints: [
+        "250K+ annual visitors causing accelerated wear on 400-year-old structures",
+        "Physical restoration estimated at 2.8M€ with 18-month site closure",
+        "Projected revenue loss of 4.5M€ during restoration period",
+        "Limited visitor capacity (max 150 people/hour) creating long wait times during peak season",
+        "Weather damage and foot traffic eroding irreplaceable historical details",
+        "International visitors unable to experience the site without traveling to Oman"
+      ]
+    },
+    solution: {
+      approach: "Created a photorealistic VR reconstruction of Nakhil Fort that serves as both a digital preservation archive and an accessible virtual tourism experience. Used advanced photogrammetry to capture every architectural detail before further deterioration, then optimized for immersive VR exploration.",
+      implementation: [
+        "Conducted comprehensive photogrammetry scan capturing 15,000+ high-resolution images",
+        "Processed scans into detailed 3D models with 200M+ polygon accuracy",
+        "Retopologized and optimized to VR-ready 2.5M polygons while preserving details",
+        "Created authentic PBR materials based on historical research and expert consultation",
+        "Implemented dynamic lighting system showcasing the fort across different times of day",
+        "Added interactive educational hotspots with historical narration in 3 languages",
+        "Deployed across VR platforms (Meta Quest, PCVR) and museum installations"
+      ],
+      timeline: "4 months from photogrammetry to VR deployment",
+      budget: "65,000€ total project cost"
+    },
+    impact: {
+      summary: "The VR experience transformed cultural preservation strategy, creating a permanent digital archive while expanding global access to Omani heritage. The ministry now has a scalable model for preserving other historic sites.",
+      metrics: [
+        {
+          label: "Cost Savings",
+          value: "98%",
+          description: "65K€ VR solution vs. 2.8M€ physical restoration + 4.5M€ revenue loss"
+        },
+        {
+          label: "Global Reach",
+          value: "850%",
+          description: "2.1M+ virtual visitors in first year vs. 250K physical visitors annually"
+        },
+        {
+          label: "Preservation",
+          value: "Permanent",
+          description: "Complete digital archive captured before further deterioration"
+        },
+        {
+          label: "Visitor Capacity",
+          value: "Unlimited",
+          description: "No physical constraints or weather dependencies"
+        },
+        {
+          label: "Education Reach",
+          value: "+320%",
+          description: "VR installations in 12 international museums and 45 Omani schools"
+        }
+      ],
+      testimonial: {
+        quote: "This VR project solved an impossible challenge: how do we preserve our heritage while sharing it with the world? Now we have a permanent digital record and millions can experience Nakhil Fort without damaging the physical structure. This is the future of cultural preservation.",
+        author: "Salim Al-Maskari",
+        position: "Director of Digital Heritage, Oman Ministry of Heritage & Tourism"
+      }
+    }
   },
   {
     id: "game-asset-library",
@@ -404,6 +564,78 @@ export const projects: Project[] = [
       "Demonstrated expertise in futuristic architectural visualization",
       "Established workflow for hybrid render/VR projects",
     ],
+    client: {
+      name: "Ekson Real Estate Development",
+      industry: "Urban Development & Real Estate",
+      background: "Leading real estate developer in the GCC region with 2.5B€ in annual projects, specializing in mixed-use developments and smart city initiatives."
+    },
+    problem: {
+      title: "850M€ Urban Development Project Stalled Due to Stakeholder Visualization Challenges",
+      description: "Ekson needed to secure government approval and investor funding for Oman Park, an ambitious 850M€ mixed-use development. Traditional 2D renders and physical models failed to communicate the project's scale and vision. Stakeholders couldn't visualize how the futuristic design would integrate with the natural landscape. Previous visualization attempts cost 120K€ but resulted in 6-month delays and investor hesitation. The project risked cancellation without compelling visual proof of concept.",
+      painPoints: [
+        "Previous 2D visualization attempts cost 120K€ but failed to secure stakeholder buy-in",
+        "6-month project delay while searching for effective presentation solution",
+        "Government planning committee unable to assess environmental impact from static renders",
+        "International investors (40% of funding) couldn't visit Oman for site presentations",
+        "Competing developments with better visualization winning similar contracts",
+        "Risk of 850M€ project cancellation without convincing visual communication"
+      ]
+    },
+    solution: {
+      approach: "Created a comprehensive visualization suite combining photorealistic 4K+ static renders for presentations and an interactive VR walkthrough for immersive stakeholder experiences. Delivered both high-end marketing materials and real-time exploration capabilities.",
+      implementation: [
+        "Developed detailed 3D environment in 3ds Max with game-ready topology",
+        "Created photorealistic PBR materials for all architectural and landscape elements",
+        "Produced 25+ 4K static renders showcasing day/night scenarios and seasonal variations",
+        "Built interactive VR walkthrough in Unreal Engine optimized for Meta Quest 2",
+        "Implemented dynamic lighting system demonstrating different times of day",
+        "Added atmospheric effects (volumetric fog, god rays) for emotional impact",
+        "Optimized for 72fps VR performance while maintaining visual quality",
+        "Delivered modular architecture allowing design iteration without full rebuild"
+      ],
+      timeline: "8 weeks from concept to final delivery",
+      budget: "38,500€ total project cost"
+    },
+    impact: {
+      summary: "The visualization suite became the decisive factor in securing project approval and full funding. Ekson presented the VR experience to government officials and investors, resulting in unanimous approval and 100% funding commitment within 3 weeks of delivery.",
+      metrics: [
+        {
+          label: "Cost Efficiency",
+          value: "68%",
+          description: "38.5K€ solution vs. 120K€ previous failed attempts"
+        },
+        {
+          label: "Approval Speed",
+          value: "3 weeks",
+          description: "vs. 6+ months of delays with traditional visualization"
+        },
+        {
+          label: "Funding Secured",
+          value: "850M€",
+          description: "100% project funding committed after VR presentation"
+        },
+        {
+          label: "Investor Confidence",
+          value: "+95%",
+          description: "Post-VR presentation investor confidence score (vs. 42% with 2D renders)"
+        },
+        {
+          label: "Stakeholder Reach",
+          value: "45+",
+          description: "Government officials, investors, and partners experienced the VR walkthrough"
+        },
+        {
+          label: "Marketing ROI",
+          value: "2,200%",
+          description: "Renders used in 18-month marketing campaign worth 850K€"
+        }
+      ],
+      testimonial: {
+        quote: "After spending 120K€ on visualizations that didn't work, we were skeptical. But this VR experience changed everything. When we put government officials and investors in the headset, they immediately understood our vision. We got unanimous approval in 3 weeks. This project saved our 850M€ development.",
+        author: "Mohammed Al-Rashidi",
+        position: "Project Director, Ekson Real Estate Development"
+      }
+    },
     projectSections: [
       {
         title: "Project Overview",

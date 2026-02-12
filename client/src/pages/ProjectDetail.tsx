@@ -188,6 +188,152 @@ export default function ProjectDetail() {
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Main Content */}
             <div className="lg:col-span-2 space-y-8">
+              {/* Client Story */}
+              {project.client && (
+                <div className="bg-gradient-to-br from-accent/5 to-accent/10 border border-accent/20 rounded-lg p-8">
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
+                      <span className="text-2xl">🏢</span>
+                    </div>
+                    <div>
+                      <h2 className="font-heading text-2xl font-semibold text-primary">
+                        {project.client.name}
+                      </h2>
+                      <p className="text-accent font-medium">{project.client.industry}</p>
+                    </div>
+                  </div>
+                  <p className="text-foreground/80 leading-relaxed">{project.client.background}</p>
+                </div>
+              )}
+
+              {/* The Problem */}
+              {project.problem && (
+                <div className="border-l-4 border-red-500/50 pl-6">
+                  <div className="flex items-start gap-3 mb-4">
+                    <span className="text-3xl">⚠️</span>
+                    <div>
+                      <h2 className="font-heading text-3xl font-semibold text-primary mb-2">
+                        The Challenge
+                      </h2>
+                      <h3 className="text-xl font-medium text-red-400 mb-3">
+                        {project.problem.title}
+                      </h3>
+                    </div>
+                  </div>
+                  <p className="text-lg leading-relaxed text-foreground/90 mb-6">
+                    {project.problem.description}
+                  </p>
+                  {project.problem.painPoints && project.problem.painPoints.length > 0 && (
+                    <div className="bg-red-500/5 border border-red-500/20 rounded-lg p-6">
+                      <h4 className="font-semibold text-lg mb-4 text-red-400">Key Pain Points:</h4>
+                      <ul className="space-y-3">
+                        {project.problem.painPoints.map((point, idx) => (
+                          <li key={idx} className="flex gap-3 text-foreground/80">
+                            <span className="text-red-400 mt-1.5 flex-shrink-0">✗</span>
+                            <span>{point}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {/* The Solution */}
+              {project.solution && (
+                <div className="border-l-4 border-blue-500/50 pl-6">
+                  <div className="flex items-start gap-3 mb-4">
+                    <span className="text-3xl">💡</span>
+                    <h2 className="font-heading text-3xl font-semibold text-primary">
+                      The Solution
+                    </h2>
+                  </div>
+                  <p className="text-lg leading-relaxed text-foreground/90 mb-6">
+                    {project.solution.approach}
+                  </p>
+                  {project.solution.implementation && project.solution.implementation.length > 0 && (
+                    <div className="bg-blue-500/5 border border-blue-500/20 rounded-lg p-6 mb-6">
+                      <h4 className="font-semibold text-lg mb-4 text-blue-400">Implementation:</h4>
+                      <ul className="space-y-3">
+                        {project.solution.implementation.map((item, idx) => (
+                          <li key={idx} className="flex gap-3 text-foreground/80">
+                            <span className="text-blue-400 mt-1.5 flex-shrink-0">✓</span>
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    {project.solution.timeline && (
+                      <div className="bg-card border border-border rounded-lg p-4">
+                        <p className="text-sm text-muted-foreground mb-1">Timeline</p>
+                        <p className="text-xl font-semibold text-primary">{project.solution.timeline}</p>
+                      </div>
+                    )}
+                    {project.solution.budget && (
+                      <div className="bg-card border border-border rounded-lg p-4">
+                        <p className="text-sm text-muted-foreground mb-1">Investment</p>
+                        <p className="text-xl font-semibold text-primary">{project.solution.budget}</p>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              )}
+
+              {/* The Impact */}
+              {project.impact && (
+                <div className="border-l-4 border-green-500/50 pl-6">
+                  <div className="flex items-start gap-3 mb-4">
+                    <span className="text-3xl">🎯</span>
+                    <h2 className="font-heading text-3xl font-semibold text-primary">
+                      The Results
+                    </h2>
+                  </div>
+                  <p className="text-lg leading-relaxed text-foreground/90 mb-8">
+                    {project.impact.summary}
+                  </p>
+                  
+                  {/* Metrics Grid */}
+                  {project.impact.metrics && project.impact.metrics.length > 0 && (
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+                      {project.impact.metrics.map((metric, idx) => (
+                        <div key={idx} className="bg-gradient-to-br from-green-500/10 to-green-500/5 border border-green-500/20 rounded-lg p-6 text-center">
+                          <div className="text-4xl font-bold text-green-400 mb-2">
+                            {metric.value}
+                          </div>
+                          <div className="text-sm font-semibold text-foreground/90 mb-2">
+                            {metric.label}
+                          </div>
+                          <div className="text-xs text-foreground/60">
+                            {metric.description}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  {/* Testimonial */}
+                  {project.impact.testimonial && (
+                    <div className="bg-gradient-to-br from-accent/10 to-accent/5 border border-accent/30 rounded-lg p-8">
+                      <div className="text-5xl text-accent/30 mb-4">"</div>
+                      <p className="text-lg italic text-foreground/90 mb-6 leading-relaxed">
+                        {project.impact.testimonial.quote}
+                      </p>
+                      <div className="flex items-center gap-4">
+                        <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center">
+                          <span className="text-2xl">👤</span>
+                        </div>
+                        <div>
+                          <p className="font-semibold text-primary">{project.impact.testimonial.author}</p>
+                          <p className="text-sm text-muted-foreground">{project.impact.testimonial.position}</p>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )}
+
               {project.fullDescription && (
                 <div>
                   <h2 className="font-heading text-3xl font-semibold mb-4 text-primary">
