@@ -19,6 +19,11 @@ export default function ProjectDetail() {
   const [selectedImage, setSelectedImage] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }, [params?.id]);
+
   // Auto-advance slideshow every 4 seconds
   useEffect(() => {
     if (!project?.gallery || project.gallery.length <= 1) return;
