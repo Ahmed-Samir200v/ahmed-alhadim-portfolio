@@ -15,6 +15,7 @@ import { Badge } from "@/components/ui/badge";
 import { Mail, Linkedin, Youtube, ArrowRight, Code2, Layers, Sparkles } from "lucide-react";
 import { personalInfo, projects, skills, experience } from "@/data/portfolio";
 import Header from "@/components/Header";
+import { AnimatedCounter } from "@/components/AnimatedCounter";
 
 export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
@@ -116,16 +117,22 @@ export default function Home() {
               {/* Stats */}
               <div className="grid grid-cols-3 gap-6 pt-8 border-t border-border/50">
                 <div>
-                  <div className="font-display text-4xl text-primary">{personalInfo.yearsExperience}</div>
-                  <div className="text-sm text-muted-foreground font-heading">Years Experience</div>
+                  <div className="font-display text-4xl text-primary">
+                    <AnimatedCounter end={50} suffix="+" />
+                  </div>
+                  <div className="text-sm text-muted-foreground font-heading">Happy Clients</div>
                 </div>
                 <div>
-                  <div className="font-display text-4xl text-primary">{personalInfo.projectsCompleted}</div>
-                  <div className="text-sm text-muted-foreground font-heading">Projects Delivered</div>
+                  <div className="font-display text-4xl text-primary">
+                    <AnimatedCounter end={100} suffix="K+" />
+                  </div>
+                  <div className="text-sm text-muted-foreground font-heading">Polygons Optimized</div>
                 </div>
                 <div>
-                  <div className="font-display text-4xl text-primary">AAA</div>
-                  <div className="text-sm text-muted-foreground font-heading">Production Quality</div>
+                  <div className="font-display text-4xl text-primary">
+                    <AnimatedCounter end={15} suffix="+" />
+                  </div>
+                  <div className="text-sm text-muted-foreground font-heading">XR Platforms</div>
                 </div>
               </div>
             </div>
