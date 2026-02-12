@@ -11,12 +11,36 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { ArrowLeft, ExternalLink } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function ProjectDetail() {
   const [, params] = useRoute("/project/:id");
   const project = projects.find((p) => p.id === params?.id);
   const [selectedImage, setSelectedImage] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+
+  // Auto-advance slideshow every 4 seconds
+  useEffect(() => {
+    if (!project?.gallery || project.gallery.length <= 1) return;
+    
+    const interval = setInterval(() => {
+      setIsTransitioning(true);
+      setTimeout(() => {
+        setSelectedImage((prev) => (prev + 1) % (project.gallery?.length || 1));
+        setIsTransitioning(false);
+      }, 500); // Half of transition duration
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [project]);
+
+  const handleImageSelect = (index: number) => {
+    setIsTransitioning(true);
+    setTimeout(() => {
+      setSelectedImage(index);
+      setIsTransitioning(false);
+    }, 500);
+  };
 
   if (!project) {
     return (
@@ -76,7 +100,7 @@ export default function ProjectDetail() {
               <img
                 src={gallery[selectedImage]}
                 alt={`${project.title} - Image ${selectedImage + 1}`}
-                className="w-full h-full object-cover"
+                className={`w-full h-full object-cover transition-opacity duration-1000 ${isTransitioning ? 'opacity-0' : 'opacity-100'}`}
               />
             </div>
 
@@ -86,7 +110,7 @@ export default function ProjectDetail() {
                 {gallery.map((img, idx) => (
                   <button
                     key={idx}
-                    onClick={() => setSelectedImage(idx)}
+                    onClick={() => handleImageSelect(idx)}
                     className={`relative aspect-video rounded-lg overflow-hidden border-2 transition-all ${
                       selectedImage === idx
                         ? "border-primary glow-amber scale-105"
