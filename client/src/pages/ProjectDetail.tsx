@@ -163,14 +163,50 @@ export default function ProjectDetail() {
                 </div>
               )}
 
+              {project.projectSections && project.projectSections.length > 0 && (
+                <div className="space-y-8">
+                  {project.projectSections.map((section, idx) => (
+                    <div key={idx} className="border-l-4 border-accent/50 pl-6">
+                      <h2 className="font-heading text-3xl font-semibold mb-4 text-primary">
+                        {section.title}
+                      </h2>
+                      <p className="text-lg leading-relaxed text-foreground/90 mb-4">
+                        {section.content}
+                      </p>
+                      {section.points && section.points.length > 0 && (
+                        <ul className="space-y-3 mt-4">
+                          {section.points.map((point, pointIdx) => (
+                            <li key={pointIdx} className="flex gap-3 text-foreground/80">
+                              <span className="text-accent mt-1.5">▸</span>
+                              <span>{point}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              )}
+
               {project.challenges && (
                 <div>
                   <h2 className="font-heading text-3xl font-semibold mb-4 text-primary">
                     Challenges & Solutions
                   </h2>
-                  <p className="text-lg leading-relaxed text-foreground/90">
-                    {project.challenges}
-                  </p>
+                  {Array.isArray(project.challenges) ? (
+                    <ul className="space-y-3">
+                      {project.challenges.map((challenge, idx) => (
+                        <li key={idx} className="flex gap-3 text-foreground/80">
+                          <span className="text-accent mt-1.5">▸</span>
+                          <span>{challenge}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p className="text-lg leading-relaxed text-foreground/90">
+                      {project.challenges}
+                    </p>
+                  )}
                 </div>
               )}
 

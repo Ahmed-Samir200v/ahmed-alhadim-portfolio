@@ -111,6 +111,11 @@ export interface Project {
   duration?: string;
   technologies?: string[];
   keyFeatures?: string[];
+  projectSections?: {
+    title: string;
+    content: string;
+    points?: string[];
+  }[];
 }
 
 export const projects: Project[] = [
@@ -398,6 +403,71 @@ export const projects: Project[] = [
       "Successful VR presentation to stakeholders and investors",
       "Demonstrated expertise in futuristic architectural visualization",
       "Established workflow for hybrid render/VR projects",
+    ],
+    projectSections: [
+      {
+        title: "Project Overview",
+        content: "This project focuses on the design and production of a game-ready 3D environment, with a strong emphasis on clean topology, edge flow, lighting readability, and real-time performance standards. The environment was developed following a production-oriented mindset, prioritizing structural clarity, scalability, and integration into modern game engines.",
+      },
+      {
+        title: "Environment Layout & Design Intent",
+        content: "The layout was planned to ensure compatibility with cinematic, gameplay, and first-person perspectives. Design decisions were driven by functionality and clarity rather than visual noise.",
+        points: [
+          "Clear spatial hierarchy (primary, secondary, and tertiary forms)",
+          "Logical player flow and camera readability",
+          "Modular thinking for future expansion",
+          "Compatibility with cinematic, gameplay, and first-person perspectives",
+        ],
+      },
+      {
+        title: "Topology & Modeling",
+        content: "All assets were modeled using clean quad-based topology, ensuring stable shading without artifacts and optimized geometry suitable for real-time rendering. The meshes are fully game-ready, built with performance considerations in mind.",
+        points: [
+          "Even polygon distribution",
+          "Logical edge flow supporting hard edges and curvature",
+          "Stable shading without artifacts",
+          "Optimized geometry suitable for real-time rendering",
+        ],
+      },
+      {
+        title: "Edge Flow Strategy",
+        content: "Edge flow was carefully planned to support form and silhouette from multiple viewing distances while reducing visual and technical complexity where possible.",
+        points: [
+          "Support form and silhouette from multiple viewing distances",
+          "Avoid unnecessary edge density",
+          "Maintain clean deformation-safe geometry",
+          "Reduce visual and technical complexity where possible",
+        ],
+      },
+      {
+        title: "Shading & Lighting Validation (Clay Pass)",
+        content: "A material-free clay render pass was used to validate lighting direction, form readability, and overall scene balance without relying on textures. The lighting setup follows a cinematic approach using a clear key light, soft fill, subtle rim lighting, and physically based global illumination.",
+        points: [
+          "Lighting direction and hierarchy",
+          "Form readability and depth",
+          "Focal point clarity",
+          "Overall scene balance without relying on textures",
+        ],
+      },
+      {
+        title: "Performance & Game Readiness",
+        content: "The environment was created with real-time constraints in mind, ensuring compatibility with modern pipelines (Unity / Unreal Engine).",
+        points: [
+          "Optimized meshes ready for LOD generation",
+          "Correct scale for game engines",
+          "Clean shading suitable for engine integration",
+          "Compatible with modern pipelines (Unity / Unreal Engine)",
+        ],
+      },
+      {
+        title: "Tools & Workflow",
+        content: "The project utilized industry-standard tools and workflows to ensure professional quality and game-ready assets.",
+        points: [
+          "3ds Max – Modeling, layout, and topology",
+          "Clay lighting passes – Form and readability validation",
+          "Game-ready asset standards – Real-time optimization focus",
+        ],
+      },
     ],
   },
 ];
