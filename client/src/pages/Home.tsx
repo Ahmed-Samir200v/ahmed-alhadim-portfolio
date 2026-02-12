@@ -179,6 +179,49 @@ export default function Home() {
             <div className="space-y-6 text-lg leading-relaxed text-foreground/90">
               <p>{personalInfo.bio}</p>
             </div>
+            
+            {/* Software Logos */}
+            <div className="mt-16 flex flex-wrap items-center justify-center gap-8 md:gap-12">
+              <div className="group relative">
+                <div className="absolute inset-0 bg-primary/20 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <img 
+                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/EAgBdRaJPJCAduCI.png" 
+                  alt="Unity" 
+                  className="h-16 md:h-20 w-auto filter brightness-90 group-hover:brightness-110 transition-all duration-500 relative z-10 group-hover:scale-110"
+                  style={{filter: 'drop-shadow(0 0 20px rgba(255,255,255,0.3))'}}
+                />
+              </div>
+              
+              <div className="group relative">
+                <div className="absolute inset-0 bg-primary/20 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <img 
+                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/UNlUKpwFZtIgbHgD.png" 
+                  alt="Unreal Engine" 
+                  className="h-16 md:h-20 w-auto filter brightness-90 group-hover:brightness-110 transition-all duration-500 relative z-10 group-hover:scale-110"
+                  style={{filter: 'drop-shadow(0 0 20px rgba(255,255,255,0.3))'}}
+                />
+              </div>
+              
+              <div className="group relative">
+                <div className="absolute inset-0 bg-primary/20 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <img 
+                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/ZErRzZlvwJmKnYCB.png" 
+                  alt="3ds Max" 
+                  className="h-16 md:h-20 w-auto filter brightness-90 group-hover:brightness-110 transition-all duration-500 relative z-10 group-hover:scale-110"
+                  style={{filter: 'drop-shadow(0 0 20px rgba(255,255,255,0.3))'}}
+                />
+              </div>
+              
+              <div className="group relative">
+                <div className="absolute inset-0 bg-primary/20 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <img 
+                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/aLPsDxUHcwdejyGx.png" 
+                  alt="Substance Painter" 
+                  className="h-16 md:h-20 w-auto filter brightness-90 group-hover:brightness-110 transition-all duration-500 relative z-10 group-hover:scale-110"
+                  style={{filter: 'drop-shadow(0 0 20px rgba(255,255,255,0.3))'}}
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
