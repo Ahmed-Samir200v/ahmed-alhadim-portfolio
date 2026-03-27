@@ -470,6 +470,58 @@ export default function ProjectDetail() {
         </div>
       </section>
 
+      {/* CTA Banner */}
+      {project.impact && (
+        <section className="py-16 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-accent/5 to-primary/10" />
+          <div className="absolute inset-0" style={{backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(255,255,255,0.01) 40px, rgba(255,255,255,0.01) 80px)'}} />
+          <div className="container relative">
+            <div className="max-w-3xl mx-auto text-center">
+              <p className="text-accent font-accent text-sm tracking-[0.3em] uppercase mb-4">Ready to Get Similar Results?</p>
+              <h2 className="font-display text-4xl md:text-5xl lg:text-6xl mb-6 text-primary">
+                LET'S BUILD<br />
+                <span className="text-accent">YOUR SUCCESS STORY</span>
+              </h2>
+              <p className="text-lg text-muted-foreground mb-10 leading-relaxed">
+                Every project starts with a problem worth solving. Tell me yours — I'll show you what's possible with 3D, VR, and XR.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/#contact">
+                  <button className="group relative px-10 py-4 bg-primary text-primary-foreground font-heading font-bold text-lg tracking-widest uppercase overflow-hidden transition-all duration-300 hover:scale-105">
+                    <span className="relative z-10 flex items-center gap-3">
+                      START YOUR PROJECT
+                      <svg className="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </span>
+                    <div className="absolute inset-0 bg-accent translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+                  </button>
+                </Link>
+                <Link href="/#projects">
+                  <button className="px-10 py-4 border border-primary/50 text-primary font-heading font-bold text-lg tracking-widest uppercase hover:border-accent hover:text-accent transition-all duration-300">
+                    VIEW MORE WORK
+                  </button>
+                </Link>
+              </div>
+              <div className="mt-12 grid grid-cols-3 gap-8 pt-8 border-t border-border/50">
+                <div className="text-center">
+                  <div className="text-3xl font-display text-accent mb-1">50+</div>
+                  <div className="text-xs text-muted-foreground font-accent tracking-widest uppercase">Happy Clients</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-display text-accent mb-1">8+</div>
+                  <div className="text-xs text-muted-foreground font-accent tracking-widest uppercase">Years Experience</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-display text-accent mb-1">15+</div>
+                  <div className="text-xs text-muted-foreground font-accent tracking-widest uppercase">XR Platforms</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Related Projects */}
       <section className="py-12">
         <div className="container">

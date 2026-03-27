@@ -19,12 +19,35 @@ import { AnimatedCounter } from "@/components/AnimatedCounter";
 
 export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
+  const [selectedIndustry, setSelectedIndustry] = useState<string>("All");
   
   const categories = ["All", "VR", "AR", "MR", "Game", "Visualization", "Web3D"];
+  const industries = [
+    { label: "All Industries", value: "All" },
+    { label: "Education", value: "Education" },
+    { label: "Real Estate", value: "Real Estate" },
+    { label: "Healthcare", value: "Healthcare" },
+    { label: "Manufacturing", value: "Manufacturing" },
+    { label: "E-Commerce", value: "E-Commerce" },
+    { label: "Entertainment", value: "Entertainment" },
+    { label: "Corporate", value: "Corporate" },
+  ];
   
-  const filteredProjects = selectedCategory === "All" 
-    ? projects 
-    : projects.filter(p => p.category === selectedCategory);
+  const industryMap: Record<string, string[]> = {
+    "Education": ["vr-chemistry-lab", "vr-biology-lab"],
+    "Real Estate": ["oman-park-archviz", "architectural-viz"],
+    "Healthcare": ["mr-surgical-planning"],
+    "Manufacturing": ["mr-assembly-guidance"],
+    "E-Commerce": ["ar-product-viz"],
+    "Entertainment": ["nakhil-castle-vr", "library-virtual-tour"],
+    "Corporate": ["vr-classroom", "game-asset-library", "web3d-experiences", "desert-survival-vr"],
+  };
+
+  const filteredProjects = projects.filter(p => {
+    const categoryMatch = selectedCategory === "All" || p.category === selectedCategory;
+    const industryMatch = selectedIndustry === "All" || (industryMap[selectedIndustry] || []).includes(p.id);
+    return categoryMatch && industryMatch;
+  });
 
   return (
     <div className="min-h-screen">
@@ -237,18 +260,57 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Category Filter */}
-          <div className="flex flex-wrap gap-3 mb-12">
-            {categories.map((cat) => (
-              <Button
-                key={cat}
-                variant={selectedCategory === cat ? "default" : "outline"}
-                onClick={() => setSelectedCategory(cat)}
-                className="font-accent text-xs"
-              >
-                {cat}
-              </Button>
-            ))}
+          {/* Filters */}
+          <div className="space-y-4 mb-12">
+            {/* Category Filter */}
+            <div>
+              <p className="text-xs text-muted-foreground font-accent tracking-[0.2em] uppercase mb-3">Filter by Type</p>
+              <div className="flex flex-wrap gap-3">
+                {categories.map((cat) => (
+                  <Button
+                    key={cat}
+                    variant={selectedCategory === cat ? "default" : "outline"}
+                    onClick={() => setSelectedCategory(cat)}
+                    className="font-accent text-xs"
+                  >
+                    {cat}
+                  </Button>
+                ))}
+              </div>
+            </div>
+            {/* Industry Filter */}
+            <div>
+              <p className="text-xs text-muted-foreground font-accent tracking-[0.2em] uppercase mb-3">Filter by Industry</p>
+              <div className="flex flex-wrap gap-2">
+                {industries.map((ind) => (
+                  <button
+                    key={ind.value}
+                    onClick={() => setSelectedIndustry(ind.value)}
+                    className={`px-4 py-1.5 text-xs font-accent tracking-widest uppercase border transition-all duration-200 ${
+                      selectedIndustry === ind.value
+                        ? "border-accent text-accent bg-accent/10"
+                        : "border-border/50 text-muted-foreground hover:border-accent/50 hover:text-accent/70"
+                    }`}
+                  >
+                    {ind.label}
+                  </button>
+                ))}
+              </div>
+            </div>
+            {/* Results count */}
+            {(selectedCategory !== "All" || selectedIndustry !== "All") && (
+              <div className="flex items-center gap-3">
+                <p className="text-sm text-muted-foreground">
+                  Showing <span className="text-accent font-semibold">{filteredProjects.length}</span> of <span className="text-primary font-semibold">{projects.length}</span> projects
+                </p>
+                <button
+                  onClick={() => { setSelectedCategory("All"); setSelectedIndustry("All"); }}
+                  className="text-xs text-muted-foreground/60 hover:text-accent underline transition-colors"
+                >
+                  Clear filters
+                </button>
+              </div>
+            )}
           </div>
 
           {/* Projects Grid */}

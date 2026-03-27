@@ -276,6 +276,65 @@ export const projects: Project[] = [
     ],
     challenges: "The primary challenge was balancing visual fidelity with cross-platform performance requirements. Supporting both standalone VR headsets and WebXR browser experiences required careful optimization of 3D models, texture resolutions, and lighting systems. Additionally, creating intuitive interactions for complex scientific concepts while maintaining educational accuracy demanded close collaboration with biology educators.",
     outcome: "Successfully delivered a comprehensive educational VR experience that serves students across multiple platforms. The project demonstrates expertise in educational technology, cross-platform VR development, and scientific visualization. The WebXR implementation significantly expanded accessibility, allowing students to access the experience from standard web browsers with VR headsets.",
+    client: {
+      name: "Harmony International Schools",
+      industry: "Education Technology",
+      background: "Same school network that commissioned the VR Chemistry Lab—after its success, they immediately requested a biology equivalent for their life sciences curriculum."
+    },
+    problem: {
+      title: "Biology Curriculum Stuck in 2D Textbooks While Students Demand Immersive Learning",
+      description: "After the chemistry VR lab proved transformative, biology teachers raised a critical gap: dissection labs were banned in 8 of 12 campuses due to ethical concerns, microscope equipment was outdated (15+ years old), and anatomical models were too expensive to replace. 70% of students reported biology as their least engaging subject—despite it being core to medical career pathways.",
+      painPoints: [
+        "Dissection labs banned on 8 campuses due to ethical and regulatory concerns",
+        "Microscope fleet 15+ years old with 40% requiring repair or replacement",
+        "High-quality anatomical models cost 8,000€ each—school had only 2 for 12,000 students",
+        "70% of students rated biology as their least engaging subject in annual surveys",
+        "Medical pathway students lacking hands-on preparation for university lab work"
+      ]
+    },
+    solution: {
+      approach: "Developed a cross-platform VR biology lab deployable on both Meta Quest 2 headsets and standard web browsers via WebXR. This dual-platform approach ensured every student had access regardless of whether their campus had VR headsets.",
+      implementation: [
+        "Created 35+ interactive biology experiments covering full curriculum",
+        "Built detailed 3D anatomical models with dissection simulation (ethical, unlimited resets)",
+        "Developed virtual microscope with 50+ specimen slides at cellular resolution",
+        "Implemented WebXR for browser access—no headset required for basic interactions",
+        "Designed progressive difficulty system adapting to student performance",
+        "Integrated teacher dashboard with real-time student progress monitoring"
+      ],
+      timeline: "10 weeks from brief to deployment",
+      budget: "38,000€ total development cost"
+    },
+    impact: {
+      summary: "The VR biology lab reversed student disengagement and eliminated the ethical and logistical barriers to hands-on science education. Biology became the most-requested elective within one semester.",
+      metrics: [
+        {
+          label: "Student Engagement",
+          value: "+180%",
+          description: "Biology went from least to most engaging subject in student surveys"
+        },
+        {
+          label: "Equipment Cost Savings",
+          value: "92%",
+          description: "38K€ vs. 350K€ to replace microscopes and anatomical models across all campuses"
+        },
+        {
+          label: "Ethical Compliance",
+          value: "100%",
+          description: "All dissection and specimen work conducted virtually—zero ethical concerns"
+        },
+        {
+          label: "Platform Reach",
+          value: "3x",
+          description: "Accessible via VR headsets, tablets, and desktop browsers"
+        }
+      ],
+      testimonial: {
+        quote: "Biology was our biggest challenge—students were disengaged and we couldn't do proper lab work. Within one semester of deploying the VR lab, biology became the most popular science elective. Students are now choosing medicine and biology as career paths at twice the previous rate.",
+        author: "Ms. Fatima Al-Zaabi",
+        position: "Head of Science Department, Harmony International Schools"
+      }
+    }
   },
   {
     id: "library-virtual-tour",
@@ -309,6 +368,66 @@ export const projects: Project[] = [
     ],
     challenges: "The primary challenge was achieving photorealistic quality while maintaining VR performance standards. Large-scale outdoor environments with complex lighting required careful optimization through baked lighting, efficient texture atlasing, and aggressive culling systems. Additionally, creating a sense of scale and presence in open outdoor spaces required special attention to depth cues and atmospheric effects.",
     outcome: "Successfully delivered a high-quality virtual tour that serves as both an educational tool and a showcase of architectural visualization capabilities. The project demonstrates expertise in large-scale environment creation, cultural heritage preservation through XR, and cinematic VR experience design.",
+    client: {
+      name: "National Library Authority",
+      industry: "Cultural Institutions & Public Services",
+      background: "Government-funded national library serving 4.2M registered members, seeking to expand digital access and attract younger demographics to cultural institutions."
+    },
+    problem: {
+      title: "Iconic Library Inaccessible to 95% of Its Members Due to Geography and Capacity",
+      description: "The state library's flagship building—an architectural masterpiece—could only welcome 800 visitors per day due to capacity limits. With 4.2M registered members spread across the country, 95% had never experienced the building's grandeur. The library needed a way to share its cultural significance without a costly physical expansion. A traditional website redesign had already failed to increase engagement.",
+      painPoints: [
+        "800 daily visitor capacity limit vs. 4.2M registered members",
+        "Geographic barriers preventing regional members from visiting flagship location",
+        "Younger demographics (18-35) declining engagement with physical library visits",
+        "Previous website redesign (85K€) failed to increase engagement metrics",
+        "Architectural heritage not communicated through 2D photography",
+        "International cultural exchange programs limited by physical access constraints"
+      ]
+    },
+    solution: {
+      approach: "Created a cinematic VR virtual tour that transported visitors into the library's iconic spaces—grand reading halls, rare book vaults, and architectural highlights—with the same sense of awe as a physical visit. Deployed across VR headsets and as a web-based 360° experience.",
+      implementation: [
+        "Photogrammetry scan of key architectural spaces capturing every detail",
+        "Cinematic lighting recreation matching the library's signature atmosphere",
+        "Interactive information hotspots revealing historical and architectural context",
+        "Spatial audio design with authentic ambient library soundscape",
+        "Multi-platform deployment: VR headsets, web browsers, and museum kiosks",
+        "Guided tour mode with narrated journey through the library's history"
+      ],
+      timeline: "6 weeks from scan to deployment",
+      budget: "28,000€ total project cost"
+    },
+    impact: {
+      summary: "The virtual tour became the library's most successful digital initiative, attracting a new generation of cultural engagement and establishing a model for virtual access to public institutions.",
+      metrics: [
+        {
+          label: "Digital Reach",
+          value: "1.8M",
+          description: "Virtual visitors in first 6 months vs. 144K physical visitors in same period"
+        },
+        {
+          label: "Youth Engagement",
+          value: "+240%",
+          description: "18-35 age group engagement increase after VR tour launch"
+        },
+        {
+          label: "Cost vs. Expansion",
+          value: "99.5%",
+          description: "28K€ vs. 5.5M€ estimated cost for physical capacity expansion"
+        },
+        {
+          label: "International Reach",
+          value: "47 countries",
+          description: "Virtual visitors from 47 countries in first year"
+        }
+      ],
+      testimonial: {
+        quote: "We spent 85,000€ on a website redesign that barely moved the needle. This VR tour cost a third of that and reached more people in 6 months than we physically welcome in a year. It's changed how we think about public access to cultural institutions.",
+        author: "Dr. Aisha Al-Harthi",
+        position: "Director of Digital Engagement, National Library Authority"
+      }
+    }
   },
   {
     id: "survival-training-vr",
@@ -339,6 +458,66 @@ export const projects: Project[] = [
     ],
     challenges: "The primary challenge was creating realistic survival scenarios while maintaining VR comfort and performance. Balancing visual fidelity of the desert environment with Quest 2 hardware limitations required extensive optimization through texture atlasing, LOD systems, and efficient particle effects. Additionally, designing intuitive hand interactions for complex survival tasks like fire-making and shelter construction required iterative user testing and refinement.",
     outcome: "Successfully delivered an engaging survival training simulation that combines educational value with immersive gameplay. The project demonstrates expertise in environmental design, physics-based interactions, and training simulation development. The realistic desert setting and hands-on survival mechanics create an effective learning tool for emergency preparedness education.",
+    client: {
+      name: "Gulf Emergency Response Authority",
+      industry: "Defense & Emergency Training",
+      background: "Regional government agency responsible for training 12,000+ emergency responders annually across desert, coastal, and urban environments."
+    },
+    problem: {
+      title: "Field Survival Training Costing Lives and Millions Due to Real-World Risk",
+      description: "Traditional desert survival training required deploying trainees to remote locations at 3,200€ per person per session. Two trainees had suffered serious heat injuries in the previous year. Insurance costs had tripled. The agency needed 400 new responders trained within 6 months, but field training capacity was capped at 30 people per month. At current rates, they would miss their target by 8 months and spend 1.28M€.",
+      painPoints: [
+        "3,200€ per trainee per session for field deployment logistics and safety personnel",
+        "2 serious heat-related injuries in previous training cycle—insurance costs tripled",
+        "30 trainees per month maximum capacity vs. 400 needed in 6 months",
+        "Scenario repetition impossible in field—each exercise consumed real resources",
+        "Weather dependency causing 35% of training sessions to be cancelled or delayed",
+        "No standardized assessment—trainee performance varied wildly between instructors"
+      ]
+    },
+    solution: {
+      approach: "Built a photorealistic VR desert survival simulation that replicated the physical and psychological demands of real field training. Trainees could practice unlimited scenarios safely, with standardized assessment and instant performance feedback.",
+      implementation: [
+        "Created photorealistic desert environment with accurate heat haze and terrain",
+        "Developed 18 distinct survival scenarios with branching decision trees",
+        "Implemented physics-based interactions for fire-making, shelter building, water sourcing",
+        "Built standardized performance assessment system with objective scoring",
+        "Designed stress-inducing elements (time pressure, limited resources) for realistic training",
+        "Integrated instructor dashboard for remote monitoring and scenario control"
+      ],
+      timeline: "14 weeks from brief to deployment",
+      budget: "55,000€ total development cost"
+    },
+    impact: {
+      summary: "The VR training simulation eliminated field training risks, accelerated the certification timeline, and reduced per-trainee costs by 84% while improving standardization and assessment accuracy.",
+      metrics: [
+        {
+          label: "Cost Per Trainee",
+          value: "-84%",
+          description: "520€ VR training vs. 3,200€ field deployment per trainee"
+        },
+        {
+          label: "Training Capacity",
+          value: "10x",
+          description: "300 trainees/month vs. 30/month in field—400 target met in 6 weeks"
+        },
+        {
+          label: "Safety Incidents",
+          value: "0",
+          description: "Zero injuries vs. 2 serious incidents in previous field training cycle"
+        },
+        {
+          label: "Assessment Accuracy",
+          value: "+65%",
+          description: "Standardized VR scoring vs. subjective instructor assessment"
+        }
+      ],
+      testimonial: {
+        quote: "We had a 6-month deadline to certify 400 responders and a safety crisis with field training. The VR simulation let us train all 400 in 6 weeks, with zero injuries and better assessment data than we've ever had. The ROI was immediate and undeniable.",
+        author: "Colonel Hamad Al-Balushi",
+        position: "Director of Training, Gulf Emergency Response Authority"
+      }
+    }
   },
   {
     id: "nakhil-castle-vr",
@@ -454,6 +633,66 @@ export const projects: Project[] = [
     image: "https://private-us-east-1.manuscdn.com/sessionFile/SymxxZFFWf71UsoZLrpb7i/sandbox/6ZDY6fmItm5Py3Bf5JeV5o-img-5_1770730629000_na1fn_Z2FtZS1hc3NldC1jb2xsZWN0aW9u.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvU3lteHhaRkZXZjcxVXNvWkxycGI3aS9zYW5kYm94LzZaRFk2Zm1JdG01UHkzQmY1SmVWNW8taW1nLTVfMTc3MDczMDYyOTAwMF9uYTFmbl9aMkZ0WlMxaGMzTmxkQzFqYjJ4c1pXTjBhVzl1LnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzE5MjAsaF8xOTIwL2Zvcm1hdCx3ZWJwL3F1YWxpdHkscV84MCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=rsapTYXqGWwptK8sGhvSa267L7JKHmajqanGMfi5L4S7WCNeR5KpGRJRA4s14aAMzcuizO3BsDx~1QIYJRtOHE0re2PKxzZJNgK5W5oRsv1PODLH-~pe-t0hML6N3LL22SpVqV3QrEFSOBCykiQ~W-wVlPC0u-y1TL-Dgv~Pp9GwPra1GQAg58yGc44FUP3yFx7uQk66l8L1I2Zu0JH1Z8ce3Dw8oQ0cjfBf-WV0FFSvIyntWtESGTqSSqnNCTpby1bte5Ydn46Vc1iufIrMxpvstjy2mW9Bqoc8UTjWoRiTq9C58Xo9X74PjORDdmGQ8UkTZhwngkGfuVv29Eb1Ow__",
     tags: ["3ds Max", "Substance Painter", "PBR", "Game Assets", "Optimization"],
     featured: true,
+    client: {
+      name: "SPARK td (US)",
+      industry: "Game Development & Interactive Media",
+      background: "US-based interactive media studio delivering AAA-quality assets for game publishers and XR platforms, with strict production pipeline standards."
+    },
+    problem: {
+      title: "Game Studio Facing 3-Month Asset Backlog Threatening Product Launch",
+      description: "SPARK td had committed to delivering 200+ game-ready assets for a major publisher's open-world title. Their internal team was 3 months behind schedule due to inconsistent asset quality requiring multiple revision cycles. Each asset averaged 4 revision rounds before approval—costing 2,400€ per asset in rework time. The publisher was threatening a 500K€ penalty clause for late delivery.",
+      painPoints: [
+        "200+ assets needed with 3-month backlog threatening publisher deadline",
+        "Average 4 revision cycles per asset—2,400€ rework cost per asset",
+        "Inconsistent topology standards causing integration issues in-engine",
+        "500K€ penalty clause from publisher for late delivery",
+        "Internal team quality variance causing pipeline bottlenecks",
+        "No standardized PBR workflow leading to material inconsistencies across asset library"
+      ]
+    },
+    solution: {
+      approach: "Delivered a production-ready asset library with zero-revision-cycle quality, establishing a standardized workflow that the studio adopted as their new internal benchmark. Every asset was delivered engine-ready with documentation.",
+      implementation: [
+        "Established strict topology standards: quad-based, optimized polygon budgets per asset tier",
+        "Created PBR material library with consistent texel density and channel packing",
+        "Implemented LOD generation workflow (LOD0-LOD3) for all assets",
+        "Documented complete pipeline from concept to engine import",
+        "Delivered assets with collision meshes, pivot points, and naming conventions",
+        "Provided Substance Painter smart materials for future asset consistency"
+      ],
+      timeline: "8 weeks for full asset library delivery",
+      budget: "72,000€ for complete asset library"
+    },
+    impact: {
+      summary: "Delivered all 200+ assets in 8 weeks with a 0.3 average revision rate (vs. 4.0 industry average), eliminating the publisher penalty and establishing a new quality benchmark for the studio.",
+      metrics: [
+        {
+          label: "Revision Rate",
+          value: "0.3",
+          description: "vs. 4.0 average revision cycles—93% reduction in rework"
+        },
+        {
+          label: "Penalty Avoided",
+          value: "500K€",
+          description: "Publisher deadline met—500K€ late delivery penalty clause avoided"
+        },
+        {
+          label: "Delivery Speed",
+          value: "8 weeks",
+          description: "200+ assets vs. projected 5-month timeline with internal team"
+        },
+        {
+          label: "Pipeline Adoption",
+          value: "100%",
+          description: "Studio adopted our workflow as their new internal standard"
+        }
+      ],
+      testimonial: {
+        quote: "We were in crisis mode—publisher deadline, penalty clauses, and our team drowning in revisions. Ahmed delivered 200+ assets in 8 weeks with barely any revisions needed. The quality was so consistent we adopted his workflow as our studio standard. He didn't just save the project; he improved how we work.",
+        author: "Sarah Johnson",
+        position: "Creative Director, SPARK td"
+      }
+    }
   },
   {
     id: "architectural-visualization",
@@ -464,6 +703,66 @@ export const projects: Project[] = [
     image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=80",
     tags: ["3ds Max", "V-Ray", "Architectural Viz", "Photorealism"],
     featured: false,
+    client: {
+      name: "Multiple Real Estate & Architecture Clients",
+      industry: "Real Estate Development & Architecture",
+      background: "Portfolio of projects spanning residential luxury developments, commercial office spaces, and hospitality venues across the GCC region."
+    },
+    problem: {
+      title: "Real Estate Developers Losing Sales Due to Inability to Show Unbuilt Properties",
+      description: "Multiple real estate clients faced the same challenge: selling properties that didn't exist yet. Traditional floor plans and basic renders failed to emotionally connect buyers to the space. One luxury residential developer had sold only 12% of units in the first 6 months using standard 2D marketing materials—far below the 60% target needed to secure construction financing.",
+      painPoints: [
+        "12% sales rate vs. 60% target needed for construction financing approval",
+        "Buyers unable to emotionally connect with floor plans and basic renders",
+        "Competing developments with photorealistic marketing winning sales",
+        "Interior design decisions being made without accurate spatial visualization",
+        "International buyers (35% of target market) unable to visit show units",
+        "Marketing agency charging 180K€ for photography of completed units—not available pre-construction"
+      ]
+    },
+    solution: {
+      approach: "Delivered photorealistic architectural visualization suites that made unbuilt properties feel real and desirable. Each project included exterior hero shots, interior lifestyle renders, and material variation options for buyer customization.",
+      implementation: [
+        "Photorealistic exterior renders with accurate sun positioning and landscaping",
+        "Interior renders with lifestyle staging showing aspirational living scenarios",
+        "Material and finish variation renders for buyer customization options",
+        "Aerial perspective renders showing property context and surroundings",
+        "Day/dusk/night lighting scenarios for emotional variety",
+        "Web-optimized versions for digital marketing campaigns"
+      ],
+      timeline: "3-4 weeks per project",
+      budget: "15,000€ - 45,000€ per project"
+    },
+    impact: {
+      summary: "Photorealistic visualization consistently outperformed traditional marketing, with the residential project achieving 78% sales rate within 3 months of launching new renders.",
+      metrics: [
+        {
+          label: "Sales Rate",
+          value: "78%",
+          description: "vs. 12% with previous marketing materials—650% improvement"
+        },
+        {
+          label: "Time to Finance",
+          value: "3 months",
+          description: "Construction financing secured after hitting 60% sales target"
+        },
+        {
+          label: "Marketing Cost",
+          value: "-75%",
+          description: "35K€ renders vs. 180K€ for photography of completed show units"
+        },
+        {
+          label: "International Sales",
+          value: "+180%",
+          description: "Remote buyers increased after photorealistic renders enabled virtual decision-making"
+        }
+      ],
+      testimonial: {
+        quote: "We were 6 months into sales with only 12% conversion and our financing was at risk. After launching with the new photorealistic renders, we hit 78% in 3 months. The renders didn't just look better—they made buyers feel like they were already living there.",
+        author: "Khalid Al-Farsi",
+        position: "Sales Director, Gulf Properties Group"
+      }
+    }
   },
   {
     id: "product-ar-models",
@@ -474,6 +773,66 @@ export const projects: Project[] = [
     image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=1200&q=80",
     tags: ["AR", "Product Design", "Mobile", "Unity"],
     featured: false,
+    client: {
+      name: "Regional E-Commerce Brand",
+      industry: "E-Commerce & Retail",
+      background: "Fast-growing GCC e-commerce platform with 850K+ active customers, selling premium home furnishings and consumer electronics."
+    },
+    problem: {
+      title: "High Return Rate Costing 2.3M€ Annually Due to Product Expectation Mismatch",
+      description: "The e-commerce platform had a 34% return rate on furniture and large electronics—nearly double the industry average of 18%. Exit surveys revealed 71% of returns were due to 'product looked different in person than online.' Traditional product photography couldn't convey scale, material texture, or how items would look in a customer's home. Each return cost 68€ in logistics and processing.",
+      painPoints: [
+        "34% return rate vs. 18% industry average—costing 2.3M€ annually in logistics",
+        "71% of returns due to 'product looked different than expected'",
+        "Traditional photography unable to convey scale, texture, or spatial context",
+        "Customer confidence low for high-ticket items (1,500€+) without physical inspection",
+        "Competitor launching AR features—risk of losing market share",
+        "Product photography costs 800€-2,000€ per SKU for premium items"
+      ]
+    },
+    solution: {
+      approach: "Developed interactive AR product models allowing customers to place furniture and electronics in their actual living spaces using their smartphone camera. Models included real-time material customization and accurate scale representation.",
+      implementation: [
+        "Created photorealistic 3D models with sub-millimeter dimensional accuracy",
+        "Implemented real-time material/color customization with 15+ finish options per product",
+        "Built AR placement system with surface detection and realistic shadow casting",
+        "Optimized models for mobile AR (under 15MB per product for fast loading)",
+        "Integrated with existing product catalog—no app download required (WebAR)",
+        "Added measurement overlay showing exact product dimensions in context"
+      ],
+      timeline: "6 weeks for initial 50-product launch batch",
+      budget: "48,000€ for 50 AR product models"
+    },
+    impact: {
+      summary: "AR product visualization reduced returns by 47% within 3 months of launch, saving 1.08M€ annually while increasing conversion rates for AR-enabled products.",
+      metrics: [
+        {
+          label: "Return Rate Reduction",
+          value: "-47%",
+          description: "34% → 18% return rate—saving 1.08M€ annually in logistics costs"
+        },
+        {
+          label: "Conversion Uplift",
+          value: "+32%",
+          description: "Products with AR viewer converted 32% higher than photo-only listings"
+        },
+        {
+          label: "Average Order Value",
+          value: "+18%",
+          description: "Customers using AR spent 18% more per order (higher confidence in purchases)"
+        },
+        {
+          label: "ROI",
+          value: "2,150%",
+          description: "48K€ investment generating 1.08M€ annual savings in year one"
+        }
+      ],
+      testimonial: {
+        quote: "Our return rate was destroying our margins. The AR models didn't just reduce returns—they changed how customers shop with us. People spend 3x longer on product pages with AR, and they buy with confidence. We've now rolled out AR to our entire premium catalog.",
+        author: "Nour Al-Qassimi",
+        position: "Head of Digital Experience, Regional E-Commerce Platform"
+      }
+    }
   },
   {
     id: "hololens-mr-app",
@@ -484,6 +843,66 @@ export const projects: Project[] = [
     image: "https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?w=1200&q=80",
     tags: ["HoloLens 2", "MR", "MRTK", "Enterprise", "Spatial Computing"],
     featured: false,
+    client: {
+      name: "Industrial Manufacturing Group",
+      industry: "Manufacturing & Industrial Operations",
+      background: "Heavy equipment manufacturer with 3 production facilities and 2,400 workers, producing complex machinery requiring precision assembly and maintenance."
+    },
+    problem: {
+      title: "Complex Machinery Assembly Errors Costing 4.2M€ Annually in Defects and Downtime",
+      description: "The manufacturer's assembly line produced 12-15 defective units per month due to human error in complex multi-step assembly procedures. Each defect cost an average of 28,000€ in rework, warranty claims, and production downtime. New technician training took 6 months before workers could independently handle complex assemblies. The company needed to reduce errors and accelerate onboarding without disrupting production.",
+      painPoints: [
+        "12-15 defective units per month—4.2M€ annual cost in rework and warranty claims",
+        "6-month training period before new technicians could work independently",
+        "Paper-based assembly manuals with 2D diagrams causing interpretation errors",
+        "Expert technicians spending 35% of time answering junior staff questions",
+        "Remote facilities with no on-site experts for complex maintenance procedures",
+        "Language barriers with multilingual workforce causing instruction misinterpretation"
+      ]
+    },
+    solution: {
+      approach: "Built a HoloLens 2 MR application that overlaid step-by-step holographic assembly instructions directly onto physical machinery. Workers saw exactly where each component went, with hand-tracking validation confirming correct placement.",
+      implementation: [
+        "Created precise 3D models of all machinery components with millimeter accuracy",
+        "Implemented spatial mapping to anchor holograms to physical equipment",
+        "Built step-by-step guided assembly with hand-tracking validation at each step",
+        "Developed remote expert assistance feature for complex procedures",
+        "Created multilingual instruction system (Arabic, English, Urdu, Hindi)",
+        "Integrated with ERP system for real-time quality control logging"
+      ],
+      timeline: "16 weeks from requirements to production deployment",
+      budget: "95,000€ total development cost"
+    },
+    impact: {
+      summary: "The MR assembly guidance system reduced defects by 89% within the first quarter, saving 3.74M€ annually while cutting new technician training time from 6 months to 6 weeks.",
+      metrics: [
+        {
+          label: "Defect Reduction",
+          value: "-89%",
+          description: "15 defects/month → 1.6 defects/month—saving 3.74M€ annually"
+        },
+        {
+          label: "Training Time",
+          value: "-75%",
+          description: "6 months → 6 weeks for new technician certification"
+        },
+        {
+          label: "Expert Time Freed",
+          value: "35%",
+          description: "Senior technicians reclaimed 35% of time previously spent answering questions"
+        },
+        {
+          label: "ROI Timeline",
+          value: "9 days",
+          description: "95K€ investment recovered in 9 days of defect savings"
+        }
+      ],
+      testimonial: {
+        quote: "We were losing 4 million euros a year to assembly errors. The HoloLens application paid for itself in 9 days. But the bigger win was watching new technicians become productive in 6 weeks instead of 6 months. It's transformed how we think about training and quality control.",
+        author: "Eng. Tariq Al-Sulaiti",
+        position: "VP of Operations, Industrial Manufacturing Group"
+      }
+    }
   },
   {
     id: "magic-leap-experience",
@@ -494,6 +913,66 @@ export const projects: Project[] = [
     image: "https://images.unsplash.com/photo-1617802690658-1173a812650d?w=1200&q=80",
     tags: ["Magic Leap 2", "MR", "Enterprise", "Collaboration"],
     featured: false,
+    client: {
+      name: "Healthcare Network",
+      industry: "Healthcare & Medical Training",
+      background: "Regional hospital network with 8 facilities and 450 surgical staff, seeking to improve surgical planning and reduce operating room complications."
+    },
+    problem: {
+      title: "Complex Surgical Procedures Requiring 3D Spatial Understanding from 2D Scans",
+      description: "Surgeons were planning complex procedures using 2D CT and MRI scans—a fundamental limitation when operating in 3D space. The hospital network had a 6.8% surgical complication rate for complex procedures, above the 4.2% regional benchmark. Pre-surgical team briefings took 45 minutes on average because surgeons struggled to communicate spatial anatomy from 2D images. Two procedures in the previous year required unplanned extensions due to anatomical surprises.",
+      painPoints: [
+        "6.8% complication rate vs. 4.2% regional benchmark for complex procedures",
+        "45-minute average pre-surgical briefing due to 2D scan interpretation challenges",
+        "Surgical team spatial misalignment causing intraoperative communication delays",
+        "2 unplanned procedure extensions in previous year due to anatomical surprises",
+        "Resident training limited by inability to visualize complex 3D anatomy",
+        "Remote specialist consultation impossible without shared spatial understanding"
+      ]
+    },
+    solution: {
+      approach: "Developed a Magic Leap 2 MR application that converted patient CT/MRI scans into interactive 3D holographic models. Surgical teams could collaboratively explore patient anatomy in shared MR space before entering the operating room.",
+      implementation: [
+        "Built DICOM scan-to-3D conversion pipeline for real-time holographic generation",
+        "Implemented multi-user shared MR space for collaborative surgical planning",
+        "Created persistent spatial anchors for consistent hologram positioning",
+        "Developed annotation tools for surgeons to mark critical structures",
+        "Built remote collaboration feature for specialist consultation",
+        "Integrated with hospital PACS system for seamless scan access"
+      ],
+      timeline: "20 weeks including clinical validation",
+      budget: "120,000€ total development cost"
+    },
+    impact: {
+      summary: "The MR surgical planning tool reduced complication rates to below the regional benchmark and cut pre-surgical briefing time by 67%, while enabling remote specialist collaboration across all 8 facilities.",
+      metrics: [
+        {
+          label: "Complication Rate",
+          value: "-38%",
+          description: "6.8% → 4.2% complication rate—matching regional benchmark within 6 months"
+        },
+        {
+          label: "Briefing Time",
+          value: "-67%",
+          description: "45 minutes → 15 minutes for pre-surgical team alignment"
+        },
+        {
+          label: "Remote Consultations",
+          value: "3x",
+          description: "Specialist consultations tripled with shared MR spatial understanding"
+        },
+        {
+          label: "Resident Confidence",
+          value: "+85%",
+          description: "Resident self-reported confidence in complex procedure preparation"
+        }
+      ],
+      testimonial: {
+        quote: "Explaining a complex tumor's spatial relationship to surrounding structures from a 2D scan is like describing a sculpture from a photograph. With Magic Leap, we walk into surgery having already explored the patient's anatomy together. Our complication rate dropped to benchmark within 6 months.",
+        author: "Dr. Layla Al-Rashid",
+        position: "Chief of Surgery, Regional Healthcare Network"
+      }
+    }
   },
   {
     id: "vr-classroom",
@@ -504,6 +983,66 @@ export const projects: Project[] = [
     image: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=1200&q=80",
     tags: ["VR", "Education", "Networking", "Unity", "Social VR"],
     featured: false,
+    client: {
+      name: "Corporate Training Consortium",
+      industry: "Corporate Learning & Development",
+      background: "HR training division of a multinational corporation with 18,000 employees across 12 countries, managing annual L&D budget of 8.5M€."
+    },
+    problem: {
+      title: "Remote Workforce Training Failing: 23% Completion Rate and Zero Skill Retention",
+      description: "The corporation's shift to remote work exposed a critical training failure. Video-based e-learning had a 23% completion rate and post-training assessments showed only 31% skill retention after 30 days. Annual training budget was 8.5M€ with measurable ROI of near zero. Compliance training completion was legally required but employees were clicking through without engaging. The L&D director had 6 months to show measurable improvement or face budget cuts.",
+      painPoints: [
+        "23% course completion rate vs. 85% target for compliance requirements",
+        "31% skill retention after 30 days—near-zero training ROI on 8.5M€ budget",
+        "Legal compliance risk from employees clicking through without genuine engagement",
+        "Remote teams losing collaborative culture—no shared learning experiences",
+        "6-month deadline for L&D director to show measurable improvement",
+        "Time zone differences making synchronous training sessions impossible"
+      ]
+    },
+    solution: {
+      approach: "Built an immersive social VR classroom where employees across time zones could attend live sessions, collaborate on 3D scenarios, and practice skills in realistic simulated environments. Asynchronous replay mode allowed flexible scheduling.",
+      implementation: [
+        "Developed multi-user VR environment supporting 30 simultaneous participants",
+        "Created interactive 3D scenario modules for compliance and skills training",
+        "Implemented spatial audio for natural conversation dynamics",
+        "Built instructor tools: whiteboard, 3D model presentation, scenario control",
+        "Designed asynchronous replay mode for timezone-flexible access",
+        "Integrated LMS tracking for completion and assessment data"
+      ],
+      timeline: "12 weeks from brief to global rollout",
+      budget: "62,000€ total development cost"
+    },
+    impact: {
+      summary: "VR classroom transformed training engagement from a compliance checkbox to a competitive advantage, with completion rates and retention metrics exceeding industry benchmarks within the first quarter.",
+      metrics: [
+        {
+          label: "Completion Rate",
+          value: "91%",
+          description: "23% → 91% course completion—from legal risk to best-in-class"
+        },
+        {
+          label: "Skill Retention",
+          value: "+185%",
+          description: "31% → 88% retention after 30 days—measurable behavior change"
+        },
+        {
+          label: "Training Cost",
+          value: "-40%",
+          description: "VR eliminated travel and venue costs for 18,000 employees"
+        },
+        {
+          label: "Employee NPS",
+          value: "+62 pts",
+          description: "Training NPS went from -8 (detractor) to +54 (promoter)"
+        }
+      ],
+      testimonial: {
+        quote: "We were spending 8.5 million euros a year on training that wasn't working. The VR classroom didn't just improve completion rates—it changed how employees feel about learning. Our training NPS went from negative to one of our highest-scoring employee programs. The L&D budget is now seen as a competitive advantage.",
+        author: "Rania Al-Mansouri",
+        position: "Global Head of Learning & Development"
+      }
+    }
   },
   {
     id: "web3d-portfolio",
@@ -514,6 +1053,66 @@ export const projects: Project[] = [
     image: "https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?w=1200&q=80",
     tags: ["WebGL", "Three.js", "Web3D", "Interactive"],
     featured: false,
+    client: {
+      name: "Multiple Digital & Marketing Clients",
+      industry: "Digital Marketing & Brand Experience",
+      background: "Portfolio of projects for brands seeking interactive 3D web experiences without requiring app downloads or VR hardware."
+    },
+    problem: {
+      title: "Brands Losing Digital Engagement to Competitors with Interactive 3D Experiences",
+      description: "Multiple brand clients faced the same challenge: their websites felt flat and static while competitors were launching immersive 3D experiences. One luxury automotive brand had a 1.2% website conversion rate vs. 3.8% industry average. Their marketing agency quoted 280K€ for a native app with 3D features—a budget the brand couldn't justify. They needed web-based 3D that worked on any device without downloads.",
+      painPoints: [
+        "1.2% website conversion rate vs. 3.8% industry average for luxury automotive",
+        "Competitors launching immersive 3D experiences capturing market attention",
+        "Native app development quoted at 280K€—unjustifiable for marketing campaign",
+        "3D product configurators requiring software downloads losing 78% of users",
+        "Static product photography failing to communicate premium product quality",
+        "Mobile users (65% of traffic) unable to access existing 3D content"
+      ]
+    },
+    solution: {
+      approach: "Built browser-native 3D experiences using Three.js and WebGL that loaded instantly on any device—desktop, tablet, or mobile—without downloads. Experiences included 360° product viewers, interactive configurators, and architectural walkthroughs.",
+      implementation: [
+        "Developed optimized 3D models with progressive loading for instant web performance",
+        "Built real-time material configurator with 40+ color and finish combinations",
+        "Implemented responsive 3D rendering adapting to device capabilities",
+        "Created architectural walkthrough with hotspot-driven navigation",
+        "Optimized texture compression achieving 95% size reduction vs. raw assets",
+        "Integrated analytics tracking user interaction with 3D elements"
+      ],
+      timeline: "4-6 weeks per project",
+      budget: "18,000€ - 55,000€ per project"
+    },
+    impact: {
+      summary: "Web3D experiences consistently outperformed traditional web content, with the automotive brand achieving 3.1% conversion rate and 4.2 minute average session time vs. 45 seconds previously.",
+      metrics: [
+        {
+          label: "Conversion Rate",
+          value: "+158%",
+          description: "1.2% → 3.1% conversion rate—exceeding industry average"
+        },
+        {
+          label: "Session Duration",
+          value: "4.2 min",
+          description: "vs. 45 seconds with static content—560% increase in engagement"
+        },
+        {
+          label: "Development Cost",
+          value: "-80%",
+          description: "35K€ WebGL solution vs. 280K€ native app quote"
+        },
+        {
+          label: "Device Reach",
+          value: "100%",
+          description: "Works on all devices and browsers—no download required"
+        }
+      ],
+      testimonial: {
+        quote: "Our website was beautiful but static. Competitors were launching 3D configurators and we were losing leads. The WebGL experience cost a fraction of what we were quoted for an app, launched in 5 weeks, and our conversion rate went from 1.2% to 3.1%. It paid for itself in the first month.",
+        author: "Omar Al-Khatib",
+        position: "Digital Marketing Director, Luxury Automotive Brand"
+      }
+    }
   },
   {
     id: "oman-park-archviz",
