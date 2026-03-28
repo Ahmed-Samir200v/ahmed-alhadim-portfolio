@@ -8,6 +8,8 @@ import Home from "./pages/Home";
 import ProjectDetail from "./pages/ProjectDetail";
 import Blog from "./pages/Blog";
 import BlogArticle from "./pages/BlogArticle";
+import CustomCursor from "./components/CustomCursor";
+import ScrollProgressBar from "./components/ScrollProgressBar";
 
 
 function Router() {
@@ -25,9 +27,9 @@ function Router() {
 }
 
 // NOTE: About Theme
-// - First choose a default theme according to your design style (dark or light bg), than change color palette in index.css
-//   to keep consistent foreground/background color across components
-// - If you want to make theme switchable, pass `switchable` ThemeProvider and use `useTheme` hook
+// - Dark cinematic theme inspired by FusionAI
+// - Electric blue primary (#0EA5E9 range) + warm orange accent
+// - Pure black/deep navy backgrounds with neon glow effects
 
 function App() {
   return (
@@ -38,6 +40,9 @@ function App() {
       >
         <TooltipProvider>
           <Toaster />
+          {/* Global UI elements - appear on all pages */}
+          <CustomCursor />
+          <ScrollProgressBar />
           <Router />
         </TooltipProvider>
       </ThemeProvider>

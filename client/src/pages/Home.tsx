@@ -1,10 +1,10 @@
 /**
- * Design Philosophy: Cinematic Depth-Field Narrative
- * - Film noir meets AAA game cinematics
- * - Midnight blue to charcoal backgrounds
- * - Warm amber and cool violet accents
- * - Depth-of-field blur effects
- * - Diagonal composition and overlapping sections
+ * Design Philosophy: FusionAI-Inspired Cinematic Dark
+ * - Pure black / deep navy backgrounds
+ * - Electric blue primary accent with neon glow
+ * - Warm orange secondary accent
+ * - Diagonal light ray aesthetics
+ * - Glassmorphism cards with blue border glow
  */
 
 import { useState, useEffect, useRef } from "react";
@@ -16,6 +16,7 @@ import { Mail, Linkedin, Youtube, ArrowRight, Code2, Layers, Sparkles } from "lu
 import { personalInfo, projects, skills, experience } from "@/data/portfolio";
 import Header from "@/components/Header";
 import { AnimatedCounter } from "@/components/AnimatedCounter";
+import ContactForm from "@/components/ContactForm";
 
 export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
@@ -105,7 +106,7 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Hero Section - Cinematic with diagonal composition */}
+      {/* Hero Section - FusionAI-Inspired Cinematic */}
       <section ref={heroRef} className="relative min-h-screen flex items-center overflow-hidden pt-20">
         {/* Background with depth-of-field effect */}
         <div className="absolute inset-0 z-0">
@@ -121,7 +122,64 @@ export default function Home() {
               transition: 'transform 0.15s ease-out',
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/80 to-background/60" />
+          {/* Dark overlay */}
+          <div className="absolute inset-0 bg-gradient-to-br from-background/97 via-background/85 to-background/70" />
+          
+          {/* FusionAI-style diagonal light rays */}
+          <div className="absolute inset-0 pointer-events-none overflow-hidden">
+            {/* Primary blue ray */}
+            <div
+              className="absolute animate-light-ray"
+              style={{
+                top: '-20%',
+                right: '15%',
+                width: '2px',
+                height: '140%',
+                background: 'linear-gradient(to bottom, transparent 0%, rgba(14, 165, 233, 0.5) 40%, rgba(14, 165, 233, 0.7) 60%, transparent 100%)',
+                transform: 'rotate(-35deg)',
+                transformOrigin: 'top center',
+                filter: 'blur(1px)',
+              }}
+            />
+            {/* Secondary blue ray */}
+            <div
+              className="absolute animate-light-ray"
+              style={{
+                top: '-20%',
+                right: '25%',
+                width: '1px',
+                height: '140%',
+                background: 'linear-gradient(to bottom, transparent 0%, rgba(56, 189, 248, 0.3) 40%, rgba(56, 189, 248, 0.5) 60%, transparent 100%)',
+                transform: 'rotate(-35deg)',
+                transformOrigin: 'top center',
+                animationDelay: '1.5s',
+              }}
+            />
+            {/* Orange warm glow - bottom left */}
+            <div
+              className="absolute"
+              style={{
+                bottom: '-10%',
+                left: '-5%',
+                width: '40%',
+                height: '50%',
+                background: 'radial-gradient(ellipse at bottom left, rgba(249, 115, 22, 0.12) 0%, transparent 70%)',
+                filter: 'blur(40px)',
+              }}
+            />
+            {/* Blue glow - top right */}
+            <div
+              className="absolute"
+              style={{
+                top: '-10%',
+                right: '-5%',
+                width: '50%',
+                height: '60%',
+                background: 'radial-gradient(ellipse at top right, rgba(14, 165, 233, 0.10) 0%, transparent 70%)',
+                filter: 'blur(60px)',
+              }}
+            />
+          </div>
         </div>
 
         {/* Content - 60/40 split with diagonal cut */}
@@ -130,14 +188,14 @@ export default function Home() {
             <div className="lg:col-span-3 space-y-8">
               <div className="space-y-4">
                 <div className="inline-block">
-                  <Badge variant="outline" className="font-accent text-xs px-4 py-1.5 border-primary/50 text-primary">
+                  <div className="pill-badge">
                     {personalInfo.yearsExperience} Years Experience • {personalInfo.projectsCompleted} Projects
-                  </Badge>
+                  </div>
                 </div>
-                <h1 className="font-display text-6xl md:text-7xl lg:text-8xl leading-none tracking-tight text-glow-amber">
+                <h1 className="font-display text-6xl md:text-7xl lg:text-8xl leading-none tracking-tight" style={{background: 'linear-gradient(135deg, #ffffff 0%, #38bdf8 50%, #fb923c 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', filter: 'drop-shadow(0 0 30px rgba(14, 165, 233, 0.4))'}}>
                   {personalInfo.name.toUpperCase()}
                 </h1>
-                <h2 className="font-heading text-2xl md:text-3xl text-accent font-semibold">
+                <h2 className="font-heading text-2xl md:text-3xl font-semibold" style={{color: 'oklch(0.70 0.20 40)'}}>
                   {personalInfo.title}
                 </h2>
                 <p className="text-xl text-muted-foreground font-heading font-normal max-w-2xl">
@@ -146,13 +204,13 @@ export default function Home() {
               </div>
 
               <div className="flex flex-wrap gap-4">
-                <Button size="lg" className="group bg-primary hover:bg-primary/90 text-primary-foreground font-heading">
+                <Button size="lg" className="group font-heading btn-glow-blue transition-all duration-300" style={{background: 'linear-gradient(135deg, oklch(0.65 0.22 220), oklch(0.60 0.20 200))', color: 'white'}}>
                   <a href="#projects" className="flex items-center gap-2">
                     View Projects
                     <ArrowRight className="group-hover:translate-x-1 transition-transform" size={18} />
                   </a>
                 </Button>
-                <Button size="lg" variant="outline" className="font-heading border-accent text-accent hover:bg-accent hover:text-accent-foreground">
+                <Button size="lg" variant="outline" className="font-heading transition-all duration-300" style={{borderColor: 'oklch(0.70 0.20 40 / 0.6)', color: 'oklch(0.70 0.20 40)'}}>
                   <a href="#contact" className="flex items-center gap-2">
                     <Mail size={18} />
                     Get In Touch
@@ -160,25 +218,25 @@ export default function Home() {
                 </Button>
               </div>
 
-              {/* Stats */}
-              <div className="grid grid-cols-3 gap-6 pt-8 border-t border-border/50">
-                <div>
-                  <div className="font-display text-4xl text-primary">
+              {/* Stats - FusionAI style */}
+              <div className="grid grid-cols-3 gap-6 pt-8 border-t" style={{borderColor: 'oklch(0.65 0.22 220 / 0.2)'}}>
+                <div className="group">
+                  <div className="font-display text-4xl" style={{background: 'linear-gradient(135deg, #38bdf8, #818cf8)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>
                     <AnimatedCounter end={50} suffix="+" />
                   </div>
-                  <div className="text-sm text-muted-foreground font-heading">Happy Clients</div>
+                  <div className="text-sm text-muted-foreground font-heading mt-1">Happy Clients</div>
                 </div>
-                <div>
-                  <div className="font-display text-4xl text-primary">
+                <div className="group">
+                  <div className="font-display text-4xl" style={{background: 'linear-gradient(135deg, #38bdf8, #818cf8)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>
                     <AnimatedCounter end={100} suffix="K+" />
                   </div>
-                  <div className="text-sm text-muted-foreground font-heading">Polygons Optimized</div>
+                  <div className="text-sm text-muted-foreground font-heading mt-1">Polygons Optimized</div>
                 </div>
-                <div>
-                  <div className="font-display text-4xl text-primary">
+                <div className="group">
+                  <div className="font-display text-4xl" style={{background: 'linear-gradient(135deg, #38bdf8, #818cf8)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>
                     <AnimatedCounter end={15} suffix="+" />
                   </div>
-                  <div className="text-sm text-muted-foreground font-heading">XR Platforms</div>
+                  <div className="text-sm text-muted-foreground font-heading mt-1">XR Platforms</div>
                 </div>
               </div>
             </div>
@@ -231,7 +289,7 @@ export default function Home() {
         
         <div className="container relative z-10">
           <div className="max-w-4xl mx-auto">
-            <h2 className="font-display text-5xl md:text-6xl mb-8 text-primary text-glow-amber">
+            <h2 className="font-display text-5xl md:text-6xl mb-8 text-glow-blue" style={{background: 'linear-gradient(135deg, #ffffff, #38bdf8)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>
               ABOUT ME
             </h2>
             <div className="space-y-6 text-lg leading-relaxed text-foreground/90">
@@ -280,7 +338,7 @@ export default function Home() {
         
         <div className="container relative z-10">
           <div className="mb-12">
-            <h2 className="font-display text-5xl md:text-6xl mb-6 text-primary text-glow-amber">
+            <h2 className="font-display text-5xl md:text-6xl mb-6 text-glow-blue" style={{background: 'linear-gradient(135deg, #ffffff, #38bdf8)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>
               FEATURED WORK
             </h2>
             <p className="text-xl text-muted-foreground font-heading max-w-2xl">
@@ -407,7 +465,7 @@ export default function Home() {
         </div>
         
         <div className="container relative z-10">
-          <h2 className="font-display text-5xl md:text-6xl mb-12 text-primary text-glow-amber">
+          <h2 className="font-display text-5xl md:text-6xl mb-12 text-glow-blue" style={{background: 'linear-gradient(135deg, #ffffff, #38bdf8)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>
             TECHNICAL EXPERTISE
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -441,7 +499,7 @@ export default function Home() {
         </div>
         
         <div className="container relative z-10">
-          <h2 className="font-display text-5xl md:text-6xl mb-12 text-primary text-glow-amber">
+          <h2 className="font-display text-5xl md:text-6xl mb-12 text-glow-blue" style={{background: 'linear-gradient(135deg, #ffffff, #38bdf8)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>
             EXPERIENCE
           </h2>
           <div className="max-w-4xl space-y-8">
@@ -477,7 +535,7 @@ export default function Home() {
       {/* Tools & Technologies Section */}
       <section id="tools" className="py-24 relative overflow-hidden bg-gradient-to-b from-background via-background/50 to-background">
         <div className="container relative z-10">
-          <h2 className="font-display text-5xl md:text-6xl mb-4 text-primary text-glow-amber text-center">
+          <h2 className="font-display text-5xl md:text-6xl mb-4 text-center text-glow-blue" style={{background: 'linear-gradient(135deg, #ffffff, #38bdf8)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>
             TOOLS & TECHNOLOGIES
           </h2>
           <p className="text-xl text-muted-foreground text-center mb-16 font-heading">
@@ -810,7 +868,7 @@ export default function Home() {
         </div>
         
         <div className="container relative z-10">
-          <h2 className="font-display text-5xl md:text-6xl mb-4 text-primary text-glow-amber text-center">
+          <h2 className="font-display text-5xl md:text-6xl mb-4 text-center text-glow-blue" style={{background: 'linear-gradient(135deg, #ffffff, #38bdf8)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>
             CLIENT TESTIMONIALS
           </h2>
           <p className="text-xl text-muted-foreground text-center mb-16 font-heading">
@@ -896,7 +954,7 @@ export default function Home() {
         
         <div className="container relative z-10">
           <div className="text-center mb-12">
-            <h2 className="font-display text-5xl md:text-6xl mb-4 text-primary text-glow-amber">
+            <h2 className="font-display text-5xl md:text-6xl mb-4 text-glow-blue" style={{background: 'linear-gradient(135deg, #ffffff, #38bdf8)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>
               TECHNICAL INSIGHTS
             </h2>
             <p className="text-xl text-muted-foreground font-heading mb-8">
@@ -1001,37 +1059,113 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section id="contact" className="py-24 bg-card/30">
-        <div className="container">
-          <div className="max-w-2xl mx-auto text-center">
-            <h2 className="font-display text-5xl md:text-6xl mb-6 text-primary text-glow-amber">
-              LET'S COLLABORATE
-            </h2>
-            <p className="text-xl text-muted-foreground font-heading mb-8">
-              Available for freelance projects, full-time opportunities, and collaborations with AAA studios and XR companies.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-heading w-full sm:w-auto">
-                <a href={`mailto:${personalInfo.email}`} className="flex items-center gap-2">
-                  <Mail size={20} />
-                  {personalInfo.email}
-                </a>
-              </Button>
-              <Button size="lg" variant="outline" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground font-heading w-full sm:w-auto">
-                <a href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                  <Linkedin size={20} />
-                  LinkedIn Profile
-                </a>
-              </Button>
+      {/* Contact Section - FusionAI inspired with interactive form */}
+      <section id="contact" className="py-24 relative overflow-hidden">
+        {/* Background glow effects */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute bottom-0 left-1/4 w-96 h-96 rounded-full bg-primary/5 blur-3xl" />
+          <div className="absolute top-0 right-1/4 w-80 h-80 rounded-full" style={{background: 'radial-gradient(ellipse, oklch(0.70 0.20 40 / 0.06) 0%, transparent 70%)'}} />
+          {/* Diagonal light rays */}
+          <div className="absolute top-0 right-0 w-px h-full opacity-20 animate-light-ray" style={{background: 'linear-gradient(to bottom, transparent, oklch(0.65 0.22 220 / 0.6), transparent)', transform: 'rotate(-30deg) translateX(200px)', transformOrigin: 'top center'}} />
+          <div className="absolute top-0 right-20 w-px h-full opacity-10 animate-light-ray" style={{background: 'linear-gradient(to bottom, transparent, oklch(0.65 0.22 220 / 0.4), transparent)', transform: 'rotate(-30deg) translateX(100px)', transformOrigin: 'top center', animationDelay: '2s'}} />
+        </div>
+
+        <div className="container relative z-10">
+          <div className="max-w-5xl mx-auto">
+            {/* Section header */}
+            <div className="text-center mb-16">
+              <div className="pill-badge mb-6">تواصل معي</div>
+              <h2 className="font-display text-5xl md:text-7xl mb-6 text-glow-blue" style={{background: 'linear-gradient(135deg, #38bdf8, #818cf8, #fb923c)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>
+                LET'S BUILD TOGETHER
+              </h2>
+              <p className="text-xl text-muted-foreground font-heading max-w-2xl mx-auto">
+                متاح للمشاريع المستقلة، الفرص الكاملة، والتعاون مع استوديوهات AAA وشركات XR.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
+              {/* Left: Contact info */}
+              <div className="lg:col-span-2 space-y-8">
+                {/* Quick contact cards */}
+                <div className="space-y-4">
+                  <a
+                    href={`mailto:${personalInfo.email}`}
+                    className="flex items-center gap-4 p-4 rounded-xl glass-card hover:scale-105 transition-all duration-300 group"
+                  >
+                    <div className="w-12 h-12 rounded-lg bg-primary/10 border border-primary/30 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                      <Mail size={20} className="text-primary" />
+                    </div>
+                    <div>
+                      <p className="text-xs text-muted-foreground font-accent uppercase tracking-wider">البريد الإلكتروني</p>
+                      <p className="text-sm font-heading text-foreground">{personalInfo.email}</p>
+                    </div>
+                  </a>
+
+                  <a
+                    href={personalInfo.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-4 p-4 rounded-xl glass-card hover:scale-105 transition-all duration-300 group"
+                  >
+                    <div className="w-12 h-12 rounded-lg bg-accent/10 border border-accent/30 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+                      <Linkedin size={20} className="text-accent" />
+                    </div>
+                    <div>
+                      <p className="text-xs text-muted-foreground font-accent uppercase tracking-wider">LinkedIn</p>
+                      <p className="text-sm font-heading text-foreground">Ahmed Al-Hadim</p>
+                    </div>
+                  </a>
+
+                  <a
+                    href={personalInfo.youtube}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-4 p-4 rounded-xl glass-card hover:scale-105 transition-all duration-300 group"
+                  >
+                    <div className="w-12 h-12 rounded-lg bg-primary/10 border border-primary/30 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                      <Youtube size={20} className="text-primary" />
+                    </div>
+                    <div>
+                      <p className="text-xs text-muted-foreground font-accent uppercase tracking-wider">YouTube</p>
+                      <p className="text-sm font-heading text-foreground">قناة التعليم والمشاريع</p>
+                    </div>
+                  </a>
+                </div>
+
+                {/* Availability badge */}
+                <div className="p-4 rounded-xl border border-green-500/30 bg-green-500/5">
+                  <div className="flex items-center gap-3">
+                    <div className="w-2.5 h-2.5 rounded-full bg-green-400 animate-pulse" />
+                    <div>
+                      <p className="text-sm font-heading text-green-400">متاح للعمل</p>
+                      <p className="text-xs text-muted-foreground">مستعد لمشاريع جديدة</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right: Contact Form */}
+              <div className="lg:col-span-3">
+                <div className="p-8 rounded-2xl glass-card">
+                  <h3 className="font-heading text-2xl font-semibold text-foreground mb-8">
+                    أرسل رسالتك
+                  </h3>
+                  <ContactForm />
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-background border-t border-border py-12">
-        <div className="container">
+      {/* Footer - FusionAI style */}
+      <footer className="relative py-12 overflow-hidden" style={{background: 'oklch(0.07 0.02 260)', borderTop: '1px solid oklch(0.65 0.22 220 / 0.15)'}}>
+        {/* Glow line at top */}
+        <div className="divider-glow absolute top-0 left-0 right-0" />
+        {/* Background glow */}
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-96 h-32 rounded-full" style={{background: 'radial-gradient(ellipse, oklch(0.65 0.22 220 / 0.06) 0%, transparent 70%)', filter: 'blur(20px)'}} />
+        
+        <div className="container relative z-10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-8">
             {/* Logo and Brand */}
             <div className="flex items-center gap-4">
@@ -1039,9 +1173,10 @@ export default function Home() {
                 src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/FZfjwUzTsScMPRYL.png"
                 alt="Al-Hadim Cube Icon"
                 className="h-16 animate-float"
+                style={{filter: 'drop-shadow(0 0 10px rgba(14, 165, 233, 0.4))'}}
               />
               <div>
-                <h3 className="text-xl font-display font-bold text-amber">AHMED ALHADIM</h3>
+                <h3 className="text-xl font-display font-bold" style={{background: 'linear-gradient(135deg, #ffffff, #38bdf8)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>AHMED ALHADIM</h3>
                 <p className="text-sm text-muted-foreground font-accent">Senior 3D Artist | Game & XR Specialist</p>
               </div>
             </div>
@@ -1050,7 +1185,10 @@ export default function Home() {
             <div className="flex gap-6">
               <a
                 href={`mailto:${personalInfo.email}`}
-                className="text-muted-foreground hover:text-amber transition-colors"
+                className="text-muted-foreground transition-all duration-300 hover:scale-110"
+                style={{color: 'oklch(0.60 0.03 270)'}}
+                onMouseEnter={e => (e.currentTarget.style.color = '#38bdf8')}
+                onMouseLeave={e => (e.currentTarget.style.color = 'oklch(0.60 0.03 270)')}
                 aria-label="Email"
               >
                 <Mail className="h-6 w-6" />
@@ -1059,7 +1197,10 @@ export default function Home() {
                 href={personalInfo.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-violet transition-colors"
+                className="text-muted-foreground transition-all duration-300 hover:scale-110"
+                style={{color: 'oklch(0.60 0.03 270)'}}
+                onMouseEnter={e => (e.currentTarget.style.color = '#fb923c')}
+                onMouseLeave={e => (e.currentTarget.style.color = 'oklch(0.60 0.03 270)')}
                 aria-label="LinkedIn"
               >
                 <Linkedin className="h-6 w-6" />
@@ -1068,7 +1209,10 @@ export default function Home() {
                 href={personalInfo.youtube}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-amber transition-colors"
+                className="text-muted-foreground transition-all duration-300 hover:scale-110"
+                style={{color: 'oklch(0.60 0.03 270)'}}
+                onMouseEnter={e => (e.currentTarget.style.color = '#38bdf8')}
+                onMouseLeave={e => (e.currentTarget.style.color = 'oklch(0.60 0.03 270)')}
                 aria-label="YouTube"
               >
                 <Youtube className="h-6 w-6" />
@@ -1077,8 +1221,8 @@ export default function Home() {
           </div>
 
           {/* Copyright */}
-          <div className="mt-8 pt-8 border-t border-border text-center text-sm text-muted-foreground font-accent">
-            <p>© {new Date().getFullYear()} {personalInfo.name}. All rights reserved.</p>
+          <div className="mt-8 pt-8 text-center text-sm text-muted-foreground font-accent" style={{borderTop: '1px solid oklch(0.65 0.22 220 / 0.1)'}}>
+            <p>© {new Date().getFullYear()} {personalInfo.name}. All rights reserved. Built with passion for XR & 3D.</p>
           </div>
         </div>
       </footer>
