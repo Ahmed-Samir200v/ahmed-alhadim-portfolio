@@ -7,7 +7,7 @@
  * - Diagonal composition and overlapping sections
  */
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -20,6 +20,24 @@ import { AnimatedCounter } from "@/components/AnimatedCounter";
 export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
   const [selectedIndustry, setSelectedIndustry] = useState<string>("All");
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const heroRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      const hero = heroRef.current;
+      if (!hero) return;
+      const rect = hero.getBoundingClientRect();
+      // Only track when mouse is over hero section
+      if (e.clientY < rect.bottom) {
+        const x = (e.clientX / window.innerWidth - 0.5) * 2; // -1 to 1
+        const y = (e.clientY / window.innerHeight - 0.5) * 2; // -1 to 1
+        setMousePos({ x, y });
+      }
+    };
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
   
   const categories = ["All", "VR", "AR", "MR", "Game", "Visualization", "Web3D"];
   const industries = [
@@ -88,14 +106,19 @@ export default function Home() {
       </nav>
 
       {/* Hero Section - Cinematic with diagonal composition */}
-      <section className="relative min-h-screen flex items-center overflow-hidden pt-20">
+      <section ref={heroRef} className="relative min-h-screen flex items-center overflow-hidden pt-20">
         {/* Background with depth-of-field effect */}
         <div className="absolute inset-0 z-0">
           <div 
-            className="absolute inset-0 bg-cover bg-center"
+            className="absolute bg-cover bg-center"
             style={{
-              backgroundImage: `url('https://private-us-east-1.manuscdn.com/sessionFile/SymxxZFFWf71UsoZLrpb7i/sandbox/6ZDY6fmItm5Py3Bf5JeV5o-img-1_1770730622000_na1fn_aGVyby1iYWNrZ3JvdW5k.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvU3lteHhaRkZXZjcxVXNvWkxycGI3aS9zYW5kYm94LzZaRFk2Zm1JdG01UHkzQmY1SmVWNW8taW1nLTFfMTc3MDczMDYyMjAwMF9uYTFmbl9hR1Z5YnkxaVlXTnJaM0p2ZFc1ay5wbmc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=knhkB9D9Y4mQNoPWnyTMH~u3j8sMUoIdoLwTEY348MowCo~QWJWSoyLdjobhFrIXiqXOZjeHjny6Lkn4UF9dSTjuD6NdE6shQYP6ORLl6w73jHwSJA72nTAiEDGrYD2gu6pOToc3VDAqv4tOYeVvmWR96rpQv2X6NKxLoOLv3pWzW8bBEB8D7WfleACznqu5GNgYsrQyoE8FLxINvc5-TVEf9hXnBF79M2~12DRtzY0CUN62EVDViu5ir4P97KxyLuLg5K7BwB3~-P~f2qk7Chz75wO8L-IG0OLm4K8T9~H0YLWCnQORXNkgQWmXPETqMXH0loT0OkiSdJ6JjX8Ujg__')`,
+              backgroundImage: `url('https://private-us-east-1.manuscdn.com/sessionFile/SymxxZFFWf71UsoZLrpb7i/sandbox/6ZDY6fmItm5Py3Bf5JeV5o-img-1_1770730622000_na1fn_aGVyby1iYWNrZ3JvdW5k.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvU3lteHhaRkZXZjcxVXNvWkxycGI3aS9zYW5kYm94LzZaRFk2Zm1JdG01UHkzQmY1SmVWNW8taW1nLTFfMTc3MDczMDYyMjAwMF9uYTFmbl9hR1Z5YnkxaVlXTnJaM0p2ZFc1ay5wbmc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=knhkB9D9Y4mQNoPWnyTMH~u3j8sMUoIdoLwTEY348MowCo~QWJWSoyLdjobhFrIXiqXOZjeHjny6Lkn4UF9dSTjuD6NdE6shQYP6ORLl6w73jHwSJA72nTAiEDGrYD2gu6pOToc3VDAqv4tOYeVvmWR96rpQv2X6NKxLoOLv3pWzW8bBEB8D7WfleACznqu5GNgYsrQyoE8FLxINvc5-TVEf9hXnBF79M2~12DRtzY0CUN62EVDViu5ir4P97KxyLuLg5K7BwB3~-P~f2qk7Chz75wO8L-IG0OLm4K8T9~H0YLWCnQORXNkgQWmXNPETqMXH0loT0OkiSdJ6JjX8Ujg__')`,
               filter: 'blur(2px)',
+              inset: '-5%',
+              width: '110%',
+              height: '110%',
+              transform: `translate(${mousePos.x * -18}px, ${mousePos.y * -18}px)`,
+              transition: 'transform 0.15s ease-out',
             }}
           />
           <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/80 to-background/60" />
@@ -160,9 +183,14 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right side - 3D floating elements */}
+            {/* Right side - 3D floating elements with parallax */}
             <div className="lg:col-span-2 hidden lg:flex items-center justify-center">
-              <div className="relative w-full h-96">
+              <div className="relative w-full h-96"
+                style={{
+                  transform: `translate(${mousePos.x * 12}px, ${mousePos.y * 12}px)`,
+                  transition: 'transform 0.2s ease-out',
+                }}
+              >
                 {/* 3D Cube element */}
                 <div className="absolute top-0 right-0 w-32 h-32 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/40 flex items-center justify-center glow-amber animate-float shadow-2xl backdrop-blur-sm cursor-pointer transition-all duration-700 ease-out hover:scale-110 hover:shadow-[0_0_40px_rgba(255,179,71,0.6)]" style={{ transform: 'perspective(1000px) rotateX(15deg) rotateY(-15deg)', transition: 'transform 0.7s ease-out' }} onMouseEnter={(e) => e.currentTarget.style.transform = 'perspective(1000px) rotateX(25deg) rotateY(-35deg) scale(1.1)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'perspective(1000px) rotateX(15deg) rotateY(-15deg) scale(1)'}>
                   <div className="absolute inset-2 border border-primary/20 rounded-lg" style={{ transform: 'translateZ(20px)' }} />
