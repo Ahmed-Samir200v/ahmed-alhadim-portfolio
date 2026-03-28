@@ -41,7 +41,7 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
   
-  /* Custom cinematic fonts */
+  /* Cinematic fonts */
   --font-display: 'Bebas Neue', sans-serif;
   --font-heading: 'Rajdhani', sans-serif;
   --font-body: 'Outfit', sans-serif;
@@ -49,107 +49,95 @@
 }
 
 /* ============================================================
- * FusionAI-Inspired Dark Cinematic Theme
- * - Pure black/deep navy backgrounds
- * - Electric blue primary accent (#0EA5E9 / cyan-blue)
- * - Warm orange secondary accent (#F97316)
- * - Neon glow effects on cards and interactive elements
- * - Diagonal light ray aesthetics
+ * Logo-Inspired Purple Theme
+ * Primary: Deep purple #7C3AED / oklch(0.52 0.28 290)
+ * Accent:  Cyan-blue #06B6D4   / oklch(0.72 0.18 210)
+ * Background: Near-black #050508
  * ============================================================ */
 :root {
-  /* Electric blue primary - FusionAI inspired */
-  --primary: oklch(0.65 0.22 220);
-  --primary-foreground: oklch(0.98 0.01 80);
-  
-  /* Sidebar blue theme */
-  --sidebar-primary: oklch(0.60 0.20 218);
-  --sidebar-primary-foreground: oklch(0.98 0.01 80);
-  
-  /* Chart colors - blue to orange gradient */
-  --chart-1: oklch(0.65 0.22 220);
-  --chart-2: oklch(0.70 0.20 200);
-  --chart-3: oklch(0.68 0.22 195);
-  --chart-4: oklch(0.72 0.18 40);
-  --chart-5: oklch(0.65 0.20 35);
-  
+  --primary: oklch(0.55 0.28 290);
+  --primary-foreground: oklch(0.98 0.005 290);
+
+  --sidebar-primary: oklch(0.55 0.28 290);
+  --sidebar-primary-foreground: oklch(0.98 0.005 290);
+
+  --chart-1: oklch(0.55 0.28 290);
+  --chart-2: oklch(0.65 0.22 270);
+  --chart-3: oklch(0.72 0.18 210);
+  --chart-4: oklch(0.60 0.24 300);
+  --chart-5: oklch(0.70 0.20 250);
+
   --radius: 0.625rem;
-  
-  /* Pure black to deep navy background */
-  --background: oklch(0.08 0.02 260);
+
+  /* Deep space background */
+  --background: oklch(0.07 0.015 280);
   --foreground: oklch(0.95 0.01 80);
-  
-  /* Card with dark navy elevation */
-  --card: oklch(0.11 0.025 255);
+
+  /* Card: dark purple-tinted navy */
+  --card: oklch(0.10 0.02 280);
   --card-foreground: oklch(0.95 0.01 80);
-  
-  /* Popover */
-  --popover: oklch(0.10 0.025 258);
+
+  --popover: oklch(0.09 0.02 280);
   --popover-foreground: oklch(0.95 0.01 80);
-  
-  /* Secondary dark tones */
-  --secondary: oklch(0.14 0.02 258);
+
+  --secondary: oklch(0.13 0.02 280);
   --secondary-foreground: oklch(0.88 0.02 85);
-  
-  /* Muted backgrounds */
-  --muted: oklch(0.13 0.02 256);
-  --muted-foreground: oklch(0.60 0.03 270);
-  
-  /* Orange accent - warm glow like FusionAI */
-  --accent: oklch(0.70 0.20 40);
-  --accent-foreground: oklch(0.08 0.02 260);
-  
-  /* Destructive */
+
+  --muted: oklch(0.12 0.015 278);
+  --muted-foreground: oklch(0.58 0.04 280);
+
+  /* Cyan accent */
+  --accent: oklch(0.72 0.18 210);
+  --accent-foreground: oklch(0.07 0.015 280);
+
   --destructive: oklch(0.60 0.22 25);
   --destructive-foreground: oklch(0.98 0.01 80);
-  
-  /* Borders with subtle blue glow */
-  --border: oklch(0.20 0.04 240);
-  --input: oklch(0.16 0.03 248);
-  --ring: oklch(0.65 0.22 220);
-  
-  /* Sidebar */
-  --sidebar: oklch(0.10 0.025 258);
+
+  --border: oklch(0.20 0.04 280);
+  --input: oklch(0.15 0.03 280);
+  --ring: oklch(0.55 0.28 290);
+
+  --sidebar: oklch(0.09 0.02 280);
   --sidebar-foreground: oklch(0.95 0.01 80);
-  --sidebar-accent: oklch(0.14 0.02 258);
+  --sidebar-accent: oklch(0.13 0.02 280);
   --sidebar-accent-foreground: oklch(0.95 0.01 80);
-  --sidebar-border: oklch(0.20 0.04 240);
-  --sidebar-ring: oklch(0.65 0.22 220);
+  --sidebar-border: oklch(0.20 0.04 280);
+  --sidebar-ring: oklch(0.55 0.28 290);
 }
 
-/* Dark mode matches root since we're dark-only */
 .dark {
-  --primary: oklch(0.65 0.22 220);
-  --primary-foreground: oklch(0.98 0.01 80);
-  --sidebar-primary: oklch(0.60 0.20 218);
-  --sidebar-primary-foreground: oklch(0.98 0.01 80);
-  --background: oklch(0.08 0.02 260);
+  --primary: oklch(0.55 0.28 290);
+  --primary-foreground: oklch(0.98 0.005 290);
+  --sidebar-primary: oklch(0.55 0.28 290);
+  --sidebar-primary-foreground: oklch(0.98 0.005 290);
+  --background: oklch(0.07 0.015 280);
   --foreground: oklch(0.95 0.01 80);
-  --card: oklch(0.11 0.025 255);
+  --card: oklch(0.10 0.02 280);
   --card-foreground: oklch(0.95 0.01 80);
-  --popover: oklch(0.10 0.025 258);
+  --popover: oklch(0.09 0.02 280);
   --popover-foreground: oklch(0.95 0.01 80);
-  --secondary: oklch(0.14 0.02 258);
+  --secondary: oklch(0.13 0.02 280);
   --secondary-foreground: oklch(0.88 0.02 85);
-  --muted: oklch(0.13 0.02 256);
-  --muted-foreground: oklch(0.60 0.03 270);
-  --accent: oklch(0.70 0.20 40);
-  --accent-foreground: oklch(0.08 0.02 260);
+  --muted: oklch(0.12 0.015 278);
+  --muted-foreground: oklch(0.58 0.04 280);
+  --accent: oklch(0.72 0.18 210);
+  --accent-foreground: oklch(0.07 0.015 280);
   --destructive: oklch(0.60 0.22 25);
   --destructive-foreground: oklch(0.98 0.01 80);
-  --border: oklch(0.20 0.04 240);
-  --input: oklch(0.16 0.03 248);
-  --ring: oklch(0.65 0.22 220);
-  --chart-1: oklch(0.65 0.22 220);
-  --chart-2: oklch(0.70 0.20 200);
-  --chart-3: oklch(0.68 0.22 195);
-  --chart-4: oklch(0.72 0.18 40);
-  --chart-5: oklch(0.65 0.20 35);
-  --sidebar: oklch(0.10 0.025 258);
+  --border: oklch(0.20 0.04 280);
+  --input: oklch(0.15 0.03 280);
+  --ring: oklch(0.55 0.28 290);
+  --chart-1: oklch(0.55 0.28 290);
+  --chart-2: oklch(0.65 0.22 270);
+  --chart-3: oklch(0.72 0.18 210);
+  --chart-4: oklch(0.60 0.24 300);
+  --chart-5: oklch(0.70 0.20 250);
+  --sidebar: oklch(0.09 0.02 280);
   --sidebar-foreground: oklch(0.95 0.01 80);
-  --sidebar-accent: oklch(0.14 0.02 258);
+  --sidebar-accent: oklch(0.13 0.02 280);
   --sidebar-accent-foreground: oklch(0.95 0.01 80);
-  --sidebar-border: oklch(0.20 0.04 240);
-  --sidebar-ring: oklch(0.65 0.22 220);
+  --sidebar-border: oklch(0.20 0.04 280);
+  --sidebar-ring: oklch(0.55 0.28 290);
 }
 
 @layer base {
@@ -159,8 +147,10 @@
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-body);
-    /* Hide default cursor - custom cursor handles it */
     cursor: none;
+    /* Performance: GPU compositing */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
@@ -173,28 +163,11 @@
   input[type="radio"]:not(:disabled) {
     cursor: none;
   }
-  
-  /* Typography styles */
-  h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-heading);
-    font-weight: 600;
-  }
-  
-  .font-display {
-    font-family: var(--font-display);
-  }
-  
-  .font-heading {
-    font-family: var(--font-heading);
-  }
-  
-  .font-body {
-    font-family: var(--font-body);
-  }
-  
-  .font-accent {
-    font-family: var(--font-accent);
-  }
+  h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); font-weight: 600; }
+  .font-display  { font-family: var(--font-display); }
+  .font-heading  { font-family: var(--font-heading); }
+  .font-body     { font-family: var(--font-body); }
+  .font-accent   { font-family: var(--font-accent); }
 }
 
 @layer components {
@@ -205,437 +178,233 @@
     padding-left: 1rem;
     padding-right: 1rem;
   }
+  .flex { min-height: 0; min-width: 0; }
+  @media (min-width: 640px)  { .container { padding-left: 1.5rem; padding-right: 1.5rem; } }
+  @media (min-width: 1024px) { .container { padding-left: 2rem; padding-right: 2rem; max-width: 1400px; } }
 
-  .flex {
-    min-height: 0;
-    min-width: 0;
-  }
+  /* ── Glow helpers ─────────────────────────────────── */
+  .glow-purple { box-shadow: 0 0 20px oklch(0.55 0.28 290 / 0.45), 0 0 40px oklch(0.55 0.28 290 / 0.20); }
+  .glow-cyan   { box-shadow: 0 0 20px oklch(0.72 0.18 210 / 0.45), 0 0 40px oklch(0.72 0.18 210 / 0.20); }
+  /* Legacy aliases */
+  .glow-amber  { box-shadow: 0 0 20px oklch(0.55 0.28 290 / 0.30); }
+  .glow-violet { box-shadow: 0 0 20px oklch(0.55 0.28 290 / 0.30); }
+  .glow-blue   { box-shadow: 0 0 20px oklch(0.55 0.28 290 / 0.30); }
+  .glow-orange { box-shadow: 0 0 20px oklch(0.72 0.18 210 / 0.30); }
 
-  @media (min-width: 640px) {
-    .container {
-      padding-left: 1.5rem;
-      padding-right: 1.5rem;
-    }
-  }
+  /* ── Text glow ────────────────────────────────────── */
+  .text-glow-blue   { text-shadow: 0 0 30px oklch(0.55 0.28 290 / 0.6), 0 0 60px oklch(0.55 0.28 290 / 0.3); }
+  .text-glow-amber  { text-shadow: 0 0 30px oklch(0.55 0.28 290 / 0.6), 0 0 60px oklch(0.55 0.28 290 / 0.3); }
+  .text-glow-orange { text-shadow: 0 0 20px oklch(0.72 0.18 210 / 0.5); }
+  .text-glow-purple { text-shadow: 0 0 30px oklch(0.55 0.28 290 / 0.7), 0 0 60px oklch(0.55 0.28 290 / 0.35); }
 
-  @media (min-width: 1024px) {
-    .container {
-      padding-left: 2rem;
-      padding-right: 2rem;
-      max-width: 1400px;
-    }
-  }
-  
-  /* ============================================================
-   * FusionAI-Inspired Glow Effects
-   * ============================================================ */
-  
-  /* Electric blue glow - primary */
-  .glow-blue {
-    box-shadow: 0 0 20px oklch(0.65 0.22 220 / 0.4), 0 0 40px oklch(0.65 0.22 220 / 0.2);
-  }
-  
-  /* Orange/amber glow - secondary */
-  .glow-orange {
-    box-shadow: 0 0 20px oklch(0.70 0.20 40 / 0.4), 0 0 40px oklch(0.70 0.20 40 / 0.2);
-  }
-  
-  /* Legacy amber glow - keep for backward compat */
-  .glow-amber {
-    box-shadow: 0 0 20px oklch(0.65 0.22 220 / 0.3);
-  }
-  
-  /* Legacy violet glow - keep for backward compat */
-  .glow-violet {
-    box-shadow: 0 0 20px oklch(0.70 0.20 40 / 0.3);
-  }
-  
-  /* Text glow effects */
-  .text-glow-amber {
-    text-shadow: 0 0 30px oklch(0.65 0.22 220 / 0.6), 0 0 60px oklch(0.65 0.22 220 / 0.3);
-  }
-  
-  .text-glow-blue {
-    text-shadow: 0 0 30px oklch(0.65 0.22 220 / 0.6), 0 0 60px oklch(0.65 0.22 220 / 0.3);
-  }
-  
-  .text-glow-orange {
-    text-shadow: 0 0 20px oklch(0.70 0.20 40 / 0.5);
-  }
-  
-  /* Glassmorphism card - FusionAI style */
+  /* ── Glassmorphism card ───────────────────────────── */
   .glass-card {
-    background: oklch(0.11 0.025 255 / 0.8);
-    backdrop-filter: blur(20px);
-    border: 1px solid oklch(0.65 0.22 220 / 0.2);
-    box-shadow: 0 0 30px oklch(0.65 0.22 220 / 0.05), inset 0 1px 0 oklch(1 0 0 / 0.05);
+    background: oklch(0.10 0.02 280 / 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid oklch(0.55 0.28 290 / 0.18);
+    box-shadow: 0 0 30px oklch(0.55 0.28 290 / 0.06), inset 0 1px 0 oklch(1 0 0 / 0.05);
+    will-change: transform;
   }
-  
   .glass-card:hover {
-    border-color: oklch(0.65 0.22 220 / 0.4);
-    box-shadow: 0 0 40px oklch(0.65 0.22 220 / 0.15), inset 0 1px 0 oklch(1 0 0 / 0.08);
+    border-color: oklch(0.55 0.28 290 / 0.40);
+    box-shadow: 0 0 40px oklch(0.55 0.28 290 / 0.15), inset 0 1px 0 oklch(1 0 0 / 0.08);
   }
-  
-  /* Neon border effect */
-  .neon-border-blue {
-    border: 1px solid oklch(0.65 0.22 220 / 0.5);
-    box-shadow: 0 0 10px oklch(0.65 0.22 220 / 0.2), inset 0 0 10px oklch(0.65 0.22 220 / 0.05);
-  }
-  
-  .neon-border-orange {
-    border: 1px solid oklch(0.70 0.20 40 / 0.5);
-    box-shadow: 0 0 10px oklch(0.70 0.20 40 / 0.2), inset 0 0 10px oklch(0.70 0.20 40 / 0.05);
-  }
-  
-  /* Gradient text - FusionAI style */
-  .gradient-text-blue {
-    background: linear-gradient(135deg, #38bdf8, #818cf8, #fb923c);
+
+  /* ── Gradient text ────────────────────────────────── */
+  .gradient-text-purple {
+    background: linear-gradient(135deg, #a78bfa, #7c3aed, #06b6d4);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
-  
   .gradient-text-primary {
-    background: linear-gradient(135deg, oklch(0.75 0.22 220), oklch(0.70 0.20 200));
+    background: linear-gradient(135deg, oklch(0.75 0.22 290), oklch(0.70 0.20 270));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
-  
-  /* Blur depth */
-  .blur-depth {
-    backdrop-filter: blur(20px);
-  }
-  
-  /* Diagonal light ray - FusionAI signature effect */
-  .light-ray {
-    position: absolute;
-    width: 2px;
-    background: linear-gradient(to bottom, transparent, oklch(0.65 0.22 220 / 0.6), transparent);
-    transform: rotate(-45deg);
-    transform-origin: top center;
-    pointer-events: none;
-  }
-  
-  /* Pill badge - FusionAI style */
+
+  /* ── Pill badge ───────────────────────────────────── */
   .pill-badge {
     display: inline-flex;
     align-items: center;
     padding: 0.25rem 0.875rem;
     border-radius: 9999px;
-    border: 1px solid oklch(0.65 0.22 220 / 0.4);
-    background: oklch(0.65 0.22 220 / 0.08);
-    color: oklch(0.75 0.18 220);
+    border: 1px solid oklch(0.55 0.28 290 / 0.40);
+    background: oklch(0.55 0.28 290 / 0.08);
+    color: oklch(0.78 0.18 290);
     font-size: 0.75rem;
     font-family: var(--font-accent);
     letter-spacing: 0.05em;
     text-transform: uppercase;
   }
+
+  /* ── Neon borders ─────────────────────────────────── */
+  .neon-border-blue   { border: 1px solid oklch(0.55 0.28 290 / 0.5); box-shadow: 0 0 10px oklch(0.55 0.28 290 / 0.2); }
+  .neon-border-orange { border: 1px solid oklch(0.72 0.18 210 / 0.5); box-shadow: 0 0 10px oklch(0.72 0.18 210 / 0.2); }
+
+  /* ── Light ray ────────────────────────────────────── */
+  .light-ray {
+    position: absolute;
+    width: 2px;
+    background: linear-gradient(to bottom, transparent, oklch(0.55 0.28 290 / 0.5), transparent);
+    transform: rotate(-45deg);
+    transform-origin: top center;
+    pointer-events: none;
+  }
+
+  /* ── Button glow ──────────────────────────────────── */
+  .btn-glow-blue:hover   { box-shadow: 0 0 20px oklch(0.55 0.28 290 / 0.5), 0 0 40px oklch(0.55 0.28 290 / 0.25); }
+  .btn-glow-orange:hover { box-shadow: 0 0 20px oklch(0.72 0.18 210 / 0.5), 0 0 40px oklch(0.72 0.18 210 / 0.25); }
+
+  /* ── Divider glow ─────────────────────────────────── */
+  .divider-glow {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, oklch(0.55 0.28 290 / 0.5), oklch(0.72 0.18 210 / 0.3), transparent);
+  }
+
+  /* ── Contact form inputs ──────────────────────────── */
+  .contact-form-input {
+    background: oklch(0.10 0.02 280 / 0.8);
+    border: 1px solid oklch(0.20 0.04 280);
+    color: oklch(0.95 0.01 80);
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  .contact-form-input:focus {
+    border-color: oklch(0.55 0.28 290 / 0.7);
+    box-shadow: 0 0 0 3px oklch(0.55 0.28 290 / 0.15);
+    outline: none;
+  }
+  .contact-form-input::placeholder { color: oklch(0.48 0.04 280); }
 }
 
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
+/* ── Scrollbar ──────────────────────────────────────── */
+html { scroll-behavior: smooth; }
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: oklch(0.07 0.015 280); }
+::-webkit-scrollbar-thumb { background: oklch(0.55 0.28 290 / 0.4); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: oklch(0.55 0.28 290 / 0.7); }
 
-/* Custom scrollbar - FusionAI dark style */
-::-webkit-scrollbar {
-  width: 6px;
-}
-
-::-webkit-scrollbar-track {
-  background: oklch(0.08 0.02 260);
-}
-
-::-webkit-scrollbar-thumb {
-  background: oklch(0.65 0.22 220 / 0.4);
-  border-radius: 3px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: oklch(0.65 0.22 220 / 0.7);
-}
-
-/* ============================================================
- * Custom Cursor Styles
- * ============================================================ */
+/* ── Custom Cursor ──────────────────────────────────── */
 .custom-cursor-dot {
-  width: 8px;
-  height: 8px;
-  background: oklch(0.65 0.22 220);
+  width: 8px; height: 8px;
+  background: oklch(0.65 0.28 290);
   border-radius: 50%;
-  position: fixed;
-  pointer-events: none;
-  z-index: 99999;
+  position: fixed; pointer-events: none; z-index: 99999;
   transform: translate(-50%, -50%);
-  transition: width 0.2s, height 0.2s, background 0.2s;
-  box-shadow: 0 0 10px oklch(0.65 0.22 220 / 0.8), 0 0 20px oklch(0.65 0.22 220 / 0.4);
+  box-shadow: 0 0 10px oklch(0.65 0.28 290 / 0.8), 0 0 20px oklch(0.65 0.28 290 / 0.4);
+  will-change: left, top;
 }
-
 .custom-cursor-ring {
-  width: 36px;
-  height: 36px;
-  border: 1.5px solid oklch(0.65 0.22 220 / 0.6);
+  width: 36px; height: 36px;
+  border: 1.5px solid oklch(0.65 0.28 290 / 0.55);
   border-radius: 50%;
-  position: fixed;
-  pointer-events: none;
-  z-index: 99998;
+  position: fixed; pointer-events: none; z-index: 99998;
   transform: translate(-50%, -50%);
-  transition: width 0.3s ease, height 0.3s ease, border-color 0.3s ease, transform 0.1s ease;
+  will-change: left, top;
 }
-
 .custom-cursor-dot.hovering {
-  width: 12px;
-  height: 12px;
-  background: oklch(0.70 0.20 40);
-  box-shadow: 0 0 15px oklch(0.70 0.20 40 / 0.9), 0 0 30px oklch(0.70 0.20 40 / 0.5);
+  width: 12px; height: 12px;
+  background: oklch(0.72 0.18 210);
+  box-shadow: 0 0 15px oklch(0.72 0.18 210 / 0.9), 0 0 30px oklch(0.72 0.18 210 / 0.5);
 }
-
 .custom-cursor-ring.hovering {
-  width: 52px;
-  height: 52px;
-  border-color: oklch(0.70 0.20 40 / 0.7);
+  width: 52px; height: 52px;
+  border-color: oklch(0.72 0.18 210 / 0.65);
 }
 
-/* ============================================================
- * Scroll Progress Bar
- * ============================================================ */
+/* ── Scroll Progress Bar ────────────────────────────── */
 .scroll-progress-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 3px;
-  background: linear-gradient(90deg, oklch(0.65 0.22 220), oklch(0.70 0.22 200), oklch(0.70 0.20 40));
+  position: fixed; top: 0; left: 0; height: 3px;
+  background: linear-gradient(90deg, oklch(0.55 0.28 290), oklch(0.65 0.24 270), oklch(0.72 0.18 210));
   z-index: 99997;
-  box-shadow: 0 0 10px oklch(0.65 0.22 220 / 0.7), 0 0 20px oklch(0.65 0.22 220 / 0.4);
+  box-shadow: 0 0 10px oklch(0.55 0.28 290 / 0.7), 0 0 20px oklch(0.55 0.28 290 / 0.4);
   transition: width 0.1s ease-out;
+  will-change: width;
 }
 
-/* ============================================================
- * Blog Article Content Styling
- * ============================================================ */
+/* ── Animations ─────────────────────────────────────── */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-14px); }
+}
+.animate-float { animation: float 3.5s ease-in-out infinite; will-change: transform; }
+
+@keyframes float-3d {
+  0%   { transform: translateY(0px)   rotateX(0deg)   rotateY(0deg); }
+  25%  { transform: translateY(-8px)  rotateX(5deg)   rotateY(10deg); }
+  50%  { transform: translateY(-14px) rotateX(0deg)   rotateY(20deg); }
+  75%  { transform: translateY(-8px)  rotateX(-5deg)  rotateY(10deg); }
+  100% { transform: translateY(0px)   rotateX(0deg)   rotateY(0deg); }
+}
+.animate-float-3d { animation: float-3d 6s ease-in-out infinite; will-change: transform; }
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 10px oklch(0.55 0.28 290 / 0.3); }
+  50%       { box-shadow: 0 0 25px oklch(0.55 0.28 290 / 0.7), 0 0 50px oklch(0.55 0.28 290 / 0.3); }
+}
+.animate-pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
+
+@keyframes light-ray-pulse {
+  0%, 100% { opacity: 0.25; }
+  50%       { opacity: 0.65; }
+}
+.animate-light-ray { animation: light-ray-pulse 4s ease-in-out infinite; }
+
+@keyframes scroll-infinite {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-scroll-infinite { animation: scroll-infinite 40s linear infinite; }
+.animate-scroll-infinite:hover { animation-play-state: paused; }
+
+/* ── Typewriter cursor blink ────────────────────────── */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+.typewriter-cursor { animation: blink 1s step-end infinite; }
+
+/* ── Skills scroll section ──────────────────────────── */
+.skills-sticky-container { position: relative; }
+.skills-panel {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* ── Experience timeline ────────────────────────────── */
+.exp-timeline-line {
+  background: linear-gradient(to bottom, transparent, oklch(0.55 0.28 290 / 0.6), oklch(0.72 0.18 210 / 0.4), transparent);
+}
+
+/* ── Blog article ───────────────────────────────────── */
 .article-content {
   color: oklch(0.85 0.01 80);
   line-height: 1.8;
 }
+.article-content h1 { font-family: var(--font-display); font-size: 2.5rem; color: oklch(0.75 0.22 290); margin-top: 2rem; margin-bottom: 1rem; }
+.article-content h2 { font-family: var(--font-heading); font-size: 2rem; color: oklch(0.75 0.22 290); margin-top: 2rem; margin-bottom: 1rem; font-weight: 600; }
+.article-content h3 { font-family: var(--font-heading); font-size: 1.5rem; color: oklch(0.70 0.18 290); margin-top: 1.5rem; margin-bottom: 0.75rem; font-weight: 600; }
+.article-content p { margin-bottom: 1.25rem; font-family: var(--font-body); }
+.article-content strong { color: oklch(0.75 0.22 290); font-weight: 600; }
+.article-content em { color: oklch(0.72 0.18 210); font-style: italic; }
+.article-content ul, .article-content ol { margin-left: 1.5rem; margin-bottom: 1.25rem; }
+.article-content li { margin-bottom: 0.5rem; padding-left: 0.5rem; }
+.article-content ul li::marker { color: oklch(0.55 0.28 290); }
+.article-content code { background: oklch(0.13 0.02 280); color: oklch(0.65 0.22 290); padding: 0.2rem 0.4rem; border-radius: 4px; font-family: var(--font-accent); font-size: 0.9em; }
+.article-content pre { background: oklch(0.10 0.02 280); border: 1px solid oklch(0.20 0.04 280); border-radius: 8px; padding: 1.5rem; overflow-x: auto; margin-bottom: 1.25rem; }
+.article-content pre code { background: transparent; padding: 0; }
+.article-content blockquote { border-left: 4px solid oklch(0.55 0.28 290); padding-left: 1.5rem; margin: 1.5rem 0; color: oklch(0.70 0.05 80); font-style: italic; }
+.article-content a { color: oklch(0.65 0.22 290); text-decoration: underline; transition: color 0.3s; }
+.article-content a:hover { color: oklch(0.72 0.18 210); }
+.article-content hr { border: none; border-top: 1px solid oklch(0.20 0.04 280); margin: 2rem 0; }
 
-.article-content h1 {
-  font-family: var(--font-display);
-  font-size: 2.5rem;
-  color: oklch(0.75 0.22 220);
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  text-shadow: 0 0 20px oklch(0.65 0.22 220 / 0.5);
-}
-
-.article-content h2 {
-  font-family: var(--font-heading);
-  font-size: 2rem;
-  color: oklch(0.75 0.22 220);
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
-}
-
-.article-content h3 {
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  color: oklch(0.70 0.18 220);
-  margin-top: 1.5rem;
-  margin-bottom: 0.75rem;
-  font-weight: 600;
-}
-
-.article-content p {
-  margin-bottom: 1.25rem;
-  font-family: var(--font-body);
-}
-
-.article-content strong {
-  color: oklch(0.75 0.22 220);
-  font-weight: 600;
-}
-
-.article-content em {
-  color: oklch(0.70 0.20 40);
-  font-style: italic;
-}
-
-.article-content ul, .article-content ol {
-  margin-left: 1.5rem;
-  margin-bottom: 1.25rem;
-}
-
-.article-content li {
-  margin-bottom: 0.5rem;
-  padding-left: 0.5rem;
-}
-
-.article-content ul li::marker {
-  color: oklch(0.65 0.22 220);
-}
-
-.article-content code {
-  background: oklch(0.14 0.02 258);
-  color: oklch(0.65 0.22 220);
-  padding: 0.2rem 0.4rem;
-  border-radius: 4px;
-  font-family: var(--font-accent);
-  font-size: 0.9em;
-}
-
-.article-content pre {
-  background: oklch(0.11 0.025 255);
-  border: 1px solid oklch(0.20 0.04 240);
-  border-radius: 8px;
-  padding: 1.5rem;
-  overflow-x: auto;
-  margin-bottom: 1.25rem;
-}
-
-.article-content pre code {
-  background: transparent;
-  padding: 0;
-}
-
-.article-content blockquote {
-  border-left: 4px solid oklch(0.65 0.22 220);
-  padding-left: 1.5rem;
-  margin: 1.5rem 0;
-  color: oklch(0.70 0.05 80);
-  font-style: italic;
-}
-
-.article-content a {
-  color: oklch(0.65 0.22 220);
-  text-decoration: underline;
-  transition: color 0.3s;
-}
-
-.article-content a:hover {
-  color: oklch(0.70 0.20 40);
-}
-
-.article-content hr {
-  border: none;
-  border-top: 1px solid oklch(0.20 0.04 240);
-  margin: 2rem 0;
-}
-
-/* ============================================================
- * Infinite scroll animation for Tools & Technologies section
- * ============================================================ */
-@keyframes scroll-infinite {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-.animate-scroll-infinite {
-  animation: scroll-infinite 40s linear infinite;
-}
-
-.animate-scroll-infinite:hover {
-  animation-play-state: paused;
-}
-
-/* ============================================================
- * FusionAI-Inspired Background Effects
- * ============================================================ */
-
-/* Radial glow background spots */
-.bg-glow-blue {
-  background: radial-gradient(ellipse at center, oklch(0.65 0.22 220 / 0.15) 0%, transparent 70%);
-}
-
-.bg-glow-orange {
-  background: radial-gradient(ellipse at center, oklch(0.70 0.20 40 / 0.12) 0%, transparent 70%);
-}
-
-/* Diagonal light ray animation */
-@keyframes light-ray-pulse {
-  0%, 100% { opacity: 0.3; }
-  50% { opacity: 0.7; }
-}
-
-.animate-light-ray {
-  animation: light-ray-pulse 4s ease-in-out infinite;
-}
-
-/* Section divider glow line */
-.divider-glow {
-  height: 1px;
-  background: linear-gradient(90deg, transparent, oklch(0.65 0.22 220 / 0.5), oklch(0.70 0.20 40 / 0.3), transparent);
-}
-
-/* Contact form input focus glow */
-.input-glow:focus {
-  border-color: oklch(0.65 0.22 220 / 0.7);
-  box-shadow: 0 0 0 3px oklch(0.65 0.22 220 / 0.15), 0 0 20px oklch(0.65 0.22 220 / 0.1);
-  outline: none;
-}
-
-/* Button hover glow */
-.btn-glow-blue:hover {
-  box-shadow: 0 0 20px oklch(0.65 0.22 220 / 0.5), 0 0 40px oklch(0.65 0.22 220 / 0.25);
-}
-
-.btn-glow-orange:hover {
-  box-shadow: 0 0 20px oklch(0.70 0.20 40 / 0.5), 0 0 40px oklch(0.70 0.20 40 / 0.25);
-}
-
-/* Floating animation */
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-}
-
-.animate-float {
-  animation: float 3s ease-in-out infinite;
-}
-
-/* Pulse glow animation */
-@keyframes pulse-glow {
-  0%, 100% {
-    box-shadow: 0 0 10px oklch(0.65 0.22 220 / 0.3);
-  }
-  50% {
-    box-shadow: 0 0 25px oklch(0.65 0.22 220 / 0.7), 0 0 50px oklch(0.65 0.22 220 / 0.3);
-  }
-}
-
-.animate-pulse-glow {
-  animation: pulse-glow 2s ease-in-out infinite;
-}
-
-/* Gradient border animation */
-@keyframes gradient-border {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* Contact form styles */
-.contact-form-input {
-  background: oklch(0.11 0.025 255 / 0.8);
-  border: 1px solid oklch(0.20 0.04 240);
-  color: oklch(0.95 0.01 80);
-  transition: border-color 0.3s, box-shadow 0.3s;
-}
-
-.contact-form-input:focus {
-  border-color: oklch(0.65 0.22 220 / 0.7);
-  box-shadow: 0 0 0 3px oklch(0.65 0.22 220 / 0.15);
-  outline: none;
-}
-
-.contact-form-input::placeholder {
-  color: oklch(0.50 0.03 270);
-}
+/* ── Bg glow spots ──────────────────────────────────── */
+.bg-glow-purple { background: radial-gradient(ellipse at center, oklch(0.55 0.28 290 / 0.12) 0%, transparent 70%); }
+.bg-glow-cyan   { background: radial-gradient(ellipse at center, oklch(0.72 0.18 210 / 0.10) 0%, transparent 70%); }
+/* Legacy */
+.bg-glow-blue   { background: radial-gradient(ellipse at center, oklch(0.55 0.28 290 / 0.12) 0%, transparent 70%); }
+.bg-glow-orange { background: radial-gradient(ellipse at center, oklch(0.72 0.18 210 / 0.10) 0%, transparent 70%); }
