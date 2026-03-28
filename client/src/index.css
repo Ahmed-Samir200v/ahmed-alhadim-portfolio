@@ -408,3 +408,119 @@ html { scroll-behavior: smooth; }
 /* Legacy */
 .bg-glow-blue   { background: radial-gradient(ellipse at center, oklch(0.55 0.28 290 / 0.12) 0%, transparent 70%); }
 .bg-glow-orange { background: radial-gradient(ellipse at center, oklch(0.72 0.18 210 / 0.10) 0%, transparent 70%); }
+
+/* ── AAA Game Card — enhanced hover ──────────────────── */
+.game-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1),
+              box-shadow 0.4s ease;
+  will-change: transform;
+}
+.game-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg,
+    oklch(0.55 0.28 290 / 0.10) 0%,
+    transparent 50%,
+    oklch(0.72 0.18 210 / 0.06) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+.game-card:hover::before { opacity: 1; }
+.game-card:hover {
+  transform: translateY(-6px) scale(1.015);
+  box-shadow:
+    0 20px 60px oklch(0.55 0.28 290 / 0.22),
+    0 0 0 1px oklch(0.55 0.28 290 / 0.35),
+    inset 0 1px 0 oklch(1 0 0 / 0.08);
+}
+
+/* ── Scanline overlay (subtle CRT depth) ─────────────── */
+.scanline-overlay {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    oklch(0 0 0 / 0.03) 2px,
+    oklch(0 0 0 / 0.03) 4px
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Corner accent decoration ────────────────────────── */
+.corner-accent {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+}
+.corner-accent-tl { top: 0; left: 0; border-top: 2px solid oklch(0.55 0.28 290 / 0.6); border-left: 2px solid oklch(0.55 0.28 290 / 0.6); }
+.corner-accent-tr { top: 0; right: 0; border-top: 2px solid oklch(0.55 0.28 290 / 0.6); border-right: 2px solid oklch(0.55 0.28 290 / 0.6); }
+.corner-accent-bl { bottom: 0; left: 0; border-bottom: 2px solid oklch(0.72 0.18 210 / 0.5); border-left: 2px solid oklch(0.72 0.18 210 / 0.5); }
+.corner-accent-br { bottom: 0; right: 0; border-bottom: 2px solid oklch(0.72 0.18 210 / 0.5); border-right: 2px solid oklch(0.72 0.18 210 / 0.5); }
+
+/* ── Shimmer animation ───────────────────────────────── */
+@keyframes shimmer {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+.animate-shimmer {
+  animation: shimmer 2.5s ease-in-out infinite;
+}
+
+/* ── Entrance fade-up (CSS fallback) ─────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up { animation: fadeUp 0.65s ease-out forwards; }
+
+/* ── Stagger children ────────────────────────────────── */
+.stagger-children > *:nth-child(1) { animation-delay: 0ms; }
+.stagger-children > *:nth-child(2) { animation-delay: 80ms; }
+.stagger-children > *:nth-child(3) { animation-delay: 160ms; }
+.stagger-children > *:nth-child(4) { animation-delay: 240ms; }
+.stagger-children > *:nth-child(5) { animation-delay: 320ms; }
+.stagger-children > *:nth-child(6) { animation-delay: 400ms; }
+
+/* ── Neon underline on hover ─────────────────────────── */
+.neon-underline {
+  position: relative;
+}
+.neon-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; left: 0;
+  width: 0; height: 1px;
+  background: linear-gradient(90deg, oklch(0.55 0.28 290), oklch(0.72 0.18 210));
+  box-shadow: 0 0 6px oklch(0.55 0.28 290 / 0.8);
+  transition: width 0.35s ease;
+}
+.neon-underline:hover::after { width: 100%; }
+
+/* ── Section divider with glow ───────────────────────── */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    oklch(0.55 0.28 290 / 0.4) 30%,
+    oklch(0.72 0.18 210 / 0.3) 70%,
+    transparent 100%);
+  position: relative;
+}
+.section-divider::after {
+  content: '';
+  position: absolute;
+  top: -1px; left: 50%; transform: translateX(-50%);
+  width: 60px; height: 3px;
+  background: oklch(0.55 0.28 290);
+  border-radius: 2px;
+  box-shadow: 0 0 12px oklch(0.55 0.28 290 / 0.8);
+}

@@ -23,6 +23,8 @@ import { TypewriterText } from "@/components/TypewriterText";
 import { SkillsScroll } from "@/components/SkillsScroll";
 import { ExperienceTimeline } from "@/components/ExperienceTimeline";
 import { LogoBackground } from "@/components/LogoBackground";
+import { ParticleBackground } from "@/components/ParticleBackground";
+import { useScrollAnimation, fadeUpStyle, slideLeftStyle, slideRightStyle } from "@/hooks/useScrollAnimation";
 
 const PURPLE = "oklch(0.55 0.28 290)";
 const CYAN   = "oklch(0.72 0.18 210)";
@@ -33,6 +35,16 @@ export default function Home() {
   const mouseRef = useRef({ x: 0, y: 0 });
   const heroParallaxRef = useRef<HTMLDivElement>(null);
   const heroRef = useRef<HTMLElement>(null);
+
+  // Scroll animation refs
+  const aboutAnim   = useScrollAnimation();
+  const projectsAnim = useScrollAnimation();
+  const skillsAnim  = useScrollAnimation();
+  const expAnim     = useScrollAnimation();
+  const toolsAnim   = useScrollAnimation();
+  const testiAnim   = useScrollAnimation();
+  const blogAnim    = useScrollAnimation();
+  const contactAnim = useScrollAnimation();
 
   // Smooth hero parallax via RAF (not useState to avoid re-renders)
   useEffect(() => {
@@ -103,6 +115,8 @@ export default function Home() {
           HERO SECTION
       ═══════════════════════════════════════════════ */}
       <section ref={heroRef} id="hero" className="relative min-h-screen flex items-center overflow-hidden pt-20">
+        {/* Particle background */}
+        <ParticleBackground />
         {/* Parallax background */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           <div
@@ -229,7 +243,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════
           ABOUT SECTION — Typewriter animation
       ═══════════════════════════════════════════════ */}
-      <section id="about" className="py-24 relative overflow-hidden" style={{ background: `oklch(0.09 0.018 280)` }}>
+      <section ref={aboutAnim.ref as React.RefObject<HTMLElement>} id="about" className="py-24 relative overflow-hidden" style={{ background: `oklch(0.09 0.018 280)`, ...fadeUpStyle(aboutAnim.visible) }}>
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-0 left-0 w-full h-px divider-glow" />
           <div className="absolute bottom-0 left-0 w-full h-px divider-glow" />
@@ -306,7 +320,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════
           PROJECTS SECTION
       ═══════════════════════════════════════════════ */}
-      <section id="projects" className="py-24 relative overflow-hidden">
+      <section ref={projectsAnim.ref as React.RefObject<HTMLElement>} id="projects" className="py-24 relative overflow-hidden" style={fadeUpStyle(projectsAnim.visible)}>
         <div className="container relative z-10">
           <div className="mb-12">
             <div className="pill-badge mb-4">Featured Work</div>
@@ -379,10 +393,16 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredProjects.map((project, index) => (
               <Link key={project.id} href={`/project/${project.id}`}>
-                <Card
-                  className="group overflow-hidden glass-card cursor-pointer transition-all duration-400 hover:scale-[1.02]"
+                <div
+                  className="group game-card glass-card rounded-xl overflow-hidden cursor-pointer"
                   style={{ animationDelay: `${index * 80}ms` }}
                 >
+                  {/* Corner accents */}
+                  <span className="corner-accent corner-accent-tl" />
+                  <span className="corner-accent corner-accent-tr" />
+                  <span className="corner-accent corner-accent-bl" />
+                  <span className="corner-accent corner-accent-br" />
+
                   <div className="relative aspect-video overflow-hidden">
                     <img
                       src={project.image}
@@ -390,33 +410,62 @@ export default function Home() {
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       loading="lazy"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent opacity-60 group-hover:opacity-35 transition-opacity" />
+                    {/* Scanline */}
+                    <div className="scanline-overlay" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent opacity-60 group-hover:opacity-30 transition-opacity duration-500" />
                     {project.featured && (
-                      <div className="absolute top-3 right-3 px-2 py-1 rounded-full text-xs font-accent" style={{ background: `${PURPLE}90`, color: "white", border: `1px solid ${PURPLE}` }}>
-                        Featured
+                      <div
+                        className="absolute top-3 right-3 px-2.5 py-1 rounded-full text-xs font-accent tracking-widest uppercase"
+                        style={{ background: `${PURPLE}90`, color: "white", border: `1px solid ${PURPLE}`, boxShadow: `0 0 10px ${PURPLE}60` }}
+                      >
+                        ★ Featured
                       </div>
                     )}
+                    {/* Shimmer on hover */}
+                    <div
+                      className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none overflow-hidden"
+                    >
+                      <div
+                        className="absolute top-0 left-0 w-1/3 h-full bg-gradient-to-r from-transparent via-white/8 to-transparent skew-x-12 animate-shimmer"
+                      />
+                    </div>
                   </div>
-                  <div className="p-5 space-y-3">
+
+                  <div className="p-5 space-y-3 relative z-10">
                     <div className="flex items-center gap-2">
-                      <span className="px-2 py-0.5 rounded text-xs font-accent" style={{ background: `${CYAN}15`, color: CYAN, border: `1px solid ${CYAN}30` }}>
+                      <span
+                        className="px-2.5 py-0.5 rounded-full text-xs font-accent tracking-wider"
+                        style={{ background: `${CYAN}15`, color: CYAN, border: `1px solid ${CYAN}35` }}
+                      >
                         {project.category}
                       </span>
                       <span className="text-xs text-muted-foreground font-accent">{project.platform}</span>
                     </div>
-                    <h3 className="font-heading text-lg font-semibold group-hover:text-primary transition-colors">
+                    <h3 className="font-heading text-lg font-semibold group-hover:text-primary transition-colors neon-underline">
                       {project.title}
                     </h3>
-                    <p className="text-sm text-muted-foreground line-clamp-2">{project.description}</p>
-                    <div className="flex flex-wrap gap-1.5">
+                    <p className="text-sm text-muted-foreground line-clamp-2 leading-relaxed">{project.description}</p>
+                    <div className="flex flex-wrap gap-1.5 pt-1">
                       {project.tags.slice(0, 3).map((tag) => (
-                        <span key={tag} className="text-xs px-2 py-0.5 rounded font-accent" style={{ background: "oklch(0.14 0.02 280)", color: "oklch(0.55 0.04 280)" }}>
+                        <span
+                          key={tag}
+                          className="text-xs px-2 py-0.5 rounded font-accent"
+                          style={{ background: "oklch(0.14 0.02 280)", color: "oklch(0.55 0.04 280)", border: "1px solid oklch(0.20 0.04 280)" }}
+                        >
                           {tag}
                         </span>
                       ))}
                     </div>
+                    {/* Bottom CTA hint */}
+                    <div
+                      className="flex items-center gap-1.5 pt-1 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-1 group-hover:translate-y-0"
+                      style={{ color: PURPLE }}
+                    >
+                      <span className="text-xs font-accent tracking-widest uppercase">View Project</span>
+                      <ArrowRight size={12} />
+                    </div>
                   </div>
-                </Card>
+                </div>
               </Link>
             ))}
           </div>
@@ -426,7 +475,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════
           TECHNICAL EXPERTISE — Scroll-based sticky
       ═══════════════════════════════════════════════ */}
-      <section id="skills" className="relative overflow-hidden" style={{ background: `oklch(0.09 0.018 280)` }}>
+      <section ref={skillsAnim.ref as React.RefObject<HTMLElement>} id="skills" className="relative overflow-hidden" style={{ background: `oklch(0.09 0.018 280)`, ...fadeUpStyle(skillsAnim.visible) }}>
         <div className="container py-16">
           <div className="pill-badge mb-4">Technical Expertise</div>
           <h2
@@ -445,7 +494,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════
           EXPERIENCE SECTION — Creative timeline
       ═══════════════════════════════════════════════ */}
-      <section id="experience" className="py-24 relative overflow-hidden">
+      <section ref={expAnim.ref as React.RefObject<HTMLElement>} id="experience" className="py-24 relative overflow-hidden" style={fadeUpStyle(expAnim.visible)}>
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-0 left-0 w-full h-px divider-glow" />
         </div>
@@ -467,7 +516,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════
           TOOLS & TECHNOLOGIES — Infinite scroll
       ═══════════════════════════════════════════════ */}
-      <section id="tools" className="py-20 relative overflow-hidden" style={{ background: `oklch(0.09 0.018 280)` }}>
+      <section ref={toolsAnim.ref as React.RefObject<HTMLElement>} id="tools" className="py-20 relative overflow-hidden" style={{ background: `oklch(0.09 0.018 280)`, ...fadeUpStyle(toolsAnim.visible) }}>
         <div className="container relative z-10 mb-12">
           <h2
             className="font-display text-5xl md:text-6xl mb-4 text-center"
@@ -530,8 +579,10 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════
           TESTIMONIALS
       ═══════════════════════════════════════════════ */}
-      <section id="testimonials" className="py-24 relative overflow-hidden">
+      <section ref={testiAnim.ref as React.RefObject<HTMLElement>} id="testimonials" className="py-24 relative overflow-hidden" style={fadeUpStyle(testiAnim.visible)}>
         <div className="container relative z-10">
+          <div className="section-divider mb-14" />
+          <div className="pill-badge mb-4 mx-auto" style={{ display: 'table' }}>Social Proof</div>
           <h2
             className="font-display text-5xl md:text-6xl mb-4 text-center"
             style={{ background: `linear-gradient(135deg, #ffffff, #a78bfa)`, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}
@@ -579,7 +630,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════
           BLOG PREVIEW
       ═══════════════════════════════════════════════ */}
-      <section id="blog" className="py-24 relative overflow-hidden" style={{ background: `oklch(0.09 0.018 280)` }}>
+      <section ref={blogAnim.ref as React.RefObject<HTMLElement>} id="blog" className="py-24 relative overflow-hidden" style={{ background: `oklch(0.09 0.018 280)`, ...fadeUpStyle(blogAnim.visible) }}>
         <div className="container relative z-10">
           <div className="flex items-end justify-between mb-12">
             <div>
@@ -638,7 +689,7 @@ export default function Home() {
       {/* ═══════════════════════════════════════════════
           CONTACT SECTION — Full English
       ═══════════════════════════════════════════════ */}
-      <section id="contact" className="py-24 relative overflow-hidden">
+      <section ref={contactAnim.ref as React.RefObject<HTMLElement>} id="contact" className="py-24 relative overflow-hidden" style={fadeUpStyle(contactAnim.visible)}>
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute bottom-0 left-1/4 w-96 h-96 rounded-full opacity-30" style={{ background: `radial-gradient(circle, ${PURPLE}08 0%, transparent 70%)`, filter: "blur(40px)" }} />
           <div className="absolute top-0 right-1/4 w-80 h-80 rounded-full opacity-20" style={{ background: `radial-gradient(circle, ${CYAN}06 0%, transparent 70%)`, filter: "blur(40px)" }} />
