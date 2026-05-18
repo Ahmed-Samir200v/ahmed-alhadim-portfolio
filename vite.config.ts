@@ -23,16 +23,18 @@ export default defineConfig({
         manualChunks(id) {
           if (!id.includes("node_modules")) return;
           if (id.includes("framer-motion")) return "vendor-motion";
+          if (id.includes("wouter")) return "vendor-router";
           if (id.includes("@radix-ui")) return "vendor-radix";
           if (id.includes("lucide-react")) return "vendor-icons";
-          // scheduler must live with react-dom — splitting it out creates a
-          // circular chunk dependency that breaks React 19 initialisation
+          // scheduler + next-themes must live with react/react-dom — splitting
+          // them out creates circular chunk deps that break React 19 init
           if (
             id.includes("node_modules/react/") ||
             id.includes("node_modules/react-dom/") ||
-            id.includes("node_modules/scheduler/")
+            id.includes("node_modules/scheduler/") ||
+            id.includes("next-themes")
           ) return "vendor-react";
-          return "vendor";
+          return "vendor-misc";
         },
       },
     },
