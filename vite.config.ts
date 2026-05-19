@@ -21,19 +21,36 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks(id) {
-          if (!id.includes("node_modules")) return;
-          if (id.includes("framer-motion")) return "vendor-motion";
-          if (id.includes("wouter")) return "vendor-router";
-          if (id.includes("@radix-ui")) return "vendor-radix";
-          if (id.includes("lucide-react")) return "vendor-icons";
-          // scheduler must live with react/react-dom — splitting it out creates
-          // a circular chunk dependency that breaks React 19 initialisation
-          if (
-            id.includes("node_modules/react/") ||
-            id.includes("node_modules/react-dom/") ||
-            id.includes("node_modules/scheduler/")
-          ) return "vendor-react";
-          return "vendor-misc";
+          if (id.includes("node_modules")) {
+            if (
+              id.includes("react/") ||
+              id.includes("react-dom") ||
+              id.includes("react-hook-form") ||
+              id.includes("next-themes") ||
+              id.includes("sonner") ||
+              id.includes("scheduler")
+            ) {
+              return "vendor-react";
+            }
+            if (id.includes("framer-motion")) {
+              return "vendor-motion";
+            }
+            if (id.includes("wouter")) {
+              return "vendor-router";
+            }
+            if (
+              id.includes("@radix-ui") ||
+              id.includes("class-variance-authority") ||
+              id.includes("clsx") ||
+              id.includes("tailwind-merge")
+            ) {
+              return "vendor-ui";
+            }
+            if (id.includes("lucide-react")) {
+              return "vendor-icons";
+            }
+            return "vendor-misc";
+          }
         },
       },
     },
