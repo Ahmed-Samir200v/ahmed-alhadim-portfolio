@@ -12,6 +12,8 @@ export default function Footer() {
               src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/FZfjwUzTsScMPRYL.png"
               alt="Al-Hadim Cube Icon"
               className="h-16 animate-float"
+              loading="lazy"
+              decoding="async"
             />
             <div>
               <h3 className="text-xl font-display font-bold text-amber">AHMED ALHADIM</h3>

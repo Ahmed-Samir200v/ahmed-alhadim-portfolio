@@ -40,10 +40,10 @@ export default function Blog() {
         </div>
         {/* Decorative Cube Icons */}
         <div className="absolute top-20 right-20 opacity-10 animate-float hover:opacity-20 transition-all duration-700 hover:scale-110 hover:rotate-[45deg]" style={{animationDelay: '0.5s'}}>
-          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/FZfjwUzTsScMPRYL.png" alt="" className="h-32 transition-transform duration-700" />
+          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/FZfjwUzTsScMPRYL.png" alt="" className="h-32 transition-transform duration-700" loading="lazy" decoding="async" />
         </div>
         <div className="absolute bottom-20 left-20 opacity-10 animate-float hover:opacity-20 transition-all duration-700 hover:scale-110 hover:rotate-[-45deg]" style={{animationDelay: '1.5s'}}>
-          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/FZfjwUzTsScMPRYL.png" alt="" className="h-36 transition-transform duration-700" />
+          <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/FZfjwUzTsScMPRYL.png" alt="" className="h-36 transition-transform duration-700" loading="lazy" decoding="async" />
         </div>
 
         <div className="container relative z-10">

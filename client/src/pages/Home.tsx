@@ -307,7 +307,7 @@ export default function Home() {
                     key={alt}
                     className="group glass-card rounded-xl p-5 flex flex-col items-center gap-3 hover:scale-105 transition-all duration-300"
                   >
-                    <img src={src} alt={alt} className="h-14 w-auto object-contain" loading="lazy" />
+                    <img src={src} alt={alt} className="h-14 w-auto object-contain" loading="lazy" decoding="async" />
                     <p className="text-xs font-accent text-muted-foreground group-hover:text-primary transition-colors">{alt}</p>
                   </div>
                 ))}
@@ -658,7 +658,7 @@ export default function Home() {
               <Link key={href} href={href}>
                 <div className="group glass-card rounded-xl overflow-hidden cursor-pointer hover:scale-[1.02] transition-all duration-300">
                   <div className="relative h-44 overflow-hidden">
-                    <img src={img} alt={title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" />
+                    <img src={img} alt={title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" decoding="async" />
                     <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
                     <div className="absolute top-3 right-3 px-2 py-1 rounded-full text-xs font-accent" style={{ background: `${PURPLE}90`, color: "white" }}>
                       FEATURED
@@ -775,6 +775,8 @@ export default function Home() {
                 src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/FZfjwUzTsScMPRYL.png"
                 alt="Al-Hadim"
                 className="h-14 animate-float"
+                loading="lazy"
+                decoding="async"
                 style={{ filter: `drop-shadow(0 0 10px ${PURPLE}50)` }}
               />
               <div>

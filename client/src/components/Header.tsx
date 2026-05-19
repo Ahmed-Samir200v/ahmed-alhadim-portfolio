@@ -115,6 +115,7 @@ export default function Header() {
               src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663048751930/sftHyPWzPimOxihY.png"
               alt="Al-Hadim Logo"
               className="h-9 transition-all duration-300 hover:scale-105"
+              decoding="async"
               style={{ filter: 'drop-shadow(0 0 8px oklch(0.55 0.28 290 / 0.4))' }}
             />
           </Link>
