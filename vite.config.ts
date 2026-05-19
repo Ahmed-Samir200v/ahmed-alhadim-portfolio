@@ -26,13 +26,12 @@ export default defineConfig({
           if (id.includes("wouter")) return "vendor-router";
           if (id.includes("@radix-ui")) return "vendor-radix";
           if (id.includes("lucide-react")) return "vendor-icons";
-          // scheduler + next-themes must live with react/react-dom — splitting
-          // them out creates circular chunk deps that break React 19 init
+          // scheduler must live with react/react-dom — splitting it out creates
+          // a circular chunk dependency that breaks React 19 initialisation
           if (
             id.includes("node_modules/react/") ||
             id.includes("node_modules/react-dom/") ||
-            id.includes("node_modules/scheduler/") ||
-            id.includes("next-themes")
+            id.includes("node_modules/scheduler/")
           ) return "vendor-react";
           return "vendor-misc";
         },
